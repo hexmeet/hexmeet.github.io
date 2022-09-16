@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>会捷通客户端 SDK (iOS 版) 开发文档 | 中创视讯</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.png">
+    <meta name="description" content="开发者中心">
+    
+    <link rel="preload" href="/assets/css/0.styles.817749b6.css" as="style"><link rel="preload" href="/assets/js/app.f6ea9451.js" as="script"><link rel="preload" href="/assets/js/3.1680551f.js" as="script"><link rel="preload" href="/assets/js/1.177e8441.js" as="script"><link rel="preload" href="/assets/js/12.820a609c.js" as="script"><link rel="prefetch" href="/assets/js/10.9438d405.js"><link rel="prefetch" href="/assets/js/11.179992e2.js"><link rel="prefetch" href="/assets/js/13.0bb504d3.js"><link rel="prefetch" href="/assets/js/14.318507ef.js"><link rel="prefetch" href="/assets/js/15.be7540d9.js"><link rel="prefetch" href="/assets/js/16.483a3325.js"><link rel="prefetch" href="/assets/js/17.81ff5a9d.js"><link rel="prefetch" href="/assets/js/18.2f623690.js"><link rel="prefetch" href="/assets/js/19.5e748932.js"><link rel="prefetch" href="/assets/js/20.becd72fd.js"><link rel="prefetch" href="/assets/js/21.0ecdc4ef.js"><link rel="prefetch" href="/assets/js/22.b2d8e119.js"><link rel="prefetch" href="/assets/js/23.bb5a599f.js"><link rel="prefetch" href="/assets/js/24.617322da.js"><link rel="prefetch" href="/assets/js/25.25491b7b.js"><link rel="prefetch" href="/assets/js/26.944bcd95.js"><link rel="prefetch" href="/assets/js/27.11b8d1fc.js"><link rel="prefetch" href="/assets/js/28.95334c6d.js"><link rel="prefetch" href="/assets/js/29.59f3060c.js"><link rel="prefetch" href="/assets/js/30.f9525288.js"><link rel="prefetch" href="/assets/js/31.c188c228.js"><link rel="prefetch" href="/assets/js/32.ad14c16d.js"><link rel="prefetch" href="/assets/js/33.d6572d98.js"><link rel="prefetch" href="/assets/js/34.8eb1fe6f.js"><link rel="prefetch" href="/assets/js/35.720b1825.js"><link rel="prefetch" href="/assets/js/36.530a42ff.js"><link rel="prefetch" href="/assets/js/37.83bf31eb.js"><link rel="prefetch" href="/assets/js/38.973fc93c.js"><link rel="prefetch" href="/assets/js/39.6c9b52c0.js"><link rel="prefetch" href="/assets/js/4.99b20d32.js"><link rel="prefetch" href="/assets/js/40.23da87c4.js"><link rel="prefetch" href="/assets/js/41.8b1c3323.js"><link rel="prefetch" href="/assets/js/42.6ba6e523.js"><link rel="prefetch" href="/assets/js/43.447a191e.js"><link rel="prefetch" href="/assets/js/44.6db43aa0.js"><link rel="prefetch" href="/assets/js/5.f1ccbddc.js"><link rel="prefetch" href="/assets/js/6.253f75ab.js"><link rel="prefetch" href="/assets/js/7.54737f2a.js"><link rel="prefetch" href="/assets/js/8.e59ef63f.js"><link rel="prefetch" href="/assets/js/9.6c9d8d70.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.817749b6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-21432440 data-v-1156296a data-v-1156296a><h3 class="title" data-v-21432440 data-v-21432440>中创视讯</h3> <p class="description" data-v-21432440 data-v-21432440>开发者中心</p> <label id="box" class="inputBox" data-v-21432440 data-v-21432440><input type="password" value="" data-v-21432440> <span data-v-21432440>Konck! Knock!</span> <button data-v-21432440>OK</button></label> <div class="footer" data-v-21432440 data-v-21432440><span data-v-21432440><i class="iconfont reco-theme" data-v-21432440></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-21432440>vuePress-theme-reco</a></span> <span data-v-21432440><i class="iconfont reco-copyright" data-v-21432440></i> <a data-v-21432440><span data-v-21432440>中创视讯</span>
+            
+          <!---->
+          2022
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">中创视讯</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><a href="/intro/" class="nav-link"><i class="undefined"></i>
+  文档
+</a></div><div class="nav-item"><a href="http://www.hexmeet.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  公司主页
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://developer.hexmeet.com/legal/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  隐私政策
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-68e5fdee data-v-1156296a><!----> <h3 class="name" data-v-68e5fdee>
+    中创视讯
+  </h3> <div class="num" data-v-68e5fdee><div data-v-68e5fdee><h3 data-v-68e5fdee>30</h3> <h6 data-v-68e5fdee>Articles</h6></div> <div data-v-68e5fdee><h3 data-v-68e5fdee>0</h3> <h6 data-v-68e5fdee>Tags</h6></div></div> <ul class="social-links" data-v-68e5fdee></ul> <hr data-v-68e5fdee></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><a href="/intro/" class="nav-link"><i class="undefined"></i>
+  文档
+</a></div><div class="nav-item"><a href="http://www.hexmeet.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  公司主页
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://developer.hexmeet.com/legal/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  隐私政策
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>会捷通 SDK (SVC)</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/svcsdk/" aria-current="page" class="sidebar-link">入门指南</a></li><li><a href="/svcsdk/windows-cpp.html" class="sidebar-link">Windows 版本 (C++)</a></li><li><a href="/svcsdk/windows-sdk.html" class="sidebar-link">Windows 版本 (C#)</a></li><li><a href="/svcsdk/evsdk-electron.html" class="sidebar-link">Windows 版本 (Electron)</a></li><li><a href="/svcsdk/macos-sdk.html" class="sidebar-link">macOS 版本</a></li><li><a href="/svcsdk/Android-sdk.html" class="sidebar-link">Android 版本</a></li><li><a href="/svcsdk/iOS-sdk.html" aria-current="page" class="active sidebar-link">iOS 版本</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>HexMeet SDK (AVC)</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/avcsdk/Android-AVCSDK.html" class="sidebar-link">Android 版本</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>其他</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/usecases/HJT-SDK-Use-Cases.html" class="sidebar-link">应用场景示例</a></li><li><a href="/other/faq.html" class="sidebar-link">常见问题</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-21432440 data-v-1156296a><h3 class="title" data-v-21432440 data-v-21432440></h3> <!----> <label id="box" class="inputBox" data-v-21432440 data-v-21432440><input type="password" value="" data-v-21432440> <span data-v-21432440>Konck! Knock!</span> <button data-v-21432440>OK</button></label> <div class="footer" data-v-21432440 data-v-21432440><span data-v-21432440><i class="iconfont reco-theme" data-v-21432440></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-21432440>vuePress-theme-reco</a></span> <span data-v-21432440><i class="iconfont reco-copyright" data-v-21432440></i> <a data-v-21432440><span data-v-21432440>中创视讯</span>
+            
+          <!---->
+          2022
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">会捷通客户端 SDK (iOS 版) 开发文档</h1> <div data-v-53977846><i class="iconfont reco-account" data-v-53977846><span data-v-53977846>中创视讯</span></i> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="会捷通客户端-sdk-ios-版-开发文档">会捷通客户端 SDK (iOS 版) 开发文档</h1> <h2 id="概述">概述</h2> <p><img src="/assets/img/android-gallery-view.14a821fe.png" alt="gallery-view"></p> <p>会捷通客户端 SDK 是⼀款视频会议软终端开发套件，开发者可以利⽤本 SDK 开发出具有清晰流畅的⾳视频体验和⾼清内容协作的⾳视频会议终端应用。会捷通客户端 SDK 具备强⼤的⽹络适应性，和独特的⾳视频抗⽹络丢包算法，配合会捷通云视讯平台使⽤，可以保证在 30% ⽹络丢包环境下视频依然清晰流畅，即使⽹络丢包⾼达 50%，依然可以保证⾳频通畅。 会捷通客户端 SDK 提供了丰富，⽽且简单易⽤的 API 接⼝。开发者不需要掌握丰富的⾳视频和信令相关知识，也可以使⽤本 SDK 开发出专业的视频会议软终端应用。 本⽂档详细介绍了 SDK 的各项功能，以及它们的使⽤⽅法。</p> <h3 id="系统要求">系统要求</h3> <ul><li>iOS 9 及以上</li></ul> <h3 id="开发环境">开发环境</h3> <ul><li>xcode 10.0 及以上</li></ul> <h3 id="示例代码">示例代码</h3> <ul><li><p>示例代码下载地址</p> <p><a href="https://hexmeet.coding.net/public/evsdk-svc-ios-demo/EVSDK-SVC-iOS-Demo/git/files" target="_blank" rel="noopener noreferrer">https://hexmeet.coding.net/public/evsdk-svc-ios-demo/EVSDK-SVC-iOS-Demo/git/files<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></li> <li><p>代码构成</p> <ul><li>EVSDK-SVC-iOS-Demo - 根目录
+<ul><li>easyVideo-iOS.xcworkspace - xcode workspace</li> <li>evsdk-libs-ios -  SDK framework</li></ul></li></ul></li> <li><p>编译示例工程</p> <ul><li>安装 pod 依赖</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code>pod <span class="token function">install</span>
+</code></pre></div><ul><li>使用 xcode 编译工程</li> <li>使用 xcode 打开 easyVideo 目录下的 <code>easyVideo-iOS.xcworkspace</code></li> <li>编译工程</li></ul></li></ul> <p><img src="/assets/img/xcode-ios.f3b26018.png" alt="xcode-iOS"></p> <h2 id="开发入门">开发入门</h2> <h3 id="初始化-sdk">初始化 SDK</h3> <p><strong>使用 EVSDK 时，需要在工程中做如下配置：</strong></p> <table><thead><tr><th>文件</th> <th>描述</th></tr></thead> <tbody><tr><td>添加SDK库⽂件evsdk.frameworks</td> <td>示例代码⽬录/easyVideo-iOS/evsdk.framework</td></tr> <tr><td>添加rootca.pem文件(没有此文件将导致无法入会)</td> <td>将⽂件拷⻉到工程目录下边，设置给 SDK</td></tr></tbody></table> <p><strong>在程序 AppDelegate 中初始化 SDK</strong></p> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">//在AppDelegate+Ext.swift文件中</span>
+
+<span class="token comment">// MARK: EVSDK</span>
+    func <span class="token function">setEVSDK</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        let path <span class="token operator">=</span> FileTools<span class="token punctuation">.</span><span class="token function">getDocumentsFailePath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        let logPath <span class="token operator">=</span> path <span class="token operator">+</span> <span class="token string">&quot;/Log&quot;</span>
+        
+        <span class="token function">setDDLog</span><span class="token punctuation">(</span>withPath<span class="token punctuation">:</span> logPath<span class="token punctuation">)</span>
+        
+        <span class="token comment">//设置Log路径</span>
+        evengine<span class="token punctuation">.</span><span class="token function">setLog</span><span class="token punctuation">(</span>EVLogLevel<span class="token punctuation">.</span>message<span class="token punctuation">,</span> path<span class="token punctuation">:</span> logPath<span class="token punctuation">,</span> file<span class="token punctuation">:</span> <span class="token string">&quot;evsdk&quot;</span><span class="token punctuation">,</span> size<span class="token punctuation">:</span> <span class="token number">20</span><span class="token operator">*</span><span class="token number">20</span><span class="token operator">*</span><span class="token number">1024</span><span class="token punctuation">)</span>
+        evengine<span class="token punctuation">.</span><span class="token function">enableLog</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span>
+        <span class="token comment">//初始化evsdk</span>
+        evengine<span class="token punctuation">.</span><span class="token function">initialize</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> filename<span class="token punctuation">:</span> <span class="token string">&quot;config&quot;</span><span class="token punctuation">)</span>
+        <span class="token comment">//设置最大接收</span>
+        evengine<span class="token punctuation">.</span><span class="token function">setMaxRecvVideo</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+        evengine<span class="token punctuation">.</span><span class="token function">enablePreview</span><span class="token punctuation">(</span>false<span class="token punctuation">)</span>
+        <span class="token comment">//设置Rootca文件</span>
+        evengine<span class="token punctuation">.</span><span class="token function">setRootCA</span><span class="token punctuation">(</span>FileTools<span class="token punctuation">.</span><span class="token function">bundleFile</span><span class="token punctuation">(</span><span class="token string">&quot;rootca.pem&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token comment">//设置带宽</span>
+        evengine<span class="token punctuation">.</span><span class="token function">setBandwidth</span><span class="token punctuation">(</span><span class="token number">2048</span><span class="token punctuation">)</span>
+        evengine<span class="token punctuation">.</span><span class="token function">getDevice</span><span class="token punctuation">(</span><span class="token punctuation">.</span>videoCapture<span class="token punctuation">)</span>
+        evengine<span class="token punctuation">.</span><span class="token function">getDevice</span><span class="token punctuation">(</span><span class="token punctuation">.</span>audioCapture<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="日志设置">日志设置</h3> <p><strong>EVSDK 会持续收集日志，打开日志收集需要做以下设置</strong></p> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 用于设置sdk日志相关
+
+ @param level 日志等级
+ @param log_path 日志存放位置
+ @param log_file_name 日志名称
+ @param max_file_size 日志大小
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> setLog<span class="token punctuation">:</span><span class="token punctuation">(</span>EVLogLevel<span class="token punctuation">)</span>level path<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>log_path file<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nullable<span class="token punctuation">)</span>log_file_name size<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">unsigned</span> <span class="token keyword">int</span><span class="token punctuation">)</span>max_file_size<span class="token punctuation">;</span>
+<span class="token comment">//示例代码，示例代码日志储存路径为/Documents/Log</span>
+evengine<span class="token punctuation">.</span><span class="token function">setLog</span><span class="token punctuation">(</span>EVLogLevel<span class="token punctuation">.</span>message<span class="token punctuation">,</span> path<span class="token punctuation">:</span> logPath<span class="token punctuation">,</span> file<span class="token punctuation">:</span> <span class="token string">&quot;evsdk&quot;</span><span class="token punctuation">,</span> size<span class="token punctuation">:</span> <span class="token number">20</span><span class="token operator">*</span><span class="token number">20</span><span class="token operator">*</span><span class="token number">1024</span><span class="token punctuation">)</span>
+<span class="token comment">//开启日志</span>
+evengine<span class="token punctuation">.</span><span class="token function">enableLog</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span>
+</code></pre></div><h3 id="设置呼叫带宽">设置呼叫带宽</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 设置呼叫带宽
+ 
+ @param kbps 带宽大小
+ @return 返回设置结果
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> enablePreview<span class="token punctuation">:</span><span class="token punctuation">(</span>BOOL<span class="token punctuation">)</span>enable<span class="token punctuation">;</span>
+<span class="token comment">//示例代码设置2M带宽</span>
+evengine<span class="token punctuation">.</span><span class="token function">setBandwidth</span><span class="token punctuation">(</span><span class="token number">2048</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="软件运行流程图">软件运行流程图</h3> <p>下图说明客户端应用从初始化开始，呼叫进入一个会议，再结束呼叫的基本流程。</p> <img src="https://www.plantuml.com/plantuml/svg/bPD9ImCn5CVl_HIXfnRq2tYGke5B1Mb5pt7cMICpBsMQjkf94BJYKaJhYhkYA1P1GTgg_JH9nc_XZ8eBQ3lUSlYzzr-In3A2EY9hMw5GM9PFLE61TAJJOTBQJiAz_SCasJqGRYFkxPpUk2GCcM3KOZCGYH9ziwWsA-gk90lxyc99Bc_wC77Bp_gft6XP1iGWdKg0aHjX9l18j0dSIT7CCrDCD2NZtA3Msz9HXYRFDnr8WCq5_6UYYwC05857B9vYECh4XEzDC8uUZfucuJbmli2Mz-EGHSKuTso_ylgUUxoiTshogUJM5_JbKkYJ9gs-o3VHDi8nxYibiuO1OFgU6i89IB6C0AUn-Ozhd-GClTpZu00Q4B411CCKmQmz1ax0EBAm9sjLkVOeYzTk_K2jdZTns4KjonD5C4I0F74wpREY3qtsMyi_O7LKKIjbyZv1P77RUxalixlwyDoBgqhtxiNyoycQljgInLEr_QpFgW4gie3cu5j7KHAi5brRL_k7VzVoUoyzw3SI0pIzZ_iA" alt="uml diagram"> <h3 id="登录">登录</h3> <p><strong>匿名方式入会</strong></p> <div class="custom-block tip"><p class="title"></p><p>用户匿名方式入会的时候会执行：定位-&gt;匿名登录-&gt;注册视频服务-&gt;呼叫 (其中匿名登录以及注册视频服务均由SDK 处理）</p></div><ol><li>定位服务、匿名登录、注册视频服务统一都由SDK处理只需要调用以下 API</li></ol> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 用户执行匿名登录入会
+
+ @param location_server 定位服务器
+ @param port 端口号
+ @param conference_number 会议号码
+ @param display_name 用户在会议中的名称
+ @param password 会议密码
+ @return 返回 SDK 处理结果，UI一般可忽略
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> joinConferenceWithLocation<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>location_server port<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">unsigned</span> <span class="token keyword">int</span><span class="token punctuation">)</span>port conference_number<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>conference_number display_name<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>display_name password<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>password<span class="token punctuation">;</span>
+<span class="token comment">//示例代码</span>
+appDelegate<span class="token punctuation">.</span>evengine<span class="token punctuation">.</span><span class="token function">joinConference</span><span class="token punctuation">(</span>withLocation<span class="token punctuation">:</span> <span class="token string">&quot;服务器&quot;</span><span class="token punctuation">,</span> port<span class="token punctuation">:</span> <span class="token function">UInt32</span><span class="token punctuation">(</span><span class="token string">&quot;端口&quot;</span><span class="token punctuation">)</span><span class="token operator">!</span><span class="token punctuation">,</span> conference_number<span class="token punctuation">:</span> <span class="token string">&quot;会议号码&quot;</span><span class="token punctuation">,</span> display_name<span class="token punctuation">:</span> <span class="token string">&quot;会议中的名字&quot;</span><span class="token punctuation">,</span> password<span class="token punctuation">:</span> <span class="token string">&quot;密码&quot;</span><span class="token punctuation">)</span>
+</code></pre></div><ol start="2"><li>入会</li></ol> <p><strong>当调用了匿名登录的 API 后，UI 会收到 SDK 回调：入会成功、入会失败。需要做出处理</strong></p> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">//定位或者匿名登录错误会回调</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onError<span class="token punctuation">:</span><span class="token punctuation">(</span>EVError <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>err<span class="token punctuation">;</span>
+<span class="token comment">//匿名登录成功会回调</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onLoginSucceed<span class="token punctuation">:</span><span class="token punctuation">(</span>EVUserInfo <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>user<span class="token punctuation">;</span>
+<span class="token comment">//入会失败会回调</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onCallEnd<span class="token punctuation">:</span><span class="token punctuation">(</span>EVCallInfo <span class="token operator">*</span> _Nonnull<span class="token punctuation">)</span>info<span class="token punctuation">;</span>
+<span class="token comment">//入会成功会回调</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onCallConnected<span class="token punctuation">:</span><span class="token punctuation">(</span>EVCallInfo <span class="token operator">*</span> _Nonnull<span class="token punctuation">)</span>info<span class="token punctuation">;</span>
+</code></pre></div><p><strong>用户正常登录</strong></p> <div class="custom-block tip"><p class="title"></p><p>用户正常登录会执行：定位-&gt;登录-&gt;注册视频服务(其中注册视频服务由 SDK 处理)</p></div><div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token number">1.</span>定位
+<span class="token comment">/**
+ 用户定位登录（包含等位跟登录）
+
+ @param location_server 定位服务器
+ @param port 端口号
+ @param username 用户名
+ @param password 密码
+ @return 返回API结果UI可忽略
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> loginWithLocation<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>location_server port<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">unsigned</span> <span class="token keyword">int</span><span class="token punctuation">)</span>port name<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>username password<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>password<span class="token punctuation">;</span>
+<span class="token comment">//示例代码</span>
+evengine<span class="token punctuation">.</span><span class="token function">login</span><span class="token punctuation">(</span>withLocation<span class="token punctuation">:</span> <span class="token string">&quot;服务器&quot;</span><span class="token punctuation">,</span> port<span class="token punctuation">:</span> <span class="token function">UInt32</span><span class="token punctuation">(</span><span class="token string">&quot;端口&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> name<span class="token punctuation">:</span> <span class="token string">&quot;用户名&quot;</span><span class="token punctuation">,</span> password<span class="token punctuation">:</span> evengine <span class="token punctuation">.</span><span class="token function">encryptPassword</span><span class="token punctuation">(</span><span class="token string">&quot;密码&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/** 登录后会收到SDK以下回调 */</span>
+<span class="token comment">//定位或者登录错误会回调</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onError<span class="token punctuation">:</span><span class="token punctuation">(</span>EVError <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>err<span class="token punctuation">;</span>
+<span class="token comment">//登录成功会回调</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onLoginSucceed<span class="token punctuation">:</span><span class="token punctuation">(</span>EVUserInfo <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>user<span class="token punctuation">;</span>
+</code></pre></div><h3 id="窗口设置">窗口设置</h3> <p><strong>EVSDK视频窗口分为三类 1. 远端窗口 2. 本地窗口 3. 内容窗口（双流、白板）</strong></p> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">//示例代码里 最大窗口数设置了4个 即最多收到4人远端画面</span>
+<span class="token punctuation">[</span>evengine setMaxRecvVideo<span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token number">1.</span>远端窗口设置
+<span class="token comment">/**
+ 设置远端窗口
+
+ @param id 远端窗口数组
+ @param size 远端窗口数量
+ @return 返回结果（UI可以忽视,不作处理）
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> setRemoteVideoWindow<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span>_Nullable<span class="token punctuation">[</span>_Nonnull<span class="token punctuation">]</span><span class="token punctuation">)</span>id andSize<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">unsigned</span> <span class="token keyword">int</span><span class="token punctuation">)</span>size<span class="token punctuation">;</span>
+<span class="token comment">//示例代码(remoteArr 里的元素为UIView对象)</span>
+<span class="token keyword">void</span> <span class="token operator">*</span> remoteArr<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">[</span>evengine setRemoteVideoWindow<span class="token punctuation">:</span>remoteArr andSize<span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token number">2.</span>本地窗口设置
+<span class="token comment">/**
+ 设置本地窗口
+
+ @param id 本地窗口对象
+ @return 返回结果（UI可以忽视,不作处理）
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> setLocalVideoWindow<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span>_Nullable<span class="token punctuation">)</span>id<span class="token punctuation">;</span>
+<span class="token comment">//示例代码（本地窗口为UIView对象）</span>
+evengine<span class="token punctuation">.</span><span class="token function">setLocalVideoWindow</span><span class="token punctuation">(</span>Unmanaged<span class="token punctuation">.</span><span class="token function">passUnretained</span><span class="token punctuation">(</span>local<span class="token punctuation">.</span>videoV<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toOpaque</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token number">3.</span>内容窗口设置
+<span class="token comment">/**
+ 设置内容窗口
+
+ @param id 内容窗口对象
+ @return 返回结果（UI可以忽视,不作处理）
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> setRemoteContentWindow<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span>_Nullable<span class="token punctuation">)</span>id<span class="token punctuation">;</span>
+<span class="token comment">//示例代码（内容窗口为UIView对象）</span>
+evengine<span class="token punctuation">.</span><span class="token function">setRemoteContentWindow</span><span class="token punctuation">(</span>Unmanaged<span class="token punctuation">.</span><span class="token function">passUnretained</span><span class="token punctuation">(</span>contentView<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toOpaque</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+</code></pre></div><h3 id="实现视频通话">实现视频通话</h3> <p><strong>视频通话主要分为两种，一种是匿名入会（参考登录模块的匿名登录入会），一种是用户登录后入会</strong></p> <ul><li>设置用户入会后的头像以及视频背景图片（关闭摄像头所展示的图片）</li></ul> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 设置会议中用户的头像以及背景图片
+
+ @param background_file_path 背景图片
+ @param user_image_path 用户图片
+ @return UI可不作处理
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> setUserImage<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>background_file_path filename<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nullable<span class="token punctuation">)</span>user_image_path<span class="token punctuation">;</span>
+<span class="token comment">//示例</span>
+evengine<span class="token punctuation">.</span><span class="token function">setUserImage</span><span class="token punctuation">(</span>Bundle<span class="token punctuation">.</span>main<span class="token punctuation">.</span><span class="token function">path</span><span class="token punctuation">(</span>forResource<span class="token punctuation">:</span> <span class="token string">&quot;img_videomute&quot;</span><span class="token punctuation">,</span> ofType<span class="token punctuation">:</span> <span class="token string">&quot;jpg&quot;</span><span class="token punctuation">)</span><span class="token operator">!</span><span class="token punctuation">,</span> filename<span class="token punctuation">:</span> headImgPath<span class="token punctuation">)</span>
+</code></pre></div><ul><li>用户创建会议</li></ul> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code>  <span class="token comment">/**
+  用户创建会议
+   @param conference_number 创建会议的号码，这个参数要求必须是数字字符串，字符串的长度范围由服务器设置，默认情况要求如下：
+          端口模式自定义会议号码可以是任意数字开头的 5-11 位数字，在同一个 MRU 上，一个会议的号码不能是另一个号码的前缀。
+   @param conference_title 创建会议显示的名字
+   @param password 加入会议所需要的密码，不设置则不需要入会密码
+   @param id 传出参数，用于删除会议时使用，如果不结束删除会议，会议中有参会人员，则会议不会自动结束，如果会议中没有参会人员，会议会在5分钟后自动结束并删除。
+   @return EV_OK 表示创建会议成功，EV_SERVER_NUMERICID_CONFLICTS 表示创建会议重复了。
+           除了 EV_OK 以外的值都表示创建会议没有成功。
+   */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> createConference<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>conference_number conference_title<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>conference_title password<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>password id<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString<span class="token operator">*</span> <span class="token punctuation">)</span>id
+</code></pre></div><ul><li>用户登录后主动入会</li></ul> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/// 用户加入会议</span>
+<span class="token comment">/// @param conference_number 会议号码</span>
+<span class="token comment">/// @param display_name 会议中的名字</span>
+<span class="token comment">/// @param password 会议密码</span>
+<span class="token comment">/// @param type 会议类型</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> joinConference<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>conference_number display_name<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>display_name password<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>password svcCallType<span class="token punctuation">:</span><span class="token punctuation">(</span>EVSvcCallType<span class="token punctuation">)</span>type<span class="token punctuation">;</span>
+<span class="token comment">//示例 注：会议如果没有密码可以不用给SDK传值，不传display_name则SDK会取用户名称当作会议名称</span>
+appDelegate<span class="token punctuation">.</span>evengine<span class="token punctuation">.</span><span class="token function">joinConference</span><span class="token punctuation">(</span><span class="token string">&quot;会议号码&quot;</span><span class="token punctuation">,</span> display_name<span class="token punctuation">:</span> <span class="token string">&quot;会议中的名字&quot;</span><span class="token punctuation">,</span> password<span class="token punctuation">:</span> <span class="token string">&quot;密码&quot;</span><span class="token punctuation">,</span> svcCallType<span class="token punctuation">:</span> <span class="token punctuation">.</span>conf<span class="token punctuation">)</span>
+</code></pre></div><ul><li>当调用了入会的 API 后，UI 会收到 SDK 回调：入会成功、入会失败。需要做出相应处理</li></ul> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">//入会失败会回调</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onCallEnd<span class="token punctuation">:</span><span class="token punctuation">(</span>EVCallInfo <span class="token operator">*</span> _Nonnull<span class="token punctuation">)</span>info<span class="token punctuation">;</span>
+<span class="token comment">//入会成功会回调</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onCallConnected<span class="token punctuation">:</span><span class="token punctuation">(</span>EVCallInfo <span class="token operator">*</span> _Nonnull<span class="token punctuation">)</span>info<span class="token punctuation">;</span>
+</code></pre></div><h3 id="主讲视图和画廊视图">主讲视图和画廊视图</h3> <ul><li>主讲视图</li></ul> <p><img src="/assets/img/android-speaker-view.39ade3cf.png" alt="主讲视图"></p> <p><strong>设置主讲视图模式</strong></p> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 设置视频模式（主讲模式、画廊模式）
+
+ @param layout EVLayoutRequest对象
+ @return 返回结果(UI可不作处理)
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> setLayout<span class="token punctuation">:</span><span class="token punctuation">(</span>EVLayoutRequest <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>layout<span class="token punctuation">;</span>
+<span class="token comment">//示例代码里主讲视图模式下 主视频窗口可以显示为1x1的窗口模式</span>
+let layout <span class="token operator">=</span> <span class="token function">EVLayoutRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+layout<span class="token punctuation">.</span>page <span class="token operator">=</span> <span class="token punctuation">.</span>currentPage
+layout<span class="token punctuation">.</span>max_resolution <span class="token operator">=</span> <span class="token function">EVVideoSize</span><span class="token punctuation">(</span>width<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> height<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">)</span>
+layout<span class="token punctuation">.</span>mode <span class="token operator">=</span> <span class="token punctuation">.</span>speakerMode
+layout<span class="token punctuation">.</span>max_type <span class="token operator">=</span> <span class="token punctuation">.</span>_1
+appDelegate<span class="token punctuation">.</span>evengine<span class="token punctuation">.</span><span class="token function">setLayout</span><span class="token punctuation">(</span>layout<span class="token punctuation">)</span>
+
+</code></pre></div><ul><li>画廊视图</li></ul> <p><img src="/assets/img/android-gallery-view.14a821fe.png" alt="画廊视图"></p> <p><strong>设置画廊视图模式</strong></p> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 设置视频模式（主讲模式、画廊模式）
+
+ @param layout EVLayoutRequest对象
+ @return 返回结果(UI可不作处理)
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> setLayout<span class="token punctuation">:</span><span class="token punctuation">(</span>EVLayoutRequest <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>layout<span class="token punctuation">;</span>
+<span class="token comment">//示例代码里画廊视图模式下 主视频窗口可以显示为1x1、1x2、2x2、2x3、3x3的窗口模式（可根据需要调整窗口位置）</span>
+let layout <span class="token operator">=</span> <span class="token function">EVLayoutRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+layout<span class="token punctuation">.</span>page <span class="token operator">=</span> <span class="token punctuation">.</span>currentPage
+layout<span class="token punctuation">.</span>max_resolution <span class="token operator">=</span> <span class="token function">EVVideoSize</span><span class="token punctuation">(</span>width<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> height<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">)</span>
+layout<span class="token punctuation">.</span>mode <span class="token operator">=</span> <span class="token punctuation">.</span>galleryMode
+layout<span class="token punctuation">.</span>max_type <span class="token operator">=</span> <span class="token punctuation">.</span>_4
+appDelegate<span class="token punctuation">.</span>evengine<span class="token punctuation">.</span><span class="token function">setLayout</span><span class="token punctuation">(</span>layout<span class="token punctuation">)</span>
+</code></pre></div><h3 id="静音和解除静音">静音和解除静音</h3> <p><strong>执行本地麦克风开启或者关闭</strong></p> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 是否启用麦克风
+
+ @param enable YES为开启NO为关闭
+ @return 返回结果可忽视
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> enableMic<span class="token punctuation">:</span><span class="token punctuation">(</span>BOOL<span class="token punctuation">)</span>enable<span class="token punctuation">;</span>
+<span class="token comment">//示例代码</span>
+<span class="token number">1.</span>关闭麦克风
+evengine<span class="token punctuation">.</span><span class="token function">enableMic</span><span class="token punctuation">(</span>false<span class="token punctuation">)</span>
+<span class="token number">2.</span>开启麦克风
+evengine<span class="token punctuation">.</span><span class="token function">enableMic</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span>
+</code></pre></div><h3 id="申请举手发言">申请举手发言</h3> <p><strong>用户被管理员禁言后可以调用此API申请发言</strong></p> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/// 申请举手发言</span>
+<span class="token comment">/// @param val YES</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> requestRemoteUnmute<span class="token punctuation">:</span><span class="token punctuation">(</span>BOOL<span class="token punctuation">)</span>val<span class="token punctuation">;</span>
+<span class="token comment">//示例代码</span>
+evengine<span class="token punctuation">.</span><span class="token function">requestRemoteUnmute</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span>
+</code></pre></div><h3 id="查看当前麦克风状态">查看当前麦克风状态</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token operator">-</span> <span class="token punctuation">(</span>BOOL<span class="token punctuation">)</span> micEnabled<span class="token punctuation">;</span>
+</code></pre></div><h3 id="查看当前摄像头状态">查看当前摄像头状态</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token operator">-</span> <span class="token punctuation">(</span>BOOL<span class="token punctuation">)</span> cameraEnabled<span class="token punctuation">;</span>
+</code></pre></div><h3 id="是否打开高帧率">是否打开高帧率</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token operator">-</span> <span class="token punctuation">(</span>BOOL<span class="token punctuation">)</span> highFPSEnabled<span class="token punctuation">;</span>
+</code></pre></div><h3 id="获取当前用户的displayname">获取当前用户的displayName</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/// 获取当前用户displayname</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span>NSString <span class="token operator">*</span> _Nonnull<span class="token punctuation">)</span> getDisplayName<span class="token punctuation">;</span>
+<span class="token comment">//示例代码</span>
+evengine<span class="token punctuation">.</span><span class="token function">getDisplayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="是否打开1080p">是否打开1080P</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> enableHD<span class="token punctuation">:</span><span class="token punctuation">(</span>BOOL<span class="token punctuation">)</span>enable<span class="token punctuation">;</span>
+</code></pre></div><h3 id="进入语音或者视频模式">进入语音或者视频模式</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/// 进入语音或者视频h模式</span>
+<span class="token comment">/// @param active 0为语音 3为视频</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> setVideoActive<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>active<span class="token punctuation">;</span>
+<span class="token comment">//示例代码</span>
+evengine<span class="token punctuation">.</span><span class="token function">setVideoActive</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="修改会中名字">修改会中名字</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/// 修改会中名字</span>
+<span class="token comment">/// @param display_name 会中名字</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> setInConfDisplayName<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>display_name<span class="token punctuation">;</span>
+<span class="token comment">//示例代码</span>
+evengine<span class="token punctuation">.</span><span class="token function">setInConfDisplayName</span><span class="token punctuation">(</span><span class="token string">&quot;修改名字&quot;</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="关闭或打开本地视频">关闭或打开本地视频</h3> <p><strong>执行本地摄像头开启或者关闭</strong></p> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 是否启用摄像头
+
+ @param enable YES为开启NO为关闭
+ @return 返回结果可忽视
+ */</span>
+ <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> enableCamera<span class="token punctuation">:</span><span class="token punctuation">(</span>BOOL<span class="token punctuation">)</span>enable<span class="token punctuation">;</span>
+ <span class="token comment">//示例代码</span>
+ <span class="token number">1.</span>关闭摄像头
+ evengine<span class="token punctuation">.</span><span class="token function">enableCamera</span><span class="token punctuation">(</span>false<span class="token punctuation">)</span>
+ <span class="token number">2.</span>开启摄像头
+ evengine<span class="token punctuation">.</span><span class="token function">enableCamera</span><span class="token punctuation">(</span>true<span class="token punctuation">)</span>
+</code></pre></div><h3 id="切换前置后置摄像头">切换前置后置摄像头</h3> <p><strong>执行切换前置摄像头或者后置摄像头</strong></p> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 切换摄像头
+
+ @return 返回结果可忽视
+ */</span>
+ <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> switchCamera<span class="token punctuation">;</span>
+ <span class="token comment">//示例代码</span>
+ evengine<span class="token punctuation">.</span><span class="token function">switchCamera</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="接收和显示共享内容">接收和显示共享内容</h3> <p><strong>当为 EVSDK 设置了内容窗口的时候，收到共享或者共享结束 SDK 都会通过回调的形式告诉终端</strong></p> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 接收到内容分享或者内容分享结束的回调
+
+ @param info EVContentInfo对象
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onContent<span class="token punctuation">:</span><span class="token punctuation">(</span>EVContentInfo <span class="token operator">*</span> _Nonnull<span class="token punctuation">)</span>info<span class="token punctuation">;</span>
+<span class="token comment">//示例代码</span>
+func <span class="token function">onContent</span><span class="token punctuation">(</span>_ info<span class="token punctuation">:</span> EVContentInfo<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  
+        <span class="token keyword">if</span> info<span class="token punctuation">.</span>status <span class="token operator">==</span> <span class="token punctuation">.</span>denied <span class="token punctuation">{</span>
+            
+        <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span> info<span class="token punctuation">.</span>status <span class="token operator">==</span> <span class="token punctuation">.</span>granted <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> info<span class="token punctuation">.</span>type <span class="token operator">==</span> <span class="token punctuation">.</span>content <span class="token operator">||</span> info<span class="token punctuation">.</span>type <span class="token operator">==</span> <span class="token punctuation">.</span>whiteBoard <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> info<span class="token punctuation">.</span>enabled <span class="token punctuation">{</span>
+                    <span class="token keyword">if</span> info<span class="token punctuation">.</span>dir <span class="token operator">==</span> <span class="token punctuation">.</span>upload <span class="token punctuation">{</span>
+                        
+                    <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+                        contentView<span class="token punctuation">.</span>isHidden <span class="token operator">=</span> false
+                        contentMenuView<span class="token punctuation">.</span>isHidden <span class="token operator">=</span> false
+                        selectBtn<span class="token punctuation">.</span>isSelected <span class="token operator">=</span> false
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    contentView<span class="token punctuation">.</span>isHidden <span class="token operator">=</span> true
+                    contentMenuView<span class="token punctuation">.</span>isHidden <span class="token operator">=</span> true
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span> info<span class="token punctuation">.</span>status <span class="token operator">==</span> <span class="token punctuation">.</span>released <span class="token punctuation">{</span>
+            contentView<span class="token punctuation">.</span>isHidden <span class="token operator">=</span> true
+            contentMenuView<span class="token punctuation">.</span>isHidden <span class="token operator">=</span> true
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><h2 id="p2p呼叫相关内容">P2P呼叫相关内容</h2> <p>P2P 呼叫的基本流程如下图所示</p> <img src="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuU9I008bnu821OrIGqqb1GLTEoK5rx1W5s-eW9L2W560Gd9YJev2QN5gKMQA4LXBNdv9ga9-MMeHacOhXMSpzZrViklvsiwd-rgVzIrzsJ3h-PJTB-SkGjU2P86EWjAJFREUzMu7AdwwS_FJ_Wr0SvxktlLyTVVJLPEUx9tyOlyye54GTwAh1BeMOPWHo0KlcnfUh0UfUB5-xlizFK0DBzQjK_1qiKtEpqlBJ84OW-m_NP0HI5u0gijBJIv9JS7ZpUUxbp_VlHQlPv5TXMm7s97FvYvzFcKhnAdOhJ52X2P4yVEfFLZ24KdnyoahddLi1xhZQVzqYFUHp4Sen0onhFpCF92lqrABKlEIKnKqyafparABe06cYIlgZ2YEEcINW8CL58Bpbrh1qXbQLE2DjOBKr29TkFgOl1SBLm23xkdwdS-cxNowVHCeM2Qi8HZKa7335zI6E1HpEQJcfG3p4m00" alt="uml diagram"> <h3 id="p2p主动呼叫">P2P主动呼叫</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/// P2P主动呼叫</span>
+<span class="token comment">/// @param conference_number 需要呼叫人的UserId</span>
+<span class="token comment">/// @param display_name 自己的名字</span>
+<span class="token comment">/// @param password 密码设为无</span>
+<span class="token comment">/// @param type EVSvcCallP2P</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> joinConference<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>conference_number display_name<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>display_name password<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>password svcCallType<span class="token punctuation">:</span><span class="token punctuation">(</span>EVSvcCallType<span class="token punctuation">)</span>type<span class="token punctuation">;</span>
+<span class="token comment">//示例代码</span>
+appDelegate<span class="token punctuation">.</span>evengine<span class="token punctuation">.</span><span class="token function">joinConference</span><span class="token punctuation">(</span><span class="token string">&quot;用户名&quot;</span><span class="token punctuation">,</span> display_name<span class="token punctuation">:</span> <span class="token string">&quot;会议中的名字&quot;</span><span class="token punctuation">,</span> password<span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> svcCallType<span class="token punctuation">:</span> <span class="token punctuation">.</span>P2P<span class="token punctuation">)</span>
+</code></pre></div><h3 id="接收到p2p呼叫请求">接收到P2P呼叫请求</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/// 收到邀请</span>
+<span class="token comment">/// @param info 会议详情</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onJoinConferenceIndication<span class="token punctuation">:</span><span class="token punctuation">(</span>EVCallInfo <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>info<span class="token punctuation">;</span>
+
+<span class="token function">__attribute__</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token function">visibility</span><span class="token punctuation">(</span><span class="token string">&quot;default&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">@interface</span> EVCallInfo <span class="token punctuation">:</span> NSObject
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>assign<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> BOOL isAudioOnly<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>assign<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> BOOL contentEnabled<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>copy<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> NSString <span class="token operator">*</span>_Nonnull peer<span class="token punctuation">;</span><span class="token comment">//邀请人名字</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>copy<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> NSString <span class="token operator">*</span>_Nonnull conference_number<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>copy<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> NSString <span class="token operator">*</span>_Nonnull password<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>strong<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> EVError <span class="token operator">*</span>_Nonnull err<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>assign<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> BOOL isBigConference<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>assign<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> BOOL isRemoteMuted<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>assign<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> EVSvcCallType svcCallType<span class="token punctuation">;</span><span class="token comment">//会议类型判断为P2P邀请还是普通会议</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>assign<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> EVSvcCallAction svcCallAction<span class="token punctuation">;</span>
+<span class="token keyword">@end</span>
+
+</code></pre></div><h3 id="接听">接听</h3> <div class="language-swift extra-class"><pre class="language-swift"><code><span class="token comment">//拿到会议号码去呼叫当前P2P会议</span>
+<span class="token keyword">func</span> <span class="token function">dialCall</span><span class="token punctuation">(</span>sipNumber sip<span class="token punctuation">:</span><span class="token builtin">String</span><span class="token punctuation">,</span> isVideoMode flag<span class="token punctuation">:</span><span class="token builtin">Bool</span><span class="token punctuation">,</span> disPlayName name<span class="token punctuation">:</span><span class="token builtin">String</span><span class="token punctuation">,</span> withPassword password<span class="token punctuation">:</span><span class="token builtin">String</span><span class="token punctuation">,</span> callType type<span class="token punctuation">:</span><span class="token builtin">EVSvcCallType</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="挂断">挂断</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> acceptCall<span class="token punctuation">;</span>
+</code></pre></div><h3 id="对方已接受p2p呼叫">对方已接受P2P呼叫</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onCallPeerConnected<span class="token punctuation">:</span><span class="token punctuation">(</span>EVCallInfo <span class="token operator">*</span> _Nonnull<span class="token punctuation">)</span>info<span class="token punctuation">;</span>
+</code></pre></div><h3 id="获取主叫方头像地址">获取主叫方头像地址</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onPeerImageUrl<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString<span class="token operator">*</span><span class="token punctuation">)</span>imageUrl<span class="token punctuation">;</span>
+</code></pre></div><h3 id="结束呼叫">结束呼叫</h3> <p><strong>在需要结束呼叫的时候调用 SDK 的离会 API</strong></p> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> leaveConference<span class="token punctuation">;</span>
+<span class="token comment">//示例代码</span>
+evengine<span class="token punctuation">.</span><span class="token function">leaveConference</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">//退出成功后，会收到sdk的回调</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onCallEnd<span class="token punctuation">:</span><span class="token punctuation">(</span>EVCallInfo <span class="token operator">*</span> _Nonnull<span class="token punctuation">)</span>info<span class="token punctuation">;</span>
+</code></pre></div><h2 id="api-参考">API 参考</h2> <div class="custom-block tip"><p class="title"></p><p>以下为用户相关接口回调</p></div><h3 id="onloginsucceed">onLoginSucceed</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 登录成功回调
+
+ @param user 返回用户信息
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onLoginSucceed<span class="token punctuation">:</span><span class="token punctuation">(</span>EVUserInfo <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>user<span class="token punctuation">;</span>
+</code></pre></div><h3 id="onregister">onRegister</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 视频服务注册状态（注册状态变化的时候将会走此回调）
+
+ @param registered YES为成功 NO为失败
+ */</span>
+
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onRegister<span class="token punctuation">:</span><span class="token punctuation">(</span>BOOL<span class="token punctuation">)</span>registered<span class="token punctuation">;</span>
+</code></pre></div><h3 id="ondownloaduserimagecomplete">onDownloadUserImageComplete</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 用户头像下载成功回调
+
+ @param path 保存路径
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onDownloadUserImageComplete<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>path<span class="token punctuation">;</span>
+</code></pre></div><h3 id="onuploaduserimagecomplete">onUploadUserImageComplete</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 用户上传头像成功回调
+
+ @param path 头像路径
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onUploadUserImageComplete<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>path<span class="token punctuation">;</span>
+</code></pre></div><h3 id="onnetworkquality">onNetworkQuality</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">//信号的强度回调，quality_rating代表信号等级越小信号越差</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onNetworkQuality<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span>quality_rating<span class="token punctuation">;</span>
+</code></pre></div><h3 id="onmutespeakingdetected">onMuteSpeakingDetected</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">//监测到说话但是麦克风未打开是会有此回调</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onMuteSpeakingDetected<span class="token punctuation">;</span>
+</code></pre></div><h3 id="enablesecure">enableSecure</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 是否启用https协议
+
+ @param enable YES为https NO为http
+ @return 结果返回
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> enableSecure<span class="token punctuation">:</span><span class="token punctuation">(</span>BOOL<span class="token punctuation">)</span>enable<span class="token punctuation">;</span>
+<span class="token comment">//示例</span>
+<span class="token punctuation">[</span>evengine enableSecure<span class="token punctuation">:</span>YES<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="encryptpassword">encryptPassword</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 用户登录密码加密
+
+ @param password 密码明文
+ @return 返回加密后的密码
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span>NSString <span class="token operator">*</span> _Nonnull<span class="token punctuation">)</span> encryptPassword<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span> _Nonnull<span class="token punctuation">)</span>password<span class="token punctuation">;</span>
+<span class="token comment">//示例</span>
+NSString <span class="token operator">*</span>password <span class="token operator">=</span> <span class="token punctuation">[</span>evengine encryptPassword<span class="token punctuation">:</span>password<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="logout">logout</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 用户退出
+
+ @return 返回结果
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> logout<span class="token punctuation">;</span>
+<span class="token comment">//示例</span>
+<span class="token punctuation">[</span>evengine logout<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="downloaduserimage">downloadUserImage</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 下载用户当前头像（需登录后调用）
+
+ @param path 指定储存地址
+ @return 返回结果
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> downloadUserImage<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>path<span class="token punctuation">;</span>
+<span class="token comment">//示例</span>
+<span class="token punctuation">[</span>evengine downloadUserImage<span class="token punctuation">:</span>downloadimagepath<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="uploaduserimage">uploadUserImage</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 向服务器上传用户头像
+
+ @param path 上传图片地址
+ @return 返回结果
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> uploadUserImage<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>path<span class="token punctuation">;</span>
+<span class="token comment">//示例</span>
+<span class="token punctuation">[</span>evengine uploadUserImage<span class="token punctuation">:</span>downloadimagepath<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="changepassword">changePassword</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 修改当前用户密码
+
+ @param oldpassword 原密码
+ @param newpassword 新密码
+ @return 返回结果
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> changePassword<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>oldpassword newpassword<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>newpassword<span class="token punctuation">;</span>
+<span class="token comment">//示例（密码需要使用SDK方法加密）</span>
+<span class="token keyword">int</span> state <span class="token operator">=</span>  <span class="token punctuation">[</span>evengine changePassword<span class="token punctuation">:</span><span class="token punctuation">[</span>evengine encryptPassword<span class="token punctuation">:</span>oldpwStr<span class="token punctuation">]</span> newpassword<span class="token punctuation">:</span><span class="token punctuation">[</span>evengine encryptPassword<span class="token punctuation">:</span>newpwStr<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>state <span class="token operator">==</span> EVOK<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//修改成功</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="changedisplayname">changeDisplayName</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 修改当前用户名称
+
+ @param display_name 用户名称
+ @return 返回结果
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> changeDisplayName<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>display_name<span class="token punctuation">;</span>
+<span class="token comment">//示例</span>
+<span class="token keyword">int</span> state <span class="token operator">=</span> <span class="token punctuation">[</span>evengine changeDisplayName<span class="token punctuation">:</span>displayNameStr<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>state <span class="token operator">==</span> EVOK<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//修改成功</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="getuserinfo">getUserInfo</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 获取当前用户信息
+
+ @return 返回当前用户信息
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span>EVUserInfo <span class="token operator">*</span>_Nullable<span class="token punctuation">)</span> getUserInfo<span class="token punctuation">;</span>
+<span class="token comment">//示例</span>
+EVUserInfo <span class="token operator">*</span>userInfo <span class="token operator">=</span> <span class="token punctuation">[</span>evengine getUserInfo<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token function">__attribute__</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token function">visibility</span><span class="token punctuation">(</span><span class="token string">&quot;default&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">@interface</span> EVUserInfo <span class="token punctuation">:</span> NSObject
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>copy<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> NSString <span class="token operator">*</span>_Nonnull username<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>copy<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> NSString <span class="token operator">*</span>_Nonnull displayName<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>copy<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> NSString <span class="token operator">*</span>_Nonnull org<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>copy<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> NSString <span class="token operator">*</span>_Nonnull email<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>copy<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> NSString <span class="token operator">*</span>_Nonnull cellphone<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>copy<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> NSString <span class="token operator">*</span>_Nonnull telephone<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>assign<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> BOOL everChangedPasswd<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>copy<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> NSString <span class="token operator">*</span>_Nonnull dept<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>copy<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> NSString <span class="token operator">*</span>_Nonnull customizedH5UrlPrefix<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>copy<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> NSString <span class="token operator">*</span>_Nonnull token<span class="token punctuation">;</span>
+<span class="token keyword">@end</span>
+</code></pre></div><div class="custom-block tip"><p class="title"></p><p>以下为呼叫相关接口及回调</p></div><h3 id="oncallconnected">onCallConnected</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 入会成功之后走此回调
+
+ @param info 当前呼叫信息
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onCallConnected<span class="token punctuation">:</span><span class="token punctuation">(</span>EVCallInfo <span class="token operator">*</span> _Nonnull<span class="token punctuation">)</span>info<span class="token punctuation">;</span>
+</code></pre></div><h3 id="oncallend">onCallEnd</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 会议结束后走此回调
+
+ @param info 会议信息
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onCallEnd<span class="token punctuation">:</span><span class="token punctuation">(</span>EVCallInfo <span class="token operator">*</span> _Nonnull<span class="token punctuation">)</span>info<span class="token punctuation">;</span>
+</code></pre></div><h3 id="oncontent">onContent</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 主会场模式开启关闭通知（在主会场模式下，将只能收到一路远端视频）
+
+ @param info 主会场信息
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onContent<span class="token punctuation">:</span><span class="token punctuation">(</span>EVContentInfo <span class="token operator">*</span> _Nonnull<span class="token punctuation">)</span>info<span class="token punctuation">;</span>
+<span class="token comment">//示例代码</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onContent<span class="token punctuation">:</span><span class="token punctuation">(</span>EVContentInfo <span class="token operator">*</span> _Nonnull<span class="token punctuation">)</span>info
+<span class="token punctuation">{</span>
+    <span class="token function">dispatch_async</span><span class="token punctuation">(</span><span class="token function">dispatch_get_main_queue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">^</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>info<span class="token punctuation">.</span>type <span class="token operator">==</span> EVStreamContent <span class="token operator">||</span> info<span class="token punctuation">.</span>type <span class="token operator">==</span> EVStreamWhiteBoard<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>info<span class="token punctuation">.</span>enabled<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">//当前会议为主会场模式</span>
+            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                <span class="token comment">//当前会议为讨论模式</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="onlayoutsiteindication">onLayoutSiteIndication</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 收到禁言或者解除禁言的通知
+
+ @param site 发起操作的用户
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onLayoutSiteIndication<span class="token punctuation">:</span><span class="token punctuation">(</span>EVSite <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>site<span class="token punctuation">;</span>
+<span class="token comment">//示例代码</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onLayoutSiteIndication<span class="token punctuation">:</span><span class="token punctuation">(</span>EVSite <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>site
+<span class="token punctuation">{</span>
+    <span class="token function">dispatch_async</span><span class="token punctuation">(</span><span class="token function">dispatch_get_main_queue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">^</span><span class="token punctuation">{</span>
+    <span class="token comment">//is_local为YES,指的是当前自己操作的麦克风，否则为当前会议中的其他用户操作的麦克风</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>site<span class="token punctuation">.</span>is_local<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>site<span class="token punctuation">.</span>remote_muted<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">//被禁言</span>
+            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                <span class="token comment">//解除禁言</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>site<span class="token punctuation">.</span>mic_muted<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">//被禁言</span>
+            <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token comment">//解除禁言</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="onlayoutspeakerindication">onLayoutSpeakerIndication</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 当前会议的发言者
+
+ @param speaker 发言人信息
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onLayoutSpeakerIndication<span class="token punctuation">:</span><span class="token punctuation">(</span>EVLayoutSpeakerIndication <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>speaker<span class="token punctuation">;</span>
+<span class="token comment">//示例代码</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onLayoutSpeakerIndication<span class="token punctuation">:</span><span class="token punctuation">(</span>EVLayoutSpeakerIndication <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>speaker
+<span class="token punctuation">{</span>
+    <span class="token function">dispatch_async</span><span class="token punctuation">(</span><span class="token function">dispatch_get_main_queue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">^</span><span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span><span class="token keyword">self</span><span class="token operator">-&gt;</span>remoteList<span class="token punctuation">.</span>count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">self</span><span class="token operator">-&gt;</span>remotVideoController <span class="token operator">=</span> <span class="token keyword">self</span><span class="token operator">-&gt;</span>remoteList<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token keyword">self</span><span class="token operator">-&gt;</span>remotVideoController<span class="token punctuation">.</span>userName<span class="token punctuation">.</span>stringValue isEqualToString<span class="token punctuation">:</span>speaker<span class="token punctuation">.</span>speaker_name<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token comment">//当前这个窗口的人在发言</span>
+            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                <span class="token comment">//其他窗口的人没有发言</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="onjoinconferenceindication">onJoinConferenceIndication</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 收到会议邀请的通知
+
+ @param info 邀请会议的信息
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onJoinConferenceIndication<span class="token punctuation">:</span><span class="token punctuation">(</span>EVCallInfo <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>info<span class="token punctuation">;</span>
+<span class="token function">__attribute__</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token function">visibility</span><span class="token punctuation">(</span><span class="token string">&quot;default&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">@interface</span> EVCallInfo <span class="token punctuation">:</span> NSObject
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>assign<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> BOOL isAudioOnly<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>assign<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> BOOL contentEnabled<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>copy<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> NSString <span class="token operator">*</span>_Nonnull peer<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>copy<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> NSString <span class="token operator">*</span>_Nonnull conference_number<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>copy<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> NSString <span class="token operator">*</span>_Nonnull password<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>strong<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> EVError <span class="token operator">*</span>_Nonnull err<span class="token punctuation">;</span>
+<span class="token keyword">@end</span>
+</code></pre></div><h3 id="onrecordingindication">onRecordingIndication</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 是否有录制终端参与
+
+ @param info 录制终端信息
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onRecordingIndication<span class="token punctuation">:</span><span class="token punctuation">(</span>EVRecordingInfo <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>info<span class="token punctuation">;</span>
+<span class="token comment">//录制相关枚举</span>
+<span class="token keyword">typedef</span> <span class="token function">NS_ENUM</span> <span class="token punctuation">(</span>NSUInteger<span class="token punctuation">,</span> EVRecordingState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    EVRecordingStateNone <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token comment">//没有录制</span>
+    EVRecordingStateOn <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span><span class="token comment">//正在录制</span>
+    EVRecordingStatePause <span class="token operator">=</span> <span class="token number">2</span><span class="token comment">//暂停录制</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="onmessageoverlay">onMessageOverlay</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 会议字幕相关通知
+
+ @param msg 字幕信息
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onMessageOverlay<span class="token punctuation">:</span><span class="token punctuation">(</span>EVMessageOverlay <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>msg<span class="token punctuation">;</span>
+ <span class="token function">__attribute__</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token function">visibility</span><span class="token punctuation">(</span><span class="token string">&quot;default&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">@interface</span> EVMessageOverlay <span class="token punctuation">:</span> NSObject
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>assign<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> BOOL enable<span class="token punctuation">;</span><span class="token comment">//是否开启字幕</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>copy<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> NSString <span class="token operator">*</span>_Nonnull content<span class="token punctuation">;</span><span class="token comment">//字幕内容</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>assign<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> <span class="token keyword">int</span> displayRepetitions<span class="token punctuation">;</span><span class="token comment">//字幕重复次数</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>assign<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> <span class="token keyword">int</span> displaySpeed<span class="token punctuation">;</span><span class="token comment">//字幕速度</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>assign<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> <span class="token keyword">int</span> verticalBorder<span class="token punctuation">;</span><span class="token comment">//字幕垂直边界</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>assign<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> <span class="token keyword">int</span> transparency<span class="token punctuation">;</span><span class="token comment">//字幕透明度</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>assign<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> <span class="token keyword">int</span> fontSize<span class="token punctuation">;</span><span class="token comment">//字体大小</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>copy<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> NSString <span class="token operator">*</span>_Nonnull foregroundColor<span class="token punctuation">;</span><span class="token comment">//字体颜色</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>copy<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> NSString <span class="token operator">*</span>_Nonnull backgroundColor<span class="token punctuation">;</span><span class="token comment">//背景颜色</span>
+<span class="token keyword">@end</span>
+</code></pre></div><h3 id="onparticipant">onParticipant</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 获取当前参与会议人数
+
+ @param number 当前参与人数
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onParticipant<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>number<span class="token punctuation">;</span>
+</code></pre></div><h3 id="当前会议禁止解除静音">当前会议禁止解除静音</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">//warn = EVWarnUnmuteAudioNotAllowed</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onWarn<span class="token punctuation">:</span><span class="token punctuation">(</span>EVWarn <span class="token operator">*</span><span class="token punctuation">)</span>warn<span class="token punctuation">;</span>
+</code></pre></div><h3 id="主持人解除当前终端静音时收到的回调">主持人解除当前终端静音时收到的回调</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">//warn = EVWarnUnmuteAudioIndication</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onWarn<span class="token punctuation">:</span><span class="token punctuation">(</span>EVWarn <span class="token operator">*</span><span class="token punctuation">)</span>warn<span class="token punctuation">;</span>
+<span class="token comment">//示例代码</span>
+<span class="token punctuation">[</span>appDelegate<span class="token punctuation">.</span>evengine enableMic<span class="token punctuation">:</span>NO<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">//不同意解除</span>
+<span class="token punctuation">[</span>appDelegate<span class="token punctuation">.</span>evengine enableMic<span class="token punctuation">:</span>YES<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">//同意解除</span>
+</code></pre></div><h3 id="远端静音提示">远端静音提示</h3> <p><strong>当会议中发生远端对该终端进行静音或者解除静音时，SDK会该回调事件</strong></p> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code>onUploadFeedback<span class="token comment">/**
+ 远端静音提示
+ 
+ @param int, 当取值为0时，表示远端静音，否则为远端解除静音
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onMicMutedShow<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>mic_muted<span class="token punctuation">;</span>
+</code></pre></div><div class="custom-block tip"><p class="title"></p><p>其他接口及回调</p></div><h3 id="setdevicerotation">setDeviceRotation</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 设置当前的设备旋转角度，一般关注为横竖屏
+
+ @param rotation 当前设备旋转角度
+ @return 可以忽略
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> setDeviceRotation<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>rotation<span class="token punctuation">;</span>
+</code></pre></div><h3 id="audiointerruption">audioInterruption</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 当前音视频被中断是的处理
+
+ @param type 是否被中断
+ @return 可以忽略
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> audioInterruption<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>type<span class="token punctuation">;</span>
+</code></pre></div><h3 id="onerror">onError</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/** SDK错误回调需要查看错误类型做出相应处理 */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onError<span class="token punctuation">:</span><span class="token punctuation">(</span>EVError <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>err<span class="token punctuation">;</span>
+</code></pre></div><h3 id="onwarn">onWarn</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/** SDK会议中的警告回调需要查看错误类型做出相应处理 */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onError<span class="token punctuation">:</span><span class="token punctuation">(</span>EVError <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>err<span class="token punctuation">;</span>
+<span class="token comment">//示例</span>
+func <span class="token function">onWarn</span><span class="token punctuation">(</span>_ warn<span class="token punctuation">:</span> EVWarn<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="setdelegate">setDelegate</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 设置SDK代理
+
+ @param aDelegate SDK代理
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> setDelegate<span class="token punctuation">:</span><span class="token punctuation">(</span>id<span class="token operator">&lt;</span>EVEngineDelegate<span class="token operator">&gt;</span>_Nonnull<span class="token punctuation">)</span>aDelegate<span class="token punctuation">;</span>
+<span class="token comment">//示例代码</span>
+<span class="token punctuation">[</span>evengine setDelegate<span class="token punctuation">:</span><span class="token keyword">self</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="enablehighfps">enableHighFPS</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 设置高帧率
+
+ @param enable YES为高帧率 NO为相反
+ @return 返回结果
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> enableHighFPS<span class="token punctuation">:</span><span class="token punctuation">(</span>BOOL<span class="token punctuation">)</span>enable<span class="token punctuation">;</span>
+<span class="token comment">//示例</span>
+<span class="token punctuation">[</span>evengine enableHighFPS<span class="token punctuation">:</span>YES<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="getnetworkquality">getNetworkQuality</h3> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/**
+ 获取当前信号强度
+
+ @return 返回信号数值
+ */</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span> getNetworkQuality<span class="token punctuation">;</span>
+<span class="token comment">//示例</span>
+<span class="token keyword">float</span> signalValue <span class="token operator">=</span> <span class="token punctuation">[</span>evengine getNetworkQuality<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="错误码以及枚举类型">错误码以及枚举类型</h2> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code><span class="token comment">/** 信号统计相关枚举 */</span>
+<span class="token keyword">typedef</span> <span class="token function">NS_ENUM</span> <span class="token punctuation">(</span>NSUInteger<span class="token punctuation">,</span> EVStreamType<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	EVStreamAudio <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token comment">//音频流</span>
+	EVStreamVideo <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span><span class="token comment">//视频流</span>
+	EVStreamContent <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span><span class="token comment">//分享内容</span>
+	EVStreamWhiteBoard <span class="token operator">=</span> <span class="token number">3</span><span class="token comment">//白板</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">typedef</span> <span class="token function">NS_ENUM</span> <span class="token punctuation">(</span>NSUInteger<span class="token punctuation">,</span> EVStreamDir<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	EVStreamUpload <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token comment">//上传</span>
+	EVStreamDownload <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span><span class="token comment">//下载</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span>NSArray<span class="token operator">&lt;</span>EVStreamStats <span class="token operator">*</span><span class="token operator">&gt;</span> <span class="token operator">*</span> _Nonnull<span class="token punctuation">)</span> getStats<span class="token punctuation">;</span>
+
+<span class="token comment">/** 日志设置 */</span>
+<span class="token keyword">typedef</span> <span class="token function">NS_ENUM</span> <span class="token punctuation">(</span>NSUInteger<span class="token punctuation">,</span> EVLogLevel<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    EVLogLevelDebug <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    EVLogLevelMessage <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    EVLogLevelWARNING <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    EVLogLevelError <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    EVLogLevelFatal <span class="token operator">=</span> <span class="token number">4</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> setLog<span class="token punctuation">:</span><span class="token punctuation">(</span>EVLogLevel<span class="token punctuation">)</span>level path<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>log_path file<span class="token punctuation">:</span><span class="token punctuation">(</span>NSString <span class="token operator">*</span>_Nullable<span class="token punctuation">)</span>log_file_name size<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token keyword">unsigned</span> <span class="token keyword">int</span><span class="token punctuation">)</span>max_file_size<span class="token punctuation">;</span>
+
+<span class="token comment">/** SDK返回错误信息类型 */</span>
+<span class="token keyword">typedef</span> <span class="token function">NS_ENUM</span> <span class="token punctuation">(</span>NSUInteger<span class="token punctuation">,</span> EVErrorType<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    EVErrorTypeSdk <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token comment">//SDK错误</span>
+    EVErrorTypeServer <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span><span class="token comment">//服务器错误</span>
+    EVErrorTypeLocate <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span><span class="token comment">//定位错误</span>
+    EVErrorTypeCall <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">,</span><span class="token comment">//呼叫错误</span>
+    EVErrorTypeUnknown <span class="token operator">=</span> <span class="token number">4</span><span class="token comment">//未知错误</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">//如果接收到SDK的错误回调，可以根据EVErrorType定位错误类型</span>
+<span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>onError<span class="token punctuation">:</span><span class="token punctuation">(</span>EVError <span class="token operator">*</span>_Nonnull<span class="token punctuation">)</span>err<span class="token punctuation">;</span>
+<span class="token function">__attribute__</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token function">visibility</span><span class="token punctuation">(</span><span class="token string">&quot;default&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">@interface</span> EVError <span class="token punctuation">:</span> NSObject
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>assign<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> EVErrorType type<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>assign<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> <span class="token keyword">int</span> code<span class="token punctuation">;</span>
+<span class="token keyword">@property</span> <span class="token punctuation">(</span>copy<span class="token punctuation">,</span> nonatomic<span class="token punctuation">)</span> NSString <span class="token operator">*</span>_Nonnull msg<span class="token punctuation">;</span>
+<span class="token keyword">@end</span>
+<span class="token comment">//SDK 错误枚举</span>
+<span class="token keyword">typedef</span> <span class="token function">NS_ENUM</span> <span class="token punctuation">(</span>NSUInteger<span class="token punctuation">,</span> EVSdkError<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    EVOK <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    EVNG <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    EVUninitialized <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    EVBadFormat <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    EVNotInConf <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">,</span>
+    EVBadParam <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">,</span>
+    EVRegisterFailed <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">,</span>
+    EVInternalError <span class="token operator">=</span> <span class="token number">7</span>
+ <span class="token punctuation">}</span><span class="token punctuation">;</span>
+ <span class="token comment">//服务器错误枚举</span>
+ <span class="token keyword">typedef</span> <span class="token function">NS_ENUM</span> <span class="token punctuation">(</span>NSUInteger<span class="token punctuation">,</span> EVServerError<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    EVServerApiVersionNotSupported <span class="token operator">=</span> <span class="token number">1000</span><span class="token punctuation">,</span>
+    EVServerInvalidToken <span class="token operator">=</span> <span class="token number">1001</span><span class="token punctuation">,</span>
+    EVServerInvalidParameter <span class="token operator">=</span> <span class="token number">1002</span><span class="token punctuation">,</span>
+    EVServerInvalidDevicesn <span class="token operator">=</span> <span class="token number">1003</span><span class="token punctuation">,</span>
+    EVServerInvalidMediaType <span class="token operator">=</span> <span class="token number">1004</span><span class="token punctuation">,</span>
+    EVServerPermissionDenied <span class="token operator">=</span> <span class="token number">1005</span><span class="token punctuation">,</span>
+    EVServerWrongFieldName <span class="token operator">=</span> <span class="token number">1006</span><span class="token punctuation">,</span>
+    EVServerInternalSystemError <span class="token operator">=</span> <span class="token number">1007</span><span class="token punctuation">,</span>
+    EVServerOperationFailed <span class="token operator">=</span> <span class="token number">1008</span><span class="token punctuation">,</span>
+    EVServerGetFailed <span class="token operator">=</span> <span class="token number">1009</span><span class="token punctuation">,</span>
+    EVServerNotSupported <span class="token operator">=</span> <span class="token number">1010</span><span class="token punctuation">,</span>
+    EVServerRedisLockTimeout <span class="token operator">=</span> <span class="token number">1011</span><span class="token punctuation">,</span>
+    EVServerInvalidUserNamePassword <span class="token operator">=</span> <span class="token number">1100</span><span class="token punctuation">,</span>
+    EVServerLoginFailedMoreThan5Times <span class="token operator">=</span> <span class="token number">1101</span><span class="token punctuation">,</span>
+    EVServerAccountTemporarilyLocked <span class="token operator">=</span> <span class="token number">1102</span><span class="token punctuation">,</span>
+    EVServerAccountDisabled <span class="token operator">=</span> <span class="token number">1103</span><span class="token punctuation">,</span>
+    EVServerNoUsername <span class="token operator">=</span> <span class="token number">1104</span><span class="token punctuation">,</span>
+    EVServerEmailMismatch <span class="token operator">=</span> <span class="token number">1105</span><span class="token punctuation">,</span>
+    EVServerCompanyAdministratorNotInAnyCompany <span class="token operator">=</span> <span class="token number">1106</span><span class="token punctuation">,</span>
+    EVServerFileUploadFailed <span class="token operator">=</span> <span class="token number">1200</span><span class="token punctuation">,</span>
+    EVServerInvalidLicense <span class="token operator">=</span> <span class="token number">1201</span><span class="token punctuation">,</span>
+    EVServerInvalidImportUserFile <span class="token operator">=</span> <span class="token number">1202</span><span class="token punctuation">,</span>
+    EVServerInvalidTimeServiceAddress <span class="token operator">=</span> <span class="token number">1300</span><span class="token punctuation">,</span>
+    EVServerFailedUpdateSystemProperties <span class="token operator">=</span> <span class="token number">1301</span><span class="token punctuation">,</span>
+    EVServerConfNotExists <span class="token operator">=</span> <span class="token number">1400</span><span class="token punctuation">,</span>
+    EVServerNumericidConflicts <span class="token operator">=</span> <span class="token number">1401</span><span class="token punctuation">,</span>
+    EVServerConfUpdatingInProgress <span class="token operator">=</span> <span class="token number">1402</span><span class="token punctuation">,</span>
+    EVServerConfDeletingInProgress <span class="token operator">=</span> <span class="token number">1403</span><span class="token punctuation">,</span>
+    EVServerConfTerminatingInProgress <span class="token operator">=</span> <span class="token number">1404</span><span class="token punctuation">,</span>
+    EVServerConfLaunchingInProgress <span class="token operator">=</span> <span class="token number">1405</span><span class="token punctuation">,</span>
+    EVServerConfNotInApprovedStatus <span class="token operator">=</span> <span class="token number">1406</span><span class="token punctuation">,</span>
+    EVServerConfNumericidOngoing <span class="token operator">=</span> <span class="token number">1407</span><span class="token punctuation">,</span>
+    EVServerConfNotApprovedOrOngoing <span class="token operator">=</span> <span class="token number">1409</span><span class="token punctuation">,</span>
+    EVServerParticipantNotExistsInConf <span class="token operator">=</span> <span class="token number">1410</span><span class="token punctuation">,</span>
+    EVServerNumericidAlreadyInUse <span class="token operator">=</span> <span class="token number">1412</span><span class="token punctuation">,</span>
+    EVServerInvalidConfTime <span class="token operator">=</span> <span class="token number">1415</span><span class="token punctuation">,</span>
+    EVServerInvalidConfId <span class="token operator">=</span> <span class="token number">1418</span><span class="token punctuation">,</span>
+    EVServerNotFoundSuitableMru <span class="token operator">=</span> <span class="token number">1421</span><span class="token punctuation">,</span>
+    EVServerNotFoundSuitableGateway <span class="token operator">=</span> <span class="token number">1422</span><span class="token punctuation">,</span>
+    EVServerFailedToConnectMru <span class="token operator">=</span> <span class="token number">1424</span><span class="token punctuation">,</span>
+    EVServerNotAllowDuplicatedName <span class="token operator">=</span> <span class="token number">1427</span><span class="token punctuation">,</span>
+    EVServerNotFoundConfInRedis <span class="token operator">=</span> <span class="token number">1430</span><span class="token punctuation">,</span>
+    EVServerNotInLecturerMode <span class="token operator">=</span> <span class="token number">1431</span><span class="token punctuation">,</span>
+    EVServerFailedToMuteAllParticipants <span class="token operator">=</span> <span class="token number">1433</span><span class="token punctuation">,</span>
+    EVServerFailedToConnectParticipant <span class="token operator">=</span> <span class="token number">1436</span><span class="token punctuation">,</span>
+    EVServerFailedToDisconnectParticipant <span class="token operator">=</span> <span class="token number">1439</span><span class="token punctuation">,</span>
+    EVServerFailedToChangeLayout <span class="token operator">=</span> <span class="token number">1442</span><span class="token punctuation">,</span>
+    EVServerFailedToSetSubtitle <span class="token operator">=</span> <span class="token number">1445</span><span class="token punctuation">,</span>
+    EVServerFailedToMuteParticipantAudio <span class="token operator">=</span> <span class="token number">1448</span><span class="token punctuation">,</span>
+    EVServerFailedToDeleteParticipant <span class="token operator">=</span> <span class="token number">1451</span><span class="token punctuation">,</span>
+    EVServerFailedToInviteAvcEndpoint <span class="token operator">=</span> <span class="token number">1454</span><span class="token punctuation">,</span>
+    EVServerFailedToInviteSvcEndpoints <span class="token operator">=</span> <span class="token number">1455</span><span class="token punctuation">,</span>
+    EVServerConfRoomCompletelyFull <span class="token operator">=</span> <span class="token number">1456</span><span class="token punctuation">,</span>
+    EVServerTimeoutToGenerateNumericid <span class="token operator">=</span> <span class="token number">1457</span><span class="token punctuation">,</span>
+    EVServerNotFoundProfileNamedSvc <span class="token operator">=</span> <span class="token number">1460</span><span class="token punctuation">,</span>
+    EVServerFailedToProlongConf <span class="token operator">=</span> <span class="token number">1463</span><span class="token punctuation">,</span>
+    EVServerInvalidMeetingControlRequest <span class="token operator">=</span> <span class="token number">1500</span><span class="token punctuation">,</span>
+    EVServerNameInUse <span class="token operator">=</span> <span class="token number">1600</span><span class="token punctuation">,</span>
+    EVServerEmptyEndpointName <span class="token operator">=</span> <span class="token number">1601</span><span class="token punctuation">,</span>
+    EVServerEmptyEndpointCallMode <span class="token operator">=</span> <span class="token number">1602</span><span class="token punctuation">,</span>
+    EVServerEmptyEndpointSipUsername <span class="token operator">=</span> <span class="token number">1603</span><span class="token punctuation">,</span>
+    EVServerEmptyEndpointSipPassword <span class="token operator">=</span> <span class="token number">1604</span><span class="token punctuation">,</span>
+    EVServerEmptyEndpointAddress <span class="token operator">=</span> <span class="token number">1605</span><span class="token punctuation">,</span>
+    EVServerInvalidSipUsername <span class="token operator">=</span> <span class="token number">1606</span><span class="token punctuation">,</span>
+    EVServerInvalidIpAddress <span class="token operator">=</span> <span class="token number">1607</span><span class="token punctuation">,</span>
+    EVServerEndpointNotExist <span class="token operator">=</span> <span class="token number">1608</span><span class="token punctuation">,</span>
+    EVServerE164InUse <span class="token operator">=</span> <span class="token number">1609</span><span class="token punctuation">,</span>
+    EVServerEndpointDeviceSnExist <span class="token operator">=</span> <span class="token number">1610</span><span class="token punctuation">,</span>
+    EVServerSipUsernameRegistered <span class="token operator">=</span> <span class="token number">1611</span><span class="token punctuation">,</span>
+    EVServerEndpointE164Invalid <span class="token operator">=</span> <span class="token number">1612</span><span class="token punctuation">,</span>
+    EVServerNotFoundEndpointDeviceSn <span class="token operator">=</span> <span class="token number">1613</span><span class="token punctuation">,</span>
+    EVServerNotFoundEndpointProvisionTemplate <span class="token operator">=</span> <span class="token number">1614</span><span class="token punctuation">,</span>
+    EVServerDeviceSnExists <span class="token operator">=</span> <span class="token number">1615</span><span class="token punctuation">,</span>
+    EVServerCanNotDeleteUserInReservedMeeting <span class="token operator">=</span> <span class="token number">1700</span><span class="token punctuation">,</span>
+    EVServerEmptyUserPassword <span class="token operator">=</span> <span class="token number">1701</span><span class="token punctuation">,</span>
+    EVServerEmptyUsername <span class="token operator">=</span> <span class="token number">1702</span><span class="token punctuation">,</span>
+    EVServerEmptyUserDisplayName <span class="token operator">=</span> <span class="token number">1703</span><span class="token punctuation">,</span>
+    EVServerInvalidUserEmail <span class="token operator">=</span> <span class="token number">1704</span><span class="token punctuation">,</span>
+    EVServerInvalidCellphoneNumber <span class="token operator">=</span> <span class="token number">1705</span><span class="token punctuation">,</span>
+    EVServerOriginalPasswordWrong <span class="token operator">=</span> <span class="token number">1706</span><span class="token punctuation">,</span>
+    EVServerDuplicateEmailName <span class="token operator">=</span> <span class="token number">1707</span><span class="token punctuation">,</span>
+    EVServerDuplicateCellphoneNumber <span class="token operator">=</span> <span class="token number">1708</span><span class="token punctuation">,</span>
+    EVServerDuplicateUsername <span class="token operator">=</span> <span class="token number">1709</span><span class="token punctuation">,</span>
+    EVServerInvalidConfRoomMaxCapacity <span class="token operator">=</span> <span class="token number">1710</span><span class="token punctuation">,</span>
+    EVServerShouldAssignDepartmentToDepartmentAdministrator <span class="token operator">=</span> <span class="token number">1711</span><span class="token punctuation">,</span>
+    EVServerEmptyUserEmail <span class="token operator">=</span> <span class="token number">1712</span><span class="token punctuation">,</span>
+    EVServerEmptyUserCellphoneNumber <span class="token operator">=</span> <span class="token number">1713</span><span class="token punctuation">,</span>
+    EVServerNotOrganizationAdministrator <span class="token operator">=</span> <span class="token number">1714</span><span class="token punctuation">,</span>
+    EVServerCompanyNotExist <span class="token operator">=</span> <span class="token number">1800</span><span class="token punctuation">,</span>
+    EVServerShortNameOfCompanyUsed <span class="token operator">=</span> <span class="token number">1801</span><span class="token punctuation">,</span>
+    EVServerFullNameOfCompanyUsed <span class="token operator">=</span> <span class="token number">1802</span><span class="token punctuation">,</span>
+    EVServerCompanyNotEmpty <span class="token operator">=</span> <span class="token number">1803</span><span class="token punctuation">,</span>
+    EVServerEmptyCompanyShortName <span class="token operator">=</span> <span class="token number">1804</span><span class="token punctuation">,</span>
+    EVServerAgentInUse <span class="token operator">=</span> <span class="token number">1900</span><span class="token punctuation">,</span>
+    EVServerShortNameInUse <span class="token operator">=</span> <span class="token number">1901</span><span class="token punctuation">,</span>
+    EVServerFullNameInUse <span class="token operator">=</span> <span class="token number">1902</span><span class="token punctuation">,</span>
+    EVServerAgentNotExist <span class="token operator">=</span> <span class="token number">1903</span><span class="token punctuation">,</span>
+    EVServerAgentNotEmpty <span class="token operator">=</span> <span class="token number">1904</span><span class="token punctuation">,</span>
+    EVServerConfRoomExpired <span class="token operator">=</span> <span class="token number">2000</span><span class="token punctuation">,</span>
+    EVServerNotActived <span class="token operator">=</span> <span class="token number">2001</span><span class="token punctuation">,</span>
+    EVServerNotFoundSuitableRoom <span class="token operator">=</span> <span class="token number">2003</span><span class="token punctuation">,</span>
+    EVServerNotFoundTemplateOrRoom <span class="token operator">=</span> <span class="token number">2005</span><span class="token punctuation">,</span>
+    EVServerConfRoomInUse <span class="token operator">=</span> <span class="token number">2006</span><span class="token punctuation">,</span>
+    EVServerConfRoomNumberInUse <span class="token operator">=</span> <span class="token number">2009</span><span class="token punctuation">,</span>
+    EVServerConfRoomCapacityExceedsLimit <span class="token operator">=</span> <span class="token number">2012</span><span class="token punctuation">,</span>
+    EVServerInvalidConfRoomCapacity <span class="token operator">=</span> <span class="token number">2015</span><span class="token punctuation">,</span><span class="token comment">//PasswordRequired</span>
+    EVServerInvalidConfRoomNumber <span class="token operator">=</span> <span class="token number">2018</span><span class="token punctuation">,</span>
+    EVServerRoomNotExists <span class="token operator">=</span> <span class="token number">2021</span><span class="token punctuation">,</span>
+    EvServerRoomNotAllowAnonymousCall <span class="token operator">=</span> <span class="token number">2031</span><span class="token punctuation">,</span>
+    EvServerRoomOnlyAllowOwnerActive <span class="token operator">=</span> <span class="token number">2033</span><span class="token punctuation">,</span>
+    EvServerTrialPeriodExpired <span class="token operator">=</span> <span class="token number">2035</span><span class="token punctuation">,</span>
+    EVServerCanNotDeleteDepartmentWithSubordinateDepartment <span class="token operator">=</span> <span class="token number">2100</span><span class="token punctuation">,</span>
+    EVServerCanNotDeleteDepartmentWithUsersOrEndpoints <span class="token operator">=</span> <span class="token number">2101</span><span class="token punctuation">,</span>
+    EVServerInvalidAcsConfiguration <span class="token operator">=</span> <span class="token number">2200</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">//定位错误枚举</span>
+<span class="token keyword">typedef</span> <span class="token function">NS_ENUM</span> <span class="token punctuation">(</span>NSUInteger<span class="token punctuation">,</span> EVLocateError<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    EVLocateFailedToReadBody <span class="token operator">=</span> <span class="token number">10000</span><span class="token punctuation">,</span>
+    EVLocateFailedToParseBody <span class="token operator">=</span> <span class="token number">10001</span><span class="token punctuation">,</span>
+    EVLocateLocationTimeout <span class="token operator">=</span> <span class="token number">10002</span><span class="token punctuation">,</span>
+    EVLocateErrorInfoGeneral <span class="token operator">=</span> <span class="token number">10003</span><span class="token punctuation">,</span>
+    EVLocateErrorInfoBadFormat <span class="token operator">=</span> <span class="token number">10004</span><span class="token punctuation">,</span>
+    EVLocateUnexpected <span class="token operator">=</span> <span class="token number">10005</span><span class="token punctuation">,</span>
+    EVLocateFailedToLocateClient <span class="token operator">=</span> <span class="token number">10006</span><span class="token punctuation">,</span>
+    EVLocateFailedToLocateZone <span class="token operator">=</span> <span class="token number">10007</span><span class="token punctuation">,</span>
+    EVLocateNoLocationDomain <span class="token operator">=</span> <span class="token number">10008</span><span class="token punctuation">,</span>
+    EVLocateErrorLocationRequest <span class="token operator">=</span> <span class="token number">10009</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">//呼叫相关错误枚举</span>
+<span class="token keyword">typedef</span> <span class="token function">NS_ENUM</span> <span class="token punctuation">(</span>NSUInteger<span class="token punctuation">,</span> EVCallError<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    EVCallInvalidNumericid <span class="token operator">=</span> <span class="token number">1001</span><span class="token punctuation">,</span>
+    EVCallInvalidUsername <span class="token operator">=</span> <span class="token number">1003</span><span class="token punctuation">,</span>
+    EVCallInvalidUserid <span class="token operator">=</span> <span class="token number">1005</span><span class="token punctuation">,</span>
+    EVCallInvalidDeviceid <span class="token operator">=</span> <span class="token number">1007</span><span class="token punctuation">,</span>
+    EVCallInvalidEndpoint <span class="token operator">=</span> <span class="token number">1009</span><span class="token punctuation">,</span>
+
+    EVCallServerUnlicensed <span class="token operator">=</span> <span class="token number">2001</span><span class="token punctuation">,</span>
+    EVCallNotFoundSuitableMru <span class="token operator">=</span> <span class="token number">2003</span><span class="token punctuation">,</span>
+    EVCallNeitherTemplateNorOngoingNorBindedRoom <span class="token operator">=</span> <span class="token number">2005</span><span class="token punctuation">,</span>
+    EVCallLockTimeout <span class="token operator">=</span> <span class="token number">2007</span><span class="token punctuation">,</span>
+    EVCallTemplateConfWithoutConfroom <span class="token operator">=</span> <span class="token number">2009</span><span class="token punctuation">,</span>
+    EVCallRoomExpired <span class="token operator">=</span> <span class="token number">2011</span><span class="token punctuation">,</span>
+    EVCallInvalidPassword <span class="token operator">=</span> <span class="token number">2015</span><span class="token punctuation">,</span>
+    EVCallNoTimeSpaceToActivateRoom <span class="token operator">=</span> <span class="token number">2017</span><span class="token punctuation">,</span>
+    EVCallConfPortCountUsedUp <span class="token operator">=</span> <span class="token number">2023</span><span class="token punctuation">,</span>
+    EVCallOrgPortCountUsedUp <span class="token operator">=</span> <span class="token number">2024</span><span class="token punctuation">,</span>
+    EVCallHaishenPortCountUsedUp <span class="token operator">=</span> <span class="token number">2025</span><span class="token punctuation">,</span>
+    EVCallHaishenGatewayAudioPortCountUsedUp <span class="token operator">=</span> <span class="token number">2027</span><span class="token punctuation">,</span>
+    EVCallHaishenGatewayVideoPortCountUsedUp <span class="token operator">=</span> <span class="token number">2029</span><span class="token punctuation">,</span>
+    EVCallOnlyRoomOwnerCanActivateRoom <span class="token operator">=</span> <span class="token number">2031</span><span class="token punctuation">,</span>
+    EVCallNotAllowAnonymousParty <span class="token operator">=</span> <span class="token number">2033</span><span class="token punctuation">,</span>
+    EVCallTrialOrgExpired <span class="token operator">=</span> <span class="token number">2035</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">//视频模式枚举</span>
+<span class="token keyword">typedef</span> <span class="token function">NS_ENUM</span> <span class="token punctuation">(</span>NSUInteger<span class="token punctuation">,</span> EVLayoutMode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    EVLayoutAutoMode <span class="token operator">=</span>  <span class="token number">0</span><span class="token punctuation">,</span>
+    EVLayoutGalleryMode <span class="token operator">=</span>  <span class="token number">1</span><span class="token punctuation">,</span> 
+    EVLayoutSpeakerMode <span class="token operator">=</span>  <span class="token number">2</span><span class="token punctuation">,</span>
+    EVLayoutSpecifiedMode <span class="token operator">=</span>  <span class="token number">3</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre></div><h2 id="屏幕共享">屏幕共享</h2> <p>请参考 <a href="/svcsdk/iOS-screen-sharing-howto.html">iOS 屏幕共享功能实现</a></p></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">6/6/2022, 3:52:43 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/svcsdk/Android-sdk.html" class="prev">
+            Android 版本
+          </a></span> <span class="next"><a href="/avcsdk/Android-AVCSDK.html">
+            Android 版本
+          </a></span></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-2" data-v-70334359><a href="/svcsdk/iOS-sdk.html#概述" class="sidebar-link reco-side-概述" data-v-70334359>概述</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#系统要求" class="sidebar-link reco-side-系统要求" data-v-70334359>系统要求</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#开发环境" class="sidebar-link reco-side-开发环境" data-v-70334359>开发环境</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#示例代码" class="sidebar-link reco-side-示例代码" data-v-70334359>示例代码</a></li><li class="level-2" data-v-70334359><a href="/svcsdk/iOS-sdk.html#开发入门" class="sidebar-link reco-side-开发入门" data-v-70334359>开发入门</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#初始化-sdk" class="sidebar-link reco-side-初始化-sdk" data-v-70334359>初始化 SDK</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#日志设置" class="sidebar-link reco-side-日志设置" data-v-70334359>日志设置</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#设置呼叫带宽" class="sidebar-link reco-side-设置呼叫带宽" data-v-70334359>设置呼叫带宽</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#软件运行流程图" class="sidebar-link reco-side-软件运行流程图" data-v-70334359>软件运行流程图</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#登录" class="sidebar-link reco-side-登录" data-v-70334359>登录</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#窗口设置" class="sidebar-link reco-side-窗口设置" data-v-70334359>窗口设置</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#实现视频通话" class="sidebar-link reco-side-实现视频通话" data-v-70334359>实现视频通话</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#主讲视图和画廊视图" class="sidebar-link reco-side-主讲视图和画廊视图" data-v-70334359>主讲视图和画廊视图</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#静音和解除静音" class="sidebar-link reco-side-静音和解除静音" data-v-70334359>静音和解除静音</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#申请举手发言" class="sidebar-link reco-side-申请举手发言" data-v-70334359>申请举手发言</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#查看当前麦克风状态" class="sidebar-link reco-side-查看当前麦克风状态" data-v-70334359>查看当前麦克风状态</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#查看当前摄像头状态" class="sidebar-link reco-side-查看当前摄像头状态" data-v-70334359>查看当前摄像头状态</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#是否打开高帧率" class="sidebar-link reco-side-是否打开高帧率" data-v-70334359>是否打开高帧率</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#获取当前用户的displayname" class="sidebar-link reco-side-获取当前用户的displayname" data-v-70334359>获取当前用户的displayName</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#是否打开1080p" class="sidebar-link reco-side-是否打开1080p" data-v-70334359>是否打开1080P</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#进入语音或者视频模式" class="sidebar-link reco-side-进入语音或者视频模式" data-v-70334359>进入语音或者视频模式</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#修改会中名字" class="sidebar-link reco-side-修改会中名字" data-v-70334359>修改会中名字</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#关闭或打开本地视频" class="sidebar-link reco-side-关闭或打开本地视频" data-v-70334359>关闭或打开本地视频</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#切换前置后置摄像头" class="sidebar-link reco-side-切换前置后置摄像头" data-v-70334359>切换前置后置摄像头</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#接收和显示共享内容" class="sidebar-link reco-side-接收和显示共享内容" data-v-70334359>接收和显示共享内容</a></li><li class="level-2" data-v-70334359><a href="/svcsdk/iOS-sdk.html#p2p呼叫相关内容" class="sidebar-link reco-side-p2p呼叫相关内容" data-v-70334359>P2P呼叫相关内容</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#p2p主动呼叫" class="sidebar-link reco-side-p2p主动呼叫" data-v-70334359>P2P主动呼叫</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#接收到p2p呼叫请求" class="sidebar-link reco-side-接收到p2p呼叫请求" data-v-70334359>接收到P2P呼叫请求</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#接听" class="sidebar-link reco-side-接听" data-v-70334359>接听</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#挂断" class="sidebar-link reco-side-挂断" data-v-70334359>挂断</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#对方已接受p2p呼叫" class="sidebar-link reco-side-对方已接受p2p呼叫" data-v-70334359>对方已接受P2P呼叫</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#获取主叫方头像地址" class="sidebar-link reco-side-获取主叫方头像地址" data-v-70334359>获取主叫方头像地址</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#结束呼叫" class="sidebar-link reco-side-结束呼叫" data-v-70334359>结束呼叫</a></li><li class="level-2" data-v-70334359><a href="/svcsdk/iOS-sdk.html#api-参考" class="sidebar-link reco-side-api-参考" data-v-70334359>API 参考</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#onloginsucceed" class="sidebar-link reco-side-onloginsucceed" data-v-70334359>onLoginSucceed</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#onregister" class="sidebar-link reco-side-onregister" data-v-70334359>onRegister</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#ondownloaduserimagecomplete" class="sidebar-link reco-side-ondownloaduserimagecomplete" data-v-70334359>onDownloadUserImageComplete</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#onuploaduserimagecomplete" class="sidebar-link reco-side-onuploaduserimagecomplete" data-v-70334359>onUploadUserImageComplete</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#onnetworkquality" class="sidebar-link reco-side-onnetworkquality" data-v-70334359>onNetworkQuality</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#onmutespeakingdetected" class="sidebar-link reco-side-onmutespeakingdetected" data-v-70334359>onMuteSpeakingDetected</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#enablesecure" class="sidebar-link reco-side-enablesecure" data-v-70334359>enableSecure</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#encryptpassword" class="sidebar-link reco-side-encryptpassword" data-v-70334359>encryptPassword</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#logout" class="sidebar-link reco-side-logout" data-v-70334359>logout</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#downloaduserimage" class="sidebar-link reco-side-downloaduserimage" data-v-70334359>downloadUserImage</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#uploaduserimage" class="sidebar-link reco-side-uploaduserimage" data-v-70334359>uploadUserImage</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#changepassword" class="sidebar-link reco-side-changepassword" data-v-70334359>changePassword</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#changedisplayname" class="sidebar-link reco-side-changedisplayname" data-v-70334359>changeDisplayName</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#getuserinfo" class="sidebar-link reco-side-getuserinfo" data-v-70334359>getUserInfo</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#oncallconnected" class="sidebar-link reco-side-oncallconnected" data-v-70334359>onCallConnected</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#oncallend" class="sidebar-link reco-side-oncallend" data-v-70334359>onCallEnd</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#oncontent" class="sidebar-link reco-side-oncontent" data-v-70334359>onContent</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#onlayoutsiteindication" class="sidebar-link reco-side-onlayoutsiteindication" data-v-70334359>onLayoutSiteIndication</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#onlayoutspeakerindication" class="sidebar-link reco-side-onlayoutspeakerindication" data-v-70334359>onLayoutSpeakerIndication</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#onjoinconferenceindication" class="sidebar-link reco-side-onjoinconferenceindication" data-v-70334359>onJoinConferenceIndication</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#onrecordingindication" class="sidebar-link reco-side-onrecordingindication" data-v-70334359>onRecordingIndication</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#onmessageoverlay" class="sidebar-link reco-side-onmessageoverlay" data-v-70334359>onMessageOverlay</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#onparticipant" class="sidebar-link reco-side-onparticipant" data-v-70334359>onParticipant</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#当前会议禁止解除静音" class="sidebar-link reco-side-当前会议禁止解除静音" data-v-70334359>当前会议禁止解除静音</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#主持人解除当前终端静音时收到的回调" class="sidebar-link reco-side-主持人解除当前终端静音时收到的回调" data-v-70334359>主持人解除当前终端静音时收到的回调</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#远端静音提示" class="sidebar-link reco-side-远端静音提示" data-v-70334359>远端静音提示</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#setdevicerotation" class="sidebar-link reco-side-setdevicerotation" data-v-70334359>setDeviceRotation</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#audiointerruption" class="sidebar-link reco-side-audiointerruption" data-v-70334359>audioInterruption</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#onerror" class="sidebar-link reco-side-onerror" data-v-70334359>onError</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#onwarn" class="sidebar-link reco-side-onwarn" data-v-70334359>onWarn</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#setdelegate" class="sidebar-link reco-side-setdelegate" data-v-70334359>setDelegate</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#enablehighfps" class="sidebar-link reco-side-enablehighfps" data-v-70334359>enableHighFPS</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/iOS-sdk.html#getnetworkquality" class="sidebar-link reco-side-getnetworkquality" data-v-70334359>getNetworkQuality</a></li><li class="level-2" data-v-70334359><a href="/svcsdk/iOS-sdk.html#错误码以及枚举类型" class="sidebar-link reco-side-错误码以及枚举类型" data-v-70334359>错误码以及枚举类型</a></li><li class="level-2" data-v-70334359><a href="/svcsdk/iOS-sdk.html#屏幕共享" class="sidebar-link reco-side-屏幕共享" data-v-70334359>屏幕共享</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.f6ea9451.js" defer></script><script src="/assets/js/3.1680551f.js" defer></script><script src="/assets/js/1.177e8441.js" defer></script><script src="/assets/js/12.820a609c.js" defer></script>
+  </body>
+</html>

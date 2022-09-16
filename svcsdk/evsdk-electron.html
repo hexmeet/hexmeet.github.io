@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>会捷通客户端 SDK (electron 版) 开发文档 | 中创视讯</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.png">
+    <meta name="description" content="开发者中心">
+    
+    <link rel="preload" href="/assets/css/0.styles.817749b6.css" as="style"><link rel="preload" href="/assets/js/app.f6ea9451.js" as="script"><link rel="preload" href="/assets/js/3.1680551f.js" as="script"><link rel="preload" href="/assets/js/1.177e8441.js" as="script"><link rel="preload" href="/assets/js/11.179992e2.js" as="script"><link rel="prefetch" href="/assets/js/10.9438d405.js"><link rel="prefetch" href="/assets/js/12.820a609c.js"><link rel="prefetch" href="/assets/js/13.0bb504d3.js"><link rel="prefetch" href="/assets/js/14.318507ef.js"><link rel="prefetch" href="/assets/js/15.be7540d9.js"><link rel="prefetch" href="/assets/js/16.483a3325.js"><link rel="prefetch" href="/assets/js/17.81ff5a9d.js"><link rel="prefetch" href="/assets/js/18.2f623690.js"><link rel="prefetch" href="/assets/js/19.5e748932.js"><link rel="prefetch" href="/assets/js/20.becd72fd.js"><link rel="prefetch" href="/assets/js/21.0ecdc4ef.js"><link rel="prefetch" href="/assets/js/22.b2d8e119.js"><link rel="prefetch" href="/assets/js/23.bb5a599f.js"><link rel="prefetch" href="/assets/js/24.617322da.js"><link rel="prefetch" href="/assets/js/25.25491b7b.js"><link rel="prefetch" href="/assets/js/26.944bcd95.js"><link rel="prefetch" href="/assets/js/27.11b8d1fc.js"><link rel="prefetch" href="/assets/js/28.95334c6d.js"><link rel="prefetch" href="/assets/js/29.59f3060c.js"><link rel="prefetch" href="/assets/js/30.f9525288.js"><link rel="prefetch" href="/assets/js/31.c188c228.js"><link rel="prefetch" href="/assets/js/32.ad14c16d.js"><link rel="prefetch" href="/assets/js/33.d6572d98.js"><link rel="prefetch" href="/assets/js/34.8eb1fe6f.js"><link rel="prefetch" href="/assets/js/35.720b1825.js"><link rel="prefetch" href="/assets/js/36.530a42ff.js"><link rel="prefetch" href="/assets/js/37.83bf31eb.js"><link rel="prefetch" href="/assets/js/38.973fc93c.js"><link rel="prefetch" href="/assets/js/39.6c9b52c0.js"><link rel="prefetch" href="/assets/js/4.99b20d32.js"><link rel="prefetch" href="/assets/js/40.23da87c4.js"><link rel="prefetch" href="/assets/js/41.8b1c3323.js"><link rel="prefetch" href="/assets/js/42.6ba6e523.js"><link rel="prefetch" href="/assets/js/43.447a191e.js"><link rel="prefetch" href="/assets/js/44.6db43aa0.js"><link rel="prefetch" href="/assets/js/5.f1ccbddc.js"><link rel="prefetch" href="/assets/js/6.253f75ab.js"><link rel="prefetch" href="/assets/js/7.54737f2a.js"><link rel="prefetch" href="/assets/js/8.e59ef63f.js"><link rel="prefetch" href="/assets/js/9.6c9d8d70.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.817749b6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-21432440 data-v-1156296a data-v-1156296a><h3 class="title" data-v-21432440 data-v-21432440>中创视讯</h3> <p class="description" data-v-21432440 data-v-21432440>开发者中心</p> <label id="box" class="inputBox" data-v-21432440 data-v-21432440><input type="password" value="" data-v-21432440> <span data-v-21432440>Konck! Knock!</span> <button data-v-21432440>OK</button></label> <div class="footer" data-v-21432440 data-v-21432440><span data-v-21432440><i class="iconfont reco-theme" data-v-21432440></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-21432440>vuePress-theme-reco</a></span> <span data-v-21432440><i class="iconfont reco-copyright" data-v-21432440></i> <a data-v-21432440><span data-v-21432440>中创视讯</span>
+            
+          <!---->
+          2022
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">中创视讯</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><a href="/intro/" class="nav-link"><i class="undefined"></i>
+  文档
+</a></div><div class="nav-item"><a href="http://www.hexmeet.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  公司主页
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://developer.hexmeet.com/legal/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  隐私政策
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-68e5fdee data-v-1156296a><!----> <h3 class="name" data-v-68e5fdee>
+    中创视讯
+  </h3> <div class="num" data-v-68e5fdee><div data-v-68e5fdee><h3 data-v-68e5fdee>30</h3> <h6 data-v-68e5fdee>Articles</h6></div> <div data-v-68e5fdee><h3 data-v-68e5fdee>0</h3> <h6 data-v-68e5fdee>Tags</h6></div></div> <ul class="social-links" data-v-68e5fdee></ul> <hr data-v-68e5fdee></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><a href="/intro/" class="nav-link"><i class="undefined"></i>
+  文档
+</a></div><div class="nav-item"><a href="http://www.hexmeet.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  公司主页
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://developer.hexmeet.com/legal/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  隐私政策
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>会捷通 SDK (SVC)</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/svcsdk/" aria-current="page" class="sidebar-link">入门指南</a></li><li><a href="/svcsdk/windows-cpp.html" class="sidebar-link">Windows 版本 (C++)</a></li><li><a href="/svcsdk/windows-sdk.html" class="sidebar-link">Windows 版本 (C#)</a></li><li><a href="/svcsdk/evsdk-electron.html" aria-current="page" class="active sidebar-link">Windows 版本 (Electron)</a></li><li><a href="/svcsdk/macos-sdk.html" class="sidebar-link">macOS 版本</a></li><li><a href="/svcsdk/Android-sdk.html" class="sidebar-link">Android 版本</a></li><li><a href="/svcsdk/iOS-sdk.html" class="sidebar-link">iOS 版本</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>HexMeet SDK (AVC)</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/avcsdk/Android-AVCSDK.html" class="sidebar-link">Android 版本</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>其他</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/usecases/HJT-SDK-Use-Cases.html" class="sidebar-link">应用场景示例</a></li><li><a href="/other/faq.html" class="sidebar-link">常见问题</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-21432440 data-v-1156296a><h3 class="title" data-v-21432440 data-v-21432440></h3> <!----> <label id="box" class="inputBox" data-v-21432440 data-v-21432440><input type="password" value="" data-v-21432440> <span data-v-21432440>Konck! Knock!</span> <button data-v-21432440>OK</button></label> <div class="footer" data-v-21432440 data-v-21432440><span data-v-21432440><i class="iconfont reco-theme" data-v-21432440></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-21432440>vuePress-theme-reco</a></span> <span data-v-21432440><i class="iconfont reco-copyright" data-v-21432440></i> <a data-v-21432440><span data-v-21432440>中创视讯</span>
+            
+          <!---->
+          2022
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">会捷通客户端 SDK (electron 版) 开发文档</h1> <div data-v-53977846><i class="iconfont reco-account" data-v-53977846><span data-v-53977846>中创视讯</span></i> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="会捷通客户端-sdk-electron-版-开发文档">会捷通客户端 SDK (electron 版) 开发文档</h1> <h2 id="更新记录">更新记录</h2> <table><thead><tr><th>日期</th> <th>更新内容</th> <th>文档版本</th></tr></thead> <tbody><tr><td>2020 年 9 月 21 日</td> <td>创建文档</td> <td>V 1.4.0</td></tr> <tr><td>2020年 11 月 23 日</td> <td>发布新版本</td> <td>V 1.4.2</td></tr> <tr><td></td> <td></td> <td></td></tr></tbody></table> <h2 id="发版说明">发版说明</h2> <h3 id="_1-4-2">1.4.2</h3> <ul><li>Demo 中增加主讲模式布局，以及布局模式切换功能</li> <li>Addon 和 Demo 增加发送屏幕共享功能</li></ul> <h2 id="概述">概述</h2> <p>会捷通客户端 SDK 是⼀款视频会议终端开发套件，开发者可以利⽤本 SDK 开发出具有清晰流畅的⾳视频体验和⾼清内容协作的⾳视频会议终端应用。</p> <p><img src="/assets/img/gallery-view.261b91fa.png" alt="gallery-view"></p> <p>会捷通客户端 SDK 具备强⼤的⽹络适应性，和独特的⾳视频抗⽹络丢包算法，配合会捷通云视讯平台使⽤，可以保证在 30% ⽹络丢包环境下视频依然清晰流畅，即使⽹络丢包⾼达 50%，依然可以保证⾳频通畅。 会捷通客户端 SDK 提供了丰富，⽽且简单易⽤的 API 接⼝。开发者不需要掌握丰富的⾳视频和信令相关知识，也可以使⽤本 SDK 开发出专业的视频会议软终端应用。 本⽂档详细介绍了 SDK 的各项功能，以及它们的使⽤⽅法。</p> <h3 id="系统要求">系统要求</h3> <ul><li>操作系统要求：Windows 10</li> <li>计算机配置推荐
+<ul><li>低级性能配置：Intel i3-8100 同级别处理器，4G 内存</li> <li>中级性能配置：Intel i5-8250 同级别处理器，8G 内存</li> <li>高级性能配置：Intel i5-9600K 同级别或高级别处理器，16G 内存</li></ul></li></ul> <h2 id="典型系统集成方案">典型系统集成方案</h2> <p>如果您开发的产品包含客户端应用和业务服务系统，需要为系统加入音视频通讯能力时，那么您只需要在客户端集成会捷通 SDK，同时通过您的业务服务系统和会捷通平台服务 (我们的公有云服务或者您自建的私有化部署会捷通平台) 进行集成。</p> <ul><li>客户端 App 集成会捷通 SDK，通过会捷通 SDK 实现客户端建立音视频呼叫的功能</li> <li>业务服务系统通过使用会捷通平台的 REST API 使用平台提供的功能，包括创建会议、管理会议等。</li></ul> <h3 id="一个典型的业务流程示例">一个典型的业务流程示例</h3> <p>下图简要说明了一个典型的业务流程</p> <ul><li>客户端 App 启动，进行会捷通 SDK 的初始化设置</li> <li>客户端 App 向自己的业务系统申请创建一个视频会议</li> <li>业务系统使用会捷通平台 API 创建一个视频会议，并把创建出的会议号码返回给客户端 App</li> <li>客户端 App 调用会捷通 SDK 的接口方法加入到这个会议</li> <li>客户端 App 调用会捷通 SDK 的接口方法离开会议</li></ul> <p><img src="/assets/img/call-seq-flow.9feefa06.png" alt="gallery-view"></p> <p>会捷通平台提供了丰富的 API 接口，您的业务系统可以根据需要选择使用。比如，在上边的例子中，可以在会议进行中通过 API 接口进行对与会者静音、开始录制会议等会议控制操作。</p> <h2 id="electron-环境搭建">Electron 环境搭建</h2> <h3 id="安装-node-js">安装 Node.js</h3> <p>从官网 (https://nodejs.org/en/download/) 下载安装包，安装的版本需要与 Electron 的版本里面使用的 V8 版本匹配，目前 EVSDK  支持的版本是 32 位，EVSDK Demo 中使用的 Electron 版本是 v8.1.1，推荐下载 nodes.js 的版本是 v12.16.3 的 32 位版本。</p> <p>在安装过程中的配置界面, 请勾选<code>Node.js runtime</code>、<code>npm package manager</code>和<code>Add to PATH</code>这三个选项。</p> <p>安装完成后，我们需要来确认Node.js是不是可以正常工作。 点击 开始 按钮，输入<code>PowerShell</code>，找到 Windows PowerShell。 打开 PowerShell 或其他你喜欢的命令行客户端后，通过以下命令来确认 <code>node</code> 和 <code>npm</code>已经安装成功：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>
+node -v
+<span class="token function">npm</span> -v 
+
+</code></pre></div><h3 id="安装-yarn">安装 Yarn</h3> <p>通过如下命令安装 yarn</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">npm</span> i <span class="token function">yarn</span> -g
+<span class="token function">yarn</span> -version
+</code></pre></div><h3 id="安装-electron">安装 Electron</h3> <h5 id="示例代码下载">示例代码下载</h5> <div class="language-shell extra-class"><pre class="language-shell"><code>
+<span class="token function">git</span> clone https://e.coding.net/hexmeet/evsdk-electron-demo/EVSDK-Electron-Demo.git
+
+</code></pre></div><blockquote><p>Web 浏览 https://hexmeet.coding.net/public/evsdk-electron-demo/EVSDK-Electron-Demo/git</p></blockquote> <p>下载示例 EVSDK-Electron-Demo 后， 在 PowserShell 中 cd 到目录 EVSDK-Electron-Demo 中，执行下面命令，完成安装</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">yarn</span>
+</code></pre></div><p>安装成功后，可以执行下面命令来启动示例</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">yarn</span> electron:serve
+</code></pre></div><h2 id="api-接口列表">API 接口列表</h2> <h4 id="初始化和释放">初始化和释放</h4> <table><thead><tr><th>接口</th> <th>接口描述</th></tr></thead> <tbody><tr><td>initialize(configPath, configFileName)</td> <td>初始化 SDK</td></tr> <tr><td>release()</td> <td>释放SDK</td></tr> <tr><td>setRootCA(root_ca_path)</td> <td>设置 rootca 文件路径</td></tr> <tr><td>setUserImage(background_file_path, user_image_path)</td> <td>设置用户头像和入会后显示的背景图像</td></tr> <tr><td>enableSecure(enable)</td> <td>使用SSL加密网络传输</td></tr></tbody></table> <h4 id="日志">日志</h4> <table><thead><tr><th>接口</th> <th>接口描述</th></tr></thead> <tbody><tr><td>setLog(level, log_path, log_file_name, max_file_size)</td> <td>设置log输出级别，路径和最大文件大小</td></tr> <tr><td>enableLog(enable)</td> <td>开启日志</td></tr></tbody></table> <h4 id="用户登录登出">用户登录登出</h4> <table><thead><tr><th>接口</th> <th>接口描述</th></tr></thead> <tbody><tr><td>loginWithLocation(locationServer, port, username, encryptedPassword)</td> <td>登录</td></tr> <tr><td>logout()</td> <td>退出登录</td></tr> <tr><td>encryptPassword(password)</td> <td>加密方法</td></tr> <tr><td>std::string descryptPassword(EV_DESCRYPT_TYPE type, const char * password, const char* akey, const char* iv);</td> <td>解密方法</td></tr> <tr><td>int downloadUserImage(const char * path);</td> <td>下载用户头像到本地</td></tr> <tr><td>int uploadUserImage(const char * path);</td> <td>上传用户头像到服务器</td></tr> <tr><td>int changePassword(const char * encrypted_oldpassword, const char *encrypted_newpassword);</td> <td>修改密码</td></tr></tbody></table> <h4 id="会议能力设置">会议能力设置</h4> <table><thead><tr><th>接口</th> <th>接口描述</th></tr></thead> <tbody><tr><td>setMaxRecvVideo(num)</td> <td>设置可以接收的最大入会视频流数量</td></tr> <tr><td>enableContent(enable)</td> <td>设置会议中是否允许发送或接收双流</td></tr> <tr><td>contentEnabled()</td> <td>查询会议中是否有发送或接收双流的能力</td></tr> <tr><td>enableContentHighFPS(enable)</td> <td>设置会议中是否发送高清双流</td></tr> <tr><td>contentHighFPSEnabled()</td> <td>获取当前设置的是帧率优先还是清晰度优先</td></tr> <tr><td>highFPSEnabled();</td> <td>获取当前是否是帧率优先</td></tr> <tr><td>enableHighFPS(enable);</td> <td>设置视频会议中帧率优先</td></tr> <tr><td>enableHD(enable);</td> <td>设置视频会议中高清优先</td></tr> <tr><td>HDEnabled();</td> <td>获取当前设置是否是高清优先</td></tr> <tr><td>setBandwidth(kbps)</td> <td>设置视频会议的带宽</td></tr> <tr><td>getBandwidth()</td> <td>获取设置的视频会议带宽</td></tr></tbody></table> <h4 id="会议通讯">会议通讯</h4> <table><thead><tr><th>接口</th> <th>接口描述</th></tr></thead> <tbody><tr><td>joinConference(conferenceNumber, displayName, password)</td> <td>加入会议</td></tr> <tr><td>joinConferenceWithLocation(location_server, port, conference_name, name_type, display_name, password)</td> <td>匿名入会</td></tr> <tr><td>leaveConference();</td> <td>离开会议</td></tr></tbody></table> <h4 id="会议操作">会议操作</h4> <table><thead><tr><th>接口</th> <th>接口描述</th></tr></thead> <tbody><tr><td>cameraEnabled();</td> <td>获取会议中摄像头打开/关闭状态</td></tr> <tr><td>enableCamera(enable)</td> <td>打开/关闭摄像头</td></tr> <tr><td>switchCamera()</td> <td>切换摄像头</td></tr> <tr><td>micEnabled()</td> <td>获取麦克风打开/关闭状态</td></tr> <tr><td>enableMic(enable)</td> <td>打开/关闭麦克风</td></tr> <tr><td>remoteMuted()</td> <td>获取会控服务器的静音状态</td></tr> <tr><td>requestRemoteUnmute(val)</td> <td>请求会控服务器解除静音</td></tr> <tr><td>setVideoActive(active)</td> <td>会议中切换视频模式和语音模式</td></tr> <tr><td>videoActive()</td> <td>获取当前是视频模式还是语音模式</td></tr></tbody></table> <h4 id="会议视频流窗口设置">会议视频流窗口设置</h4> <table><thead><tr><th>接口</th> <th>接口描述</th></tr></thead> <tbody><tr><td>setLocalVideoWindow(view?: Element): number</td> <td>设置本地视频窗口渲染位置</td></tr> <tr><td>setRemoteVideoWindow(idx: number, view?: Element): number</td> <td>设置远端视频窗口渲染位置</td></tr> <tr><td>setRemoteContentWindow(view?: Element): number</td> <td>设置接受双流的渲染窗口位置</td></tr> <tr><td>resizeRender(streamType: number, isRemote: number, idx: number)</td> <td>当渲染窗口发生变化时，调用这个接口来更新渲染区域。</td></tr></tbody></table> <h4 id="会议视频流布局">会议视频流布局</h4> <table><thead><tr><th>接口</th> <th>接口描述</th></tr></thead> <tbody><tr><td>setLayoutCapacity( mode: number, types: Array <code>&lt;Int32Array&gt;</code>, size: number): number</td> <td>设置分屏的能力集</td></tr> <tr><td>setLayout(mode: number): number</td> <td>设置布局样式</td></tr> <tr><td>setRecvVideo(num: number, max_resolution_width: number, max_resolution_height: number)</td> <td>设置会议中收到的People内容源的最大路数</td></tr></tbody></table> <h4 id="会议内容流-双流">会议内容流（双流）</h4> <table><thead><tr><th>接口</th> <th>接口描述</th></tr></thead> <tbody><tr><td>sendContent(): number</td> <td>开始发送双流</td></tr> <tr><td>stopContent(): number</td> <td>停止发送双流</td></tr> <tr><td>int enableContentAudio(bool enable)</td> <td>发送双流时同时发送声音</td></tr> <tr><td>enableContentAudio(enable: boolean): number</td> <td>获取是否发送双流声音的设置</td></tr> <tr><td>setLocalContentSource(windowtitle: string, windowid: number)： number</td> <td>发送选择的内容流窗口</td></tr></tbody></table> <h4 id="设备操作">设备操作</h4> <table><thead><tr><th>接口</th> <th>接口描述</th></tr></thead> <tbody><tr><td>int EVEngine::setAudioFile(const char * play_file)</td> <td>设置播放声音文件</td></tr> <tr><td>int startAudioPlay()</td> <td>开始播放声音</td></tr> <tr><td>stopAudioPlay()</td> <td>停止播放声音</td></tr> <tr><td>EVVolume getVolume(EV_DEVICE_TYPE type)</td> <td>获取当前音频设备音量</td></tr> <tr><td>int setVolume(EV_DEVICE_TYPE type, EVVolume &amp; vol)</td> <td>设置选中音频设备的音量</td></tr> <tr><td>getDevices(type: number): Array<code>&lt;object&gt;</code></td> <td>获取当前所有可以连接的设备列表</td></tr> <tr><td>setDevice(type: number, id: number): void</td> <td>选中指定的设备</td></tr> <tr><td>getDevice(type: number): object</td> <td>获取当前已经选中的设备</td></tr></tbody></table> <h4 id=""></h4> <h4 id="网络状态统计">网络状态统计</h4> <table><thead><tr><th>接口</th> <th>接口描述</th></tr></thead> <tbody><tr><td>getNetworkQuality(): number</td> <td>获取网络信号强度</td></tr> <tr><td>getStats(): object</td> <td>获取视频流统计信息</td></tr></tbody></table> <h2 id="开发入门">开发入门</h2> <h4 id="初始化-sdk">初始化 SDK</h4> <p>使用 EVSDK 时，需要 import EVSDK Electron module。比如demo中的</p> <blockquote><p>import EVEngine from '@/assets/libs/electron-evsdk/evsdk/Api'</p></blockquote> <p>evsdk在使用过程中，应该始终保持一个单例，以便维持登录状态和会议session。初始化的时候，需要传入配置文件的路径，用来记录一些用户配置。注册回调函数subscribeEvents，用来接受来自evsdk的回调。</p> <div class="language-c++ extra-class"><pre class="language-text"><code>getRtcEngine() {
+    if (!this.rtcEngine) {
+      this.rtcEngine = new EVEngine()
+      this.rtcEngine.initialize('.', 'config')
+      this.subscribeEvents(this.rtcEngine)
+      window.rtcEngine = this.rtcEngine
+    }
+    return this.rtcEngine
+  }
+
+subscribeEvents(rtcEngine) {
+    rtcEngine.on('onError', error =&gt; {
+      console.log('[sdkUtils.onError]: ', user)
+    })
+    rtcEngine.on('onLoginSucceed', user =&gt; {
+      console.log('[sdkUtils.onLoginSucceed]: ', user)
+    })
+    rtcEngine.on('onDownloadUserImageComplete', path =&gt; {
+      console.log('[sdkUtils.onDownloadUserImageComplete]: ', path)
+    })
+    rtcEngine.on('onRegisterInfo', (state, errcode, errmsg) =&gt; {
+      console.log('[sdkUtils.onRegisterInfo]: ', state, errcode, errmsg)
+    })
+    rtcEngine.on('onCallState', info =&gt; {
+      console.log('[sdkUtils.onCallState]: ', info)
+    })
+    rtcEngine.on('onContentState', info =&gt; {
+      console.log('[sdkUtils.onContentState]: ', info)
+    })
+    rtcEngine.on('onJoinConferenceIndication', info =&gt; {
+      console.log('[sdkUtils.onJoinConferenceIndication]: ', info)
+    })
+    rtcEngine.on('onRecordingIndication', (state, live) =&gt; {
+      console.log('[sdkUtils.onRecordingIndication]: ', state, live)
+    })
+    rtcEngine.on('onMessageOverlay', msg =&gt; {
+      console.log('[sdkUtils.onMessageOverlay]: ', msg)
+    })
+    rtcEngine.on('onLayoutIndication', info =&gt; {
+      console.log('[sdkUtils.onLayoutIndication]: ', info)
+    })
+    rtcEngine.on('onLayoutSiteIndication', info =&gt; {
+      console.log('[sdkUtils.onLayoutSiteIndication]: ', info)
+    })
+    rtcEngine.on('onLayoutSpeakerIndication', (name, speakerIndex) =&gt; {
+      console.log('[sdkUtils.onLayoutSpeakerIndication]: ', name, speakerIndex)
+    })
+    rtcEngine.on('onMicMutedShow', micMuted =&gt; {
+      console.log('[sdkUtils.onMicMutedShow]: ', micMuted)
+    })
+    rtcEngine.on('onWhiteBoardIndication', (type, authServer, server) =&gt; {
+      console.log('[sdkUtils.onWhiteBoardIndication]: ', type, authServer, server)
+    })
+    rtcEngine.on('onDeviceAdded', device =&gt; {
+      console.log('[sdkUtils.onDeviceAdded]: ', device)
+    })
+    rtcEngine.on('onDeviceRemoved', device =&gt; {
+      console.log('[sdkUtils.onDeviceRemoved]: ', device)
+    })
+}
+</code></pre></div><h4 id="日志设置">日志设置</h4> <p>EVSDK 会持续收集日志，打开日志收集需要做以下设置，可以设置log文件名字和大小。</p> <div class="language-c++ extra-class"><pre class="language-text"><code>getRtcEngine()-&gt;setLog(1, &quot;./&quot;, &quot;evsdk&quot;, 20 * 1024 * 1024);
+getRtcEngine()-&gt;enableLog(true);
+</code></pre></div><h4 id="rootca-文件">rootca 文件</h4> <p>添加 rootca.pem 文件，将⽂件拷⻉到某目录下边，设置给 SDK。</p> <div class="language-c++ extra-class"><pre class="language-text"><code>getRtcEngine()-&gt;setRootCA(&quot;./rootca.pem&quot;);
+</code></pre></div><blockquote><p>如果不设置rootca，加密的注册会失败。</p></blockquote> <h4 id="设备设置">设备设置</h4> <p>SDK 提供方法来让用户选择自己的设备，具体如下</p> <div class="language-c++ extra-class"><pre class="language-text"><code>获取当前设备的列表
+devices1 = getRtcEngine()-&gt;getDevices(0);
+devices2 = getRtcEngine()-&gt;getDevices(1);
+devices3 = getRtcEngine()-&gt;getDevices(2);
+获取当前已经选中的设备
+device1 = getRtcEngine()-&gt;getDevice(0);
+device2 = getRtcEngine()-&gt;getDevice(1);
+device3 = getRtcEngine()-&gt;getDevice(2);
+</code></pre></div><h3 id="设置呼叫基本能力">设置呼叫基本能力</h3> <h4 id="带宽">带宽</h4> <div class="language-c++ extra-class"><pre class="language-text"><code>SVC 可以设置2M到4M带宽
+bandwidth = 2048;
+
+具体带宽设置需要根据使用场景的网络情况设定。
+getRtcEngine()-&gt;setBandwidth(bandwidth);
+</code></pre></div><h4 id="接收视频流的数量上限">接收视频流的数量上限</h4> <div class="language-c++ extra-class"><pre class="language-text"><code>int const maxRxCount = 16;
+getRtcEngine()-&gt;setMaxRecvVideo(maxRxCount);
+</code></pre></div><h3 id="登录">登录</h3> <h4 id="用户正常登录">用户正常登录</h4> <div class="language-c++ extra-class"><pre class="language-text"><code>/**
+ 用户定位登录（包含定位跟登录）
+
+ @param location_server 定位服务器
+ @param port 端口号
+ @param username 用户名
+ @param password 密码
+ @return 返回API结果
+ */
+getRtcEngine()-&gt;loginWithLocation(location_server, port, username, encrypted_password) ;
+/** 登录后会收到SDK以下回调 */
+//定位或者登录错误会回调
+rtcEngine.on('onError', error =&gt; {
+})
+//登录成功会回调
+rtcEngine.on('onLoginSucceed', user =&gt; {
+})
+</code></pre></div><h4 id="匿名方式入会">匿名方式入会</h4> <p>匿名登录方式仅用于匿名呼叫的场景，在用户没有登录的情况下，直接入会。</p> <div class="language-c++ extra-class"><pre class="language-text"><code>/**
+ 用户执行匿名登录入会
+
+ @param location_server 定位服务器
+ @param port 端口号
+ @param conference_name 会议号码
+ @param name_type 参考EV_SVC_CONFERENCE_NAME_TYPE， 如果conference_name是会议号码，则此处设置EV_SVC_CONFERENCE_NAME_ID
+ @param display_name 用户在会议中的名称
+ @param password 会议密码
+ @return 返回 SDK 处理结果
+ */
+getRtcEngine()-&gt;joinConferenceWithLocation(location_server, port, conference_name, name_type, display_name, password)
+
+</code></pre></div><h3 id="窗口设置">窗口设置</h3> <blockquote><p>添加图片说明</p></blockquote> <p>EVSDK视频窗口分为三类： 远端主流窗口，本地视频窗口，内容流窗口 (辅流或双流）</p> <p><img src="/assets/img/gallery-view.261b91fa.png" alt="画廊视图"></p> <ol><li><p>远端窗口设置</p> <blockquote><p>如上图所示，画面中显示了接收到的远端窗口视频，每一个格子就是一路远端窗口，上图中有九个远端窗口，UI需要设置一个窗口列表给SDK，然后由SDK负责把接收到的视频流解码渲染到窗口上。UI首先需要设置最大要接收的远端窗口数量，然后再设置这些窗口dom所在的位置。</p></blockquote> <div class="language-c++ extra-class"><pre class="language-text"><code>int const maxRxCount = 16;
+getRtcEngine()-&gt;setMaxRecvVideo(maxRxCount);
+
+for (let i = 0; i &lt; this.maxRemoteVideo; i++) {
+    const id = `remote-video-${i}`
+    let el = document.getElementById(id)
+    window.rtcEngine.setRemoteVideoWindow(i, el)
+}
+</code></pre></div></li> <li><p>本地窗口设置</p> <blockquote><p>本地窗口是指本地的摄像头采集到的视频图像。</p></blockquote> <div class="language-c++ extra-class"><pre class="language-text"><code>this.localVideoContainer = document.getElementById('local-video-container')    window.rtcEngine.setLocalVideoWindow(this.localVideoContainer)
+</code></pre></div></li> <li><p>内容窗口设置</p> <blockquote><p>内容窗口是指别的与会者发送的内容共享，设置内容窗口，SDK会把接收到的内容流画到这个窗口上。</p></blockquote> <div class="language-c++ extra-class"><pre class="language-text"><code>this.contentContainer = document.getElementById('content-container')      window.rtcEngine.setRemoteContentWindow(this.contentContainer)
+</code></pre></div></li></ol> <h3 id="实现视频通话">实现视频通话</h3> <p>视频通话主要分为两种，一种是匿名入会（参考登录模块的匿名登录入会），一种是用户登录后入会</p> <ul><li><p>设置用户入会后的头像以及视频背景图片（关闭摄像头所展示的图片）</p> <div class="language-c++ extra-class"><pre class="language-text"><code>/**
+ 设置会议中用户的头像以及背景图片
+
+ @param background_file_path 背景图片
+ @param user_image_path 用户图片
+ @return 
+ */
+window.rtcEngine.setUserImage(background_file_path, user_image_path)
+</code></pre></div></li> <li><p>用户登录后主动入会</p> <div class="language-c++ extra-class"><pre class="language-text"><code>/**
+ 用户加入会议
+
+ @param conference_number 会议号码
+ @param display_name 会议中显示的名称
+ @param password 会议密码
+ @return 
+ */
+window.rtcEngine.joinConference(conference_number, display_name, password);
+//注：会议如果没有密码可以不用给SDK传值，不传display_name则SDK会取用户名称当作会议名称
+
+</code></pre></div></li> <li><p>当调用了入会的 API 后，UI 会收到 SDK 回调：入会成功、入会失败，需要做出处理。</p> <div class="language-c++ extra-class"><pre class="language-text"><code>rtcEngine.on('onCallState', info =&gt; {
+      console.log('[sdkUtils.onCallState]: ', info)
+})
+</code></pre></div></li></ul> <h3 id="分屏模式">分屏模式</h3> <p>分屏模式指的是应用的 UI 如何为接收到的远端视频做布局展示。典型分屏样式有：主讲视图 (即一大多小布局) 和画廊视图 (平均大小布局)。当布局样式为主讲视图时，一般希望大窗口显示的视频流分辨率比较其他远端视频流更高，而当布局样式为画廊视图时，一般希望每个视频流的分辨率尽量一致。因此，在 UI 需要改变布局样式时，需要通知 SDK，这样 SDK 可以根据需要向平台发出相应请求，告知平台 UI 希望呈现的分屏布局样式，从而平台可以尽量提供满足 app 需要的视频流。</p> <p>另外，当平台侧通过会议控制，对分屏进行改变时，SDK 也会接收到变化通知，此时 SDK 通知 UI 分屏模式发生了何种变化，UI 应该根据变化的样式进行对应的布局改变。</p> <p>相关细节可参考 API 的布局类型、分屏样式请求和布局变化事件回调部分。</p> <ul><li>主讲视图 (一大多小布局) 实现示例</li></ul> <p><img src="/assets/img/speaker-view.dd7d8b06.png" alt="主讲视图"></p> <p>主讲视图模式</p> <div class="language-c++ extra-class"><pre class="language-text"><code>/**
+ 设置视频模式（主讲模式、画廊模式）
+
+ @param mode 取值可参考EV_LAYOUT_MODE
+ @return 
+ */
+setLayout(mode: number)
+//示例代码里主讲视图模式下
+window.rtcEngine.setLayout(2);
+
+</code></pre></div><ul><li>画廊视图 (平均大小布局) 实现示例</li></ul> <p><img src="/assets/img/gallery-view.261b91fa.png" alt="画廊视图"></p> <p>画廊视图模式</p> <div class="language-c++ extra-class"><pre class="language-text"><code>/**
+ 设置视频模式（主讲模式、画廊模式）
+
+ @param mode 取值可参考EV_LAYOUT_MODE
+ @return 返回结果
+ */
+下面示例代码设置画廊模式
+window.rtcEngine.setLayout(1);
+</code></pre></div><h3 id="静音和解除静音">静音和解除静音</h3> <p>执行本地麦克风开启或者关闭</p> <div class="language-c++ extra-class"><pre class="language-text"><code>/**
+ 是否启用麦克风
+
+ @param enable true为开启, false为关闭
+ @return 
+ */
+
+//示例代码
+1.关闭麦克风
+window.rtcEngine.enableMic(false);
+2.开启麦克风
+window.rtcEngine.enableMic(true);
+</code></pre></div><h3 id="关闭或打开本地视频">关闭或打开本地视频</h3> <p>执行本地摄像头开启或者关闭</p> <div class="language-c++ extra-class"><pre class="language-text"><code>/**
+ 是否启用摄像头
+
+ @param enable true为开启, false为关闭
+ @return 
+ */
+
+ //示例代码
+ 1.关闭摄像头
+window.rtcEngine.enableCamera(false);
+ 2.开启摄像头
+window.rtcEngine.enableCamera(true);
+</code></pre></div><h3 id="接收和显示共享内容">接收和显示共享内容</h3> <p>收到共享，发送共享或者共享结束， SDK 都会通过回调的形式告诉UI。</p> <div class="language-c++ extra-class"><pre class="language-text"><code>/**
+ 接收到内容分享或者内容分享结束的回调
+
+ @param info 可以参考ts文件中接口EVContentState
+ */
+rtcEngine.on('onContentState', info =&gt; {
+      console.log('[sdkUtils.onContentState]: ', info)
+})
+
+</code></pre></div><h3 id="发送共享内容">发送共享内容</h3> <blockquote><p>发送共享主要需要以下步骤：</p> <ol><li>首先通过 getContentSourceList 获取可以共享的内容源列表供用户选择。</li> <li>然后通过 setLocalContentSource 将选择的内容源设置给SDK。</li> <li>UI 之后调用 sendContent 来请求发送内容流视频，如果平台协商一致同意当前终端发送内容源，会收到 onCallState, 回调。</li></ol></blockquote> <div class="language-c++ extra-class"><pre class="language-text"><code>window.rtcEngine.sendContent();
+</code></pre></div><h3 id="接收到分屏变化通知时应如何处理">接收到分屏变化通知时应如何处理</h3> <div class="language-c++ extra-class"><pre class="language-text"><code>rtcEngine.on('onLayoutIndication', info =&gt; {
+      console.log('[sdkUtils.onLayoutIndication]: ', info)
+})    
+    //当参会人数发生改变时，比如有人参会，有人离开会议；或者speaker布局下，主讲人发生改变时，会得到这个通知，此时，UI需要重新布局所有窗口。
+    //EV_LAYOUT_MODE mode; 当前应该展示的布局模式。
+    //EV_LAYOUT_MODE setting_mode;服务器当前使用的布局模式。
+    //EV_LAYOUT_TYPE type; 当前应该展示的布局具体类型。
+    //bool mode_settable;  服务器的设置，用来通知客户端是否可以改变布局模式。
+    //speaker_name; 主讲人名字
+    //speaker_index; 主讲人所在窗口的下标
+    //sites_size; 一共有多少个可展示窗口
+   // EVSite sites[EV_LAYOUT_SIZE]; 可展示窗口的数组。
+}
+
+rtcEngine.on('onLayoutSiteIndication', info =&gt; {
+      console.log('[sdkUtils.onLayoutSiteIndication]: ', info)
+})
+
+    //当前展示的窗口属性发生变化时会得到这个通知，比如某个参会人名字或audio mute状态发生改变，通过device_id可以查找是哪个参会人发生了改变。UI需要更新相应的窗口状态。
+
+rtcEngine.on('onLayoutSpeakerIndication', info =&gt; {
+      console.log('[sdkUtils.onLayoutSpeakerIndication]: ', info)
+})
+
+    //在gallery布局样式下，如果主讲人发生变化，会得到这个通知，客户端可以在主讲人所在的view上更新样式，比如加黄边框。speaker_index对应于最近一次收到的onLayoutIndication中的可展示窗口数组的下标。
+
+
+</code></pre></div><h3 id="结束呼叫">结束呼叫</h3> <p>在需要结束呼叫的时候调用 SDK 的离会 API</p> <div class="language-c++ extra-class"><pre class="language-text"><code>个人离开会议，但会议还在继续。
+window.rtcEngine.leaveConference();
+
+//退出成功后，会收到sdk的回调
+rtcEngine.on('onCallState', info =&gt; {
+      console.log('[sdkUtils.onCallState]: ', info)
+})
+</code></pre></div><h2 id="附录">附录</h2> <h3 id="错误码表">错误码表</h3> <h4 id="服务器错误码">服务器错误码</h4> <table><thead><tr><th>错误号</th> <th>错误</th> <th>描述</th></tr></thead> <tbody><tr><td>1000</td> <td>EV_SERVER_API_VERSION_NOT_SUPPORTED</td> <td>系统不支持您使用的API版本</td></tr> <tr><td>1001</td> <td>EV_SERVER_INVALID_TOKEN</td> <td>无效的token</td></tr> <tr><td>1002</td> <td>EV_SERVER_INVALID_PARAMETER</td> <td>无效的参数</td></tr> <tr><td>1003</td> <td>EV_SERVER_INVALID_DEVICESN</td> <td>参数deviceSN为空或者不合法</td></tr> <tr><td>1004</td> <td>EV_SERVER_INVALID_MEDIA_TYPE</td> <td>无效的媒体类型，只支持”application/json”</td></tr> <tr><td>1005</td> <td>EV_SERVER_PERMISSION_DENIED</td> <td>您不具备执行此操作的权限</td></tr> <tr><td>1006</td> <td>EV_SERVER_WRONG_FIELD_NAME</td> <td>JSON串内字段名拼写错误</td></tr> <tr><td>1007</td> <td>EV_SERVER_INTERNAL_SYSTEM_ERROR</td> <td>系统内部错误</td></tr> <tr><td>1008</td> <td>EV_SERVER_OPERATION_FAILED</td> <td>操作失败！</td></tr> <tr><td>1009</td> <td>EV_SERVER_GET_FAILED</td> <td>获取失败！</td></tr> <tr><td>1010</td> <td>EV_SERVER_NOT_SUPPORTED</td> <td>不支持！</td></tr> <tr><td>1011</td> <td>EV_SERVER_REDIS_LOCK_TIMEOUT</td> <td>请重试</td></tr> <tr><td>1019</td> <td>EV_SERVER_LOCAL_ZONE_STOPPED</td> <td>本地可用区已停止。</td></tr> <tr><td>1100</td> <td>EV_SERVER_INVALID_USER_NAME_PASSWORD</td> <td>无效的用户名或密码</td></tr> <tr><td>1101</td> <td>EV_SERVER_LOGIN_FAILED_MORE_THAN_5_TIMES</td> <td>登录失败超过5次，账号会被锁定，您还有{0}次机会</td></tr> <tr><td>1102</td> <td>EV_SERVER_ACCOUNT_TEMPORARILY_LOCKED</td> <td>您的账户已被临时锁定，请稍后再试或直接联系管理员解锁。</td></tr> <tr><td>1103</td> <td>EV_SERVER_ACCOUNT_DISABLED</td> <td>您的账户已被停用，请联系管理员。</td></tr> <tr><td>1104</td> <td>EV_SERVER_NO_USERNAME</td> <td>没有找到这个用户名</td></tr> <tr><td>1105</td> <td>EV_SERVER_EMAIL_MISMATCH</td> <td>邮箱和用户名不匹</td></tr> <tr><td>1106</td> <td>EV_SERVER_COMPANY_ADMINISTRATOR_NOT_IN_ANY_COMPANY</td> <td>该公司管理员未分配到任何公司</td></tr> <tr><td>1200</td> <td>EV_SERVER_FILE_UPLOAD_FAILED</td> <td>文件上传失败</td></tr> <tr><td>1201</td> <td>EV_SERVER_INVALID_LICENSE</td> <td>无效许可证</td></tr> <tr><td>1202</td> <td>EV_SERVER_INVALID_IMPORT_USER_FILE</td> <td>无效的导入用户文件</td></tr> <tr><td>1300</td> <td>EV_SERVER_INVALID_TIME_SERVICE_ADDRESS</td> <td>无效的时间服务地址</td></tr> <tr><td>1301</td> <td>EV_SERVER_FAILED_UPDATE_SYSTEM_PROPERTIES</td> <td>系统参数修改失败</td></tr> <tr><td>1400</td> <td>EV_SERVER_CONF_NOT_EXISTS</td> <td>会议不存在</td></tr> <tr><td>1401</td> <td>EV_SERVER_NUMERICID_CONFLICTS</td> <td>该会议号码已被占用</td></tr> <tr><td>1402</td> <td>EV_SERVER_CONF_UPDATING_IN_PROGRESS</td> <td>正在修改会议</td></tr> <tr><td>1403</td> <td>EV_SERVER_CONF_DELETING_IN_PROGRESS</td> <td>正在删除会议</td></tr> <tr><td>1404</td> <td>EV_SERVER_CONF_TERMINATING_IN_PROGRESS</td> <td>正在结束会议</td></tr> <tr><td>1405</td> <td>EV_SERVER_CONF_LAUNCHING_IN_PROGRESS</td> <td>正在开启会议</td></tr> <tr><td>1406</td> <td>EV_SERVER_CONF_NOT_IN_APPROVED_STATUS</td> <td>会议不处于预约状态</td></tr> <tr><td>1407</td> <td>EV_SERVER_CONF_NUMERICID_ONGOING</td> <td>会议已开启</td></tr> <tr><td>1409</td> <td>EV_SERVER_CONF_NOT_APPROVED_OR_ONGOING</td> <td>会议已失效</td></tr> <tr><td>1410</td> <td>EV_SERVER_PARTICIPANT_NOT_EXISTS_IN_CONF</td> <td>该终端未加入会议</td></tr> <tr><td>1412</td> <td>EV_SERVER_NUMERICID_ALREADY_IN_USE</td> <td>该会议号码已被占用！</td></tr> <tr><td>1415</td> <td>EV_SERVER_INVALID_CONF_TIME</td> <td>无效的会议时间</td></tr> <tr><td>1418</td> <td>EV_SERVER_INVALID_CONF_ID</td> <td>无效的会议ID</td></tr> <tr><td>1421</td> <td>EV_SERVER_NOT_FOUND_SUITABLE_MRU</td> <td>未找到合适的MRU.</td></tr> <tr><td>1422</td> <td>EV_SERVER_NOT_FOUND_SUITABLE_GATEWAY</td> <td>未找到合适的Gateway</td></tr> <tr><td>1424</td> <td>EV_SERVER_FAILED_TO_CONNECT_MRU</td> <td>连接MRU失败</td></tr> <tr><td>1427</td> <td>EV_SERVER_NOT_ALLOW_DUPLICATED_NAME</td> <td>不允许重名</td></tr> <tr><td>1430</td> <td>EV_SERVER_NOT_FOUND_CONF_IN_REDIS</td> <td>数据没有找到当前会议</td></tr> <tr><td>1431</td> <td>EV_SERVER_NOT_IN_LECTURER_MODE</td> <td>当前不是主会场模式</td></tr> <tr><td>1433</td> <td>EV_SERVER_FAILED_TO_MUTE_ALL_PARTICIPANTS</td> <td>全部静音失败</td></tr> <tr><td>1436</td> <td>EV_SERVER_FAILED_TO_CONNECT_PARTICIPANT</td> <td>连接与会者失败</td></tr> <tr><td>1439</td> <td>EV_SERVER_FAILED_TO_DISCONNECT_PARTICIPANT</td> <td>挂断与会者失败</td></tr> <tr><td>1442</td> <td>EV_SERVER_FAILED_TO_CHANGE_LAYOUT</td> <td>分屏设置失败</td></tr> <tr><td>1445</td> <td>EV_SERVER_FAILED_TO_SET_SUBTITLE</td> <td>字幕设置失败</td></tr> <tr><td>1448</td> <td>EV_SERVER_FAILED_TO_MUTE_PARTICIPANT_AUDIO</td> <td>对与会者静音失败</td></tr> <tr><td>1451</td> <td>EV_SERVER_FAILED_TO_DELETE_PARTICIPANT</td> <td>删除与会者失败</td></tr> <tr><td>1454</td> <td>EV_SERVER_FAILED_TO_INVITE_AVC_ENDPOINT</td> <td>邀请AVC终端失败</td></tr> <tr><td>1455</td> <td>EV_SERVER_FAILED_TO_INVITE_SVC_ENDPOINTS</td> <td>邀请SVC终端失败</td></tr> <tr><td>1456</td> <td>EV_SERVER_CONF_ROOM_COMPLETELY_FULL</td> <td>会议室已满</td></tr> <tr><td>1457</td> <td>EV_SERVER_TIMEOUT_TO_GENERATE_NUMERICID</td> <td>产生云会议室号失败，已超时</td></tr> <tr><td>1460</td> <td>EV_SERVER_NOT_FOUND_PROFILE_NAMED_SVC</td> <td>未找到名为SVC的会议模板</td></tr> <tr><td>1463</td> <td>EV_SERVER_FAILED_TO_PROLONG_CONF</td> <td>会议延时失败</td></tr> <tr><td>1500</td> <td>EV_SERVER_INVALID_MEETING_CONTROL_REQUEST</td> <td>无效的会议控制请求</td></tr> <tr><td>1600</td> <td>EV_SERVER_NAME_IN_USE</td> <td>终端名字以被占用</td></tr> <tr><td>1601</td> <td>EV_SERVER_EMPTY_ENDPOINT_NAME</td> <td>终端名称不能为空</td></tr> <tr><td>1602</td> <td>EV_SERVER_EMPTY_ENDPOINT_CALL_MODE</td> <td>终端呼叫模式不能为空</td></tr> <tr><td>1603</td> <td>EV_SERVER_EMPTY_ENDPOINT_SIP_USERNAME</td> <td>终端的SIP号码不能为空</td></tr> <tr><td>1604</td> <td>EV_SERVER_EMPTY_ENDPOINT_SIP_PASSWORD</td> <td>终端的SIP密码不能为空</td></tr> <tr><td>1605</td> <td>EV_SERVER_EMPTY_ENDPOINT_ADDRESS</td> <td>终端的IP地址不能为空</td></tr> <tr><td>1606</td> <td>EV_SERVER_INVALID_SIP_USERNAME</td> <td>无效的SIP号码</td></tr> <tr><td>1607</td> <td>EV_SERVER_INVALID_IP_ADDRESS</td> <td>无效的IP地址</td></tr> <tr><td>1608</td> <td>EV_SERVER_ENDPOINT_NOT_EXIST</td> <td>指定的终端不存在</td></tr> <tr><td>1609</td> <td>EV_SERVER_E164_IN_USE</td> <td>该E164号码已被占用</td></tr> <tr><td>1610</td> <td>EV_SERVER_ENDPOINT_DEVICE_SN_EXIST</td> <td>该序列号已被占用，请重新输入</td></tr> <tr><td>1611</td> <td>EV_SERVER_SIP_USERNAME_REGISTERED</td> <td>该SIP号码已被占用</td></tr> <tr><td>1612</td> <td>EV_SERVER_ENDPOINT_E164_INVALID</td> <td>无效的E164号</td></tr> <tr><td>1613</td> <td>EV_SERVER_NOT_FOUND_ENDPOINT_DEVICE_SN</td> <td>该终端不存在</td></tr> <tr><td>1614</td> <td>EV_SERVER_NOT_FOUND_ENDPOINT_PROVISION_TEMPLATE</td> <td>终端配置文件不存在</td></tr> <tr><td>1615</td> <td>EV_SERVER_DEVICE_SN_EXISTS</td> <td>这些设备序列号已被分配了</td></tr> <tr><td>1700</td> <td>EV_SERVER_CAN_NOT_DELETE_USER_IN_RESERVED_MEETING</td> <td>不能删除正在会议中的用户</td></tr> <tr><td>1701</td> <td>EV_SERVER_EMPTY_USER_PASSWORD</td> <td>密码不能为空</td></tr> <tr><td>1702</td> <td>EV_SERVER_EMPTY_USERNAME</td> <td>用户名不能为空</td></tr> <tr><td>1703</td> <td>EV_SERVER_EMPTY_USER_DISPLAY_NAME</td> <td>姓名不能为空</td></tr> <tr><td>1704</td> <td>EV_SERVER_INVALID_USER_EMAIL</td> <td>无效的邮箱地址</td></tr> <tr><td>1705</td> <td>EV_SERVER_INVALID_CELLPHONE_NUMBER</td> <td>无效的手机号码</td></tr> <tr><td>1706</td> <td>EV_SERVER_ORIGINAL_PASSWORD_WRONG</td> <td>原密码输入错误</td></tr> <tr><td>1707</td> <td>EV_SERVER_DUPLICATE_EMAIL_NAME</td> <td>邮箱重复</td></tr> <tr><td>1708</td> <td>EV_SERVER_DUPLICATE_CELLPHONE_NUMBER</td> <td>手机重复</td></tr> <tr><td>1709</td> <td>EV_SERVER_DUPLICATE_USERNAME</td> <td>账号重复</td></tr> <tr><td>1710</td> <td>EV_SERVER_INVALID_CONF_ROOM_MAX_CAPACITY</td> <td>无效的最大会议室容量</td></tr> <tr><td>1711</td> <td>EV_SERVER_SHOULD_ASSIGN_DEPARTMENT_TO_DEPARTMENT_ADMINISTRATOR</td> <td>请为部门管理员选择所在部门</td></tr> <tr><td>1712</td> <td>EV_SERVER_EMPTY_USER_EMAIL</td> <td>邮箱不能为空</td></tr> <tr><td>1713</td> <td>EV_SERVER_EMPTY_USER_CELLPHONE_NUMBER</td> <td>手机号不能为空</td></tr> <tr><td>1714</td> <td>EV_SERVER_NOT_ORGANIZATION_ADMINISTRATOR</td> <td>该用户不是公司管理员</td></tr> <tr><td>1800</td> <td>EV_SERVER_COMPANY_NOT_EXIST</td> <td>该公司不存在</td></tr> <tr><td>1801</td> <td>EV_SERVER_SHORT_NAME_OF_COMPANY_USED</td> <td>公司短名字已被占用</td></tr> <tr><td>1802</td> <td>EV_SERVER_FULL_NAME_OF_COMPANY_USED</td> <td>公司全名已被占用</td></tr> <tr><td>1803</td> <td>EV_SERVER_COMPANY_NOT_EMPTY</td> <td>清理该公司下用户和终端后再删除该公司</td></tr> <tr><td>1804</td> <td>EV_SERVER_EMPTY_COMPANY_SHORT_NAME</td> <td>公司名称不能为空</td></tr> <tr><td>2000</td> <td>EV_SERVER_CONF_ROOM_EXPIRED</td> <td>该云会议室已过期</td></tr> <tr><td>2001</td> <td>EV_SERVER_NOT_ACTIVED</td> <td>没有被激活</td></tr> <tr><td>2003</td> <td>EV_SERVER_NOT_FOUND_SUITABLE_ROOM</td> <td>未找到可用的云会议室</td></tr> <tr><td>2005</td> <td>EV_SERVER_NOT_FOUND_TEMPLATE_OR_ROOM</td> <td>没有找到模板和房间</td></tr> <tr><td>2006</td> <td>EV_SERVER_CONF_ROOM_IN_USE</td> <td>该云会议室已被使用</td></tr> <tr><td>2009</td> <td>EV_SERVER_CONF_ROOM_NUMBER_IN_USE</td> <td>该云会议室号码已被占用</td></tr> <tr><td>2012</td> <td>EV_SERVER_CONF_ROOM_CAPACITY_EXCEEDS_LIMIT</td> <td>会议数量超过最大容量</td></tr> <tr><td>2015</td> <td>EV_SERVER_INVALID_CONF_ROOM_CAPACITY</td> <td>无效的云会议室方数</td></tr> <tr><td>2018</td> <td>EV_SERVER_INVALID_CONF_ROOM_NUMBER</td> <td>无效的云会议室号码</td></tr> <tr><td>2021</td> <td>EV_SERVER_ROOM_NOT_EXISTS</td> <td>该云会议室不存在</td></tr> <tr><td>2031</td> <td>EV_SERVER_ROOM_ONLY_ALLOW_OWNER_ACTIVE</td> <td>只有会议主持人才能激活会议</td></tr> <tr><td>2033</td> <td>EV_SERVER_ROOM_NOT_ALLOW_ANONYMOUS_CALL</td> <td>该会议不允许匿名入会</td></tr> <tr><td>2035</td> <td>EV_SERVER_TRIAL_ORG_EXPIRED</td> <td>公司许可过期</td></tr> <tr><td>2100</td> <td>EV_SERVER_CAN_NOT_DELETE_DEPARTMENT_WITH_SUBORDINATE_DEPARTMENT</td> <td>该部门有子部门，不能删除</td></tr> <tr><td>2101</td> <td>EV_SERVER_CAN_NOT_DELETE_DEPARTMENT_WITH_USERS_OR_ENDPOINTS</td> <td>该部门内有用户或终端，不能删除</td></tr> <tr><td>2200</td> <td>EV_SERVER_INVALID_ACS_CONFIGURATION</td> <td>无效的ACS配置</td></tr></tbody></table> <h4 id="地址服务器错误码">地址服务器错误码</h4> <table><thead><tr><th>错误号</th> <th>错误</th> <th>描述</th></tr></thead> <tbody><tr><td>10000</td> <td>EV_LOCATE_FAILED_TO_READ_BODY</td> <td>定位服务读取消息体出错</td></tr> <tr><td>10001</td> <td>EV_LOCATE_FAILED_TO_PARSE_BODY</td> <td>定位服务解析消息体出错</td></tr> <tr><td>10002</td> <td>EV_LOCATE_LOCATION_TIMEOUT</td> <td>定位服务定位超时</td></tr> <tr><td>10003</td> <td>EV_LOCATE_ERROR_INFO_GENERAL</td> <td>定位服务通用信息错误</td></tr> <tr><td>10004</td> <td>EV_LOCATE_ERROR_INFO_BAD_FORMAT</td> <td>定位服务信息格式错误</td></tr> <tr><td>10005</td> <td>EV_LOCATE_UNEXPECTED</td> <td>定位服务异常</td></tr> <tr><td>10006</td> <td>EV_LOCATE_FAILED_TO_LOCATE_CLIENT</td> <td>定位服务不能定位客户端</td></tr> <tr><td>10007</td> <td>EV_LOCATE_FAILED_TO_LOCATE_ZONE</td> <td>定位服务不能定位可用区</td></tr> <tr><td>10008</td> <td>EV_LOCATE_NO_LOCATION_DOMAIN</td> <td>地址服务没有域</td></tr> <tr><td>10009</td> <td>EV_LOCATE_ERROR_LOCATION_REQUEST</td> <td>定位服务请求错误</td></tr> <tr><td>10010</td> <td>EV_LOCATE_ERROR_INFO_QUERY_ZONE_IP_IN_HIM</td> <td>定位服务在HIM中查询域IP出错</td></tr></tbody></table> <p>会议错误码</p> <table><thead><tr><th>错误</th> <th>错误号</th> <th>描述</th></tr></thead> <tbody><tr><td>11</td> <td>EV_CALL_BYE_EP_NO_PACKET_RECEIVED</td> <td>终端没有码流，断会</td></tr> <tr><td>100</td> <td>EV_CALL_BYE_MRU_NORMAL</td> <td>MRU正常挂断会议</td></tr> <tr><td>101</td> <td>EV_CALL_BYE_MRU_OPERATOR_DISCONNECT</td> <td>MRU管理员挂断终端</td></tr> <tr><td>102</td> <td>EV_CALL_BYE_MRU_NO_PACKET_RECEIVED</td> <td>MRU没有收到码流，断会</td></tr> <tr><td>1001</td> <td>EV_CALL_INVALID_NUMERICID</td> <td>无效的会议号码</td></tr> <tr><td>1005</td> <td>EV_CALL_INVALID_USERID</td> <td>无效 的用户ID</td></tr> <tr><td>1007</td> <td>EV_CALL_INVALID_DEVICEID</td> <td>无效的设备ID</td></tr> <tr><td>1009</td> <td>EV_CALL_INVALID_ENDPOINT</td> <td>无效的终端</td></tr> <tr><td>2001</td> <td>EV_CALL_SERVER_UNLICENSED</td> <td>服务器许可证过期</td></tr> <tr><td>2003</td> <td>EV_CALL_NOT_FOUND_SUITABLE_MRU</td> <td>呼叫的云平台尚未激活</td></tr> <tr><td>2005</td> <td>EV_CALL_NEITHER_TEMPLATE_NOR_ONGOING_NOR_BINDED_ROOM</td> <td>没有可用的会议端口资源</td></tr> <tr><td>2007</td> <td>EV_CALL_LOCK_TIMEOUT</td> <td>呼叫超时</td></tr> <tr><td>2009</td> <td>EV_CALL_TEMPLATE_CONF_WITHOUT_CONFROOM</td> <td>模板会议没有会议室</td></tr> <tr><td>2011</td> <td>EV_CALL_ROOM_EXPIRED</td> <td>会议室超过最大数量</td></tr> <tr><td>2015</td> <td>EV_CALL_INVALID_PASSWORD</td> <td>无效的密码</td></tr> <tr><td>2017</td> <td>EV_CALL_NO_TIME_SPACE_TO_ACTIVATE_ROOM</td> <td>没有时间激活会议室</td></tr> <tr><td>2023</td> <td>EV_CALL_CONF_PORT_COUNT_USED_UP</td> <td>当前入会人数已达上限</td></tr> <tr><td>2024</td> <td>EV_CALL_ORG_PORT_COUNT_USED_UP</td> <td>当前与会人数已达组织端口上限</td></tr> <tr><td>2025</td> <td>EV_CALL_HAISHEN_PORT_COUNT_USED_UP</td> <td>当前与会人数已达平台会议端口上限</td></tr> <tr><td>2027</td> <td>EV_CALL_HAISHEN_GATEWAY_AUDIO_PORT_COUNT_USED_UP</td> <td>网关语音通话数量已达到云平台的许可上限</td></tr> <tr><td>2029</td> <td>EV_CALL_HAISHEN_GATEWAY_VIDEO_PORT_COUNT_USED_UP</td> <td>网关视频通话数量已达到云平台的许可上限</td></tr> <tr><td>2031</td> <td>EV_CALL_ONLY_ROOM_OWNER_CAN_ACTIVATE_ROOM</td> <td>只允许会议室拥有者激活会议室</td></tr> <tr><td>2033</td> <td>EV_CALL_NOT_ALLOW_ANONYMOUS_PARTY</td> <td>该会议不允许匿名呼叫</td></tr> <tr><td>2035</td> <td>EV_CALL_TRIAL_ORG_EXPIRED</td> <td>公司许可过期</td></tr> <tr><td>2043</td> <td>EV_CALL_LOCAL_ZONE_NOT_STARTED</td> <td>可用区没有启动</td></tr> <tr><td>2045</td> <td>EV_CALL_LOCAL_ZONE_STOPPED</td> <td>可用区停止</td></tr> <tr><td>4057</td> <td>EV_CALL_ROOM_BUSY</td> <td>会议室忙碌</td></tr> <tr><td>4064</td> <td>EV_CALL_INVALID_FROM_URL</td> <td>无效的URL地址</td></tr></tbody></table></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">2/9/2021, 1:09:58 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/svcsdk/windows-sdk.html" class="prev">
+            Windows 版本 (C#)
+          </a></span> <span class="next"><a href="/svcsdk/macos-sdk.html">
+            macOS 版本
+          </a></span></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-2" data-v-70334359><a href="/svcsdk/evsdk-electron.html#更新记录" class="sidebar-link reco-side-更新记录" data-v-70334359>更新记录</a></li><li class="level-2" data-v-70334359><a href="/svcsdk/evsdk-electron.html#发版说明" class="sidebar-link reco-side-发版说明" data-v-70334359>发版说明</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/evsdk-electron.html#_1-4-2" class="sidebar-link reco-side-_1-4-2" data-v-70334359>1.4.2</a></li><li class="level-2" data-v-70334359><a href="/svcsdk/evsdk-electron.html#概述" class="sidebar-link reco-side-概述" data-v-70334359>概述</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/evsdk-electron.html#系统要求" class="sidebar-link reco-side-系统要求" data-v-70334359>系统要求</a></li><li class="level-2" data-v-70334359><a href="/svcsdk/evsdk-electron.html#典型系统集成方案" class="sidebar-link reco-side-典型系统集成方案" data-v-70334359>典型系统集成方案</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/evsdk-electron.html#一个典型的业务流程示例" class="sidebar-link reco-side-一个典型的业务流程示例" data-v-70334359>一个典型的业务流程示例</a></li><li class="level-2" data-v-70334359><a href="/svcsdk/evsdk-electron.html#electron-环境搭建" class="sidebar-link reco-side-electron-环境搭建" data-v-70334359>Electron 环境搭建</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/evsdk-electron.html#安装-node-js" class="sidebar-link reco-side-安装-node-js" data-v-70334359>安装 Node.js</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/evsdk-electron.html#安装-yarn" class="sidebar-link reco-side-安装-yarn" data-v-70334359>安装 Yarn</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/evsdk-electron.html#安装-electron" class="sidebar-link reco-side-安装-electron" data-v-70334359>安装 Electron</a></li><li class="level-2" data-v-70334359><a href="/svcsdk/evsdk-electron.html#api-接口列表" class="sidebar-link reco-side-api-接口列表" data-v-70334359>API 接口列表</a></li><li class="level-2" data-v-70334359><a href="/svcsdk/evsdk-electron.html#开发入门" class="sidebar-link reco-side-开发入门" data-v-70334359>开发入门</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/evsdk-electron.html#设置呼叫基本能力" class="sidebar-link reco-side-设置呼叫基本能力" data-v-70334359>设置呼叫基本能力</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/evsdk-electron.html#登录" class="sidebar-link reco-side-登录" data-v-70334359>登录</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/evsdk-electron.html#窗口设置" class="sidebar-link reco-side-窗口设置" data-v-70334359>窗口设置</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/evsdk-electron.html#实现视频通话" class="sidebar-link reco-side-实现视频通话" data-v-70334359>实现视频通话</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/evsdk-electron.html#分屏模式" class="sidebar-link reco-side-分屏模式" data-v-70334359>分屏模式</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/evsdk-electron.html#静音和解除静音" class="sidebar-link reco-side-静音和解除静音" data-v-70334359>静音和解除静音</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/evsdk-electron.html#关闭或打开本地视频" class="sidebar-link reco-side-关闭或打开本地视频" data-v-70334359>关闭或打开本地视频</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/evsdk-electron.html#接收和显示共享内容" class="sidebar-link reco-side-接收和显示共享内容" data-v-70334359>接收和显示共享内容</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/evsdk-electron.html#发送共享内容" class="sidebar-link reco-side-发送共享内容" data-v-70334359>发送共享内容</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/evsdk-electron.html#接收到分屏变化通知时应如何处理" class="sidebar-link reco-side-接收到分屏变化通知时应如何处理" data-v-70334359>接收到分屏变化通知时应如何处理</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/evsdk-electron.html#结束呼叫" class="sidebar-link reco-side-结束呼叫" data-v-70334359>结束呼叫</a></li><li class="level-2" data-v-70334359><a href="/svcsdk/evsdk-electron.html#附录" class="sidebar-link reco-side-附录" data-v-70334359>附录</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/evsdk-electron.html#错误码表" class="sidebar-link reco-side-错误码表" data-v-70334359>错误码表</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.f6ea9451.js" defer></script><script src="/assets/js/3.1680551f.js" defer></script><script src="/assets/js/1.177e8441.js" defer></script><script src="/assets/js/11.179992e2.js" defer></script>
+  </body>
+</html>
