@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>会捷通 EVSDK(pz200) 开发文档 | 中创视讯</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.png">
+    <meta name="description" content="开发者中心">
+    
+    <link rel="preload" href="/assets/css/0.styles.817749b6.css" as="style"><link rel="preload" href="/assets/js/app.411da203.js" as="script"><link rel="preload" href="/assets/js/3.1680551f.js" as="script"><link rel="preload" href="/assets/js/1.177e8441.js" as="script"><link rel="preload" href="/assets/js/43.59042230.js" as="script"><link rel="prefetch" href="/assets/js/10.c19d7ec3.js"><link rel="prefetch" href="/assets/js/11.c0855295.js"><link rel="prefetch" href="/assets/js/12.f0ae5cae.js"><link rel="prefetch" href="/assets/js/13.5d2f9524.js"><link rel="prefetch" href="/assets/js/14.41015bd9.js"><link rel="prefetch" href="/assets/js/15.be7540d9.js"><link rel="prefetch" href="/assets/js/16.cc31d152.js"><link rel="prefetch" href="/assets/js/17.2afd4815.js"><link rel="prefetch" href="/assets/js/18.18f81fb5.js"><link rel="prefetch" href="/assets/js/19.e31fc347.js"><link rel="prefetch" href="/assets/js/20.98c031c7.js"><link rel="prefetch" href="/assets/js/21.bc321621.js"><link rel="prefetch" href="/assets/js/22.dc2b863e.js"><link rel="prefetch" href="/assets/js/23.4670b545.js"><link rel="prefetch" href="/assets/js/24.4606d590.js"><link rel="prefetch" href="/assets/js/25.ab0d5925.js"><link rel="prefetch" href="/assets/js/26.944bcd95.js"><link rel="prefetch" href="/assets/js/27.39bdcd13.js"><link rel="prefetch" href="/assets/js/28.95334c6d.js"><link rel="prefetch" href="/assets/js/29.59f3060c.js"><link rel="prefetch" href="/assets/js/30.1f67fb08.js"><link rel="prefetch" href="/assets/js/31.b2ca0506.js"><link rel="prefetch" href="/assets/js/32.b4a82496.js"><link rel="prefetch" href="/assets/js/33.da5c451e.js"><link rel="prefetch" href="/assets/js/34.117d1402.js"><link rel="prefetch" href="/assets/js/35.e39e9e7a.js"><link rel="prefetch" href="/assets/js/36.1bcba8f4.js"><link rel="prefetch" href="/assets/js/37.83bf31eb.js"><link rel="prefetch" href="/assets/js/38.c3e2e422.js"><link rel="prefetch" href="/assets/js/39.527bb476.js"><link rel="prefetch" href="/assets/js/4.99b20d32.js"><link rel="prefetch" href="/assets/js/40.23da87c4.js"><link rel="prefetch" href="/assets/js/41.a03ffbdc.js"><link rel="prefetch" href="/assets/js/42.f9b4a544.js"><link rel="prefetch" href="/assets/js/44.aa604134.js"><link rel="prefetch" href="/assets/js/45.60c0c458.js"><link rel="prefetch" href="/assets/js/5.f1ccbddc.js"><link rel="prefetch" href="/assets/js/6.253f75ab.js"><link rel="prefetch" href="/assets/js/7.53b2c023.js"><link rel="prefetch" href="/assets/js/8.f53a178b.js"><link rel="prefetch" href="/assets/js/9.6c9d8d70.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.817749b6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-21432440 data-v-1156296a data-v-1156296a><h3 class="title" data-v-21432440 data-v-21432440>中创视讯</h3> <p class="description" data-v-21432440 data-v-21432440>开发者中心</p> <label id="box" class="inputBox" data-v-21432440 data-v-21432440><input type="password" value="" data-v-21432440> <span data-v-21432440>Konck! Knock!</span> <button data-v-21432440>OK</button></label> <div class="footer" data-v-21432440 data-v-21432440><span data-v-21432440><i class="iconfont reco-theme" data-v-21432440></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-21432440>vuePress-theme-reco</a></span> <span data-v-21432440><i class="iconfont reco-copyright" data-v-21432440></i> <a data-v-21432440><span data-v-21432440>中创视讯</span>
+            
+          <!---->
+          2023
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">中创视讯</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><a href="/intro/" class="nav-link"><i class="undefined"></i>
+  文档
+</a></div><div class="nav-item"><a href="http://www.hexmeet.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  公司主页
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://developer.hexmeet.com/legal/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  隐私政策
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-68e5fdee data-v-1156296a><!----> <h3 class="name" data-v-68e5fdee>
+    中创视讯
+  </h3> <div class="num" data-v-68e5fdee><div data-v-68e5fdee><h3 data-v-68e5fdee>31</h3> <h6 data-v-68e5fdee>Articles</h6></div> <div data-v-68e5fdee><h3 data-v-68e5fdee>0</h3> <h6 data-v-68e5fdee>Tags</h6></div></div> <ul class="social-links" data-v-68e5fdee></ul> <hr data-v-68e5fdee></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><a href="/intro/" class="nav-link"><i class="undefined"></i>
+  文档
+</a></div><div class="nav-item"><a href="http://www.hexmeet.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  公司主页
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://developer.hexmeet.com/legal/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  隐私政策
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>会捷通 SDK (SVC)</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/svcsdk/" aria-current="page" class="sidebar-link">入门指南</a></li><li><a href="/svcsdk/windows-cpp.html" class="sidebar-link">Windows 版本 (C++)</a></li><li><a href="/svcsdk/macos-sdk.html" class="sidebar-link">macOS 版本</a></li><li><a href="/svcsdk/Android-sdk.html" class="sidebar-link">Android 版本</a></li><li><a href="/svcsdk/iOS-sdk.html" class="sidebar-link">iOS 版本</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>HexMeet SDK (AVC)</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/avcsdk/Android-AVCSDK.html" class="sidebar-link">Android 版本</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>其他</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/usecases/HJT-SDK-Use-Cases.html" class="sidebar-link">应用场景示例</a></li><li><a href="/other/faq.html" class="sidebar-link">常见问题</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-21432440 data-v-1156296a><h3 class="title" data-v-21432440 data-v-21432440></h3> <!----> <label id="box" class="inputBox" data-v-21432440 data-v-21432440><input type="password" value="" data-v-21432440> <span data-v-21432440>Konck! Knock!</span> <button data-v-21432440>OK</button></label> <div class="footer" data-v-21432440 data-v-21432440><span data-v-21432440><i class="iconfont reco-theme" data-v-21432440></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-21432440>vuePress-theme-reco</a></span> <span data-v-21432440><i class="iconfont reco-copyright" data-v-21432440></i> <a data-v-21432440><span data-v-21432440>中创视讯</span>
+            
+          <!---->
+          2023
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">会捷通 EVSDK(pz200) 开发文档</h1> <div data-v-53977846><i class="iconfont reco-account" data-v-53977846><span data-v-53977846>中创视讯</span></i> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h2 id="会捷通-evsdk-pz200-开发文档">会捷通 EVSDK(pz200) 开发文档</h2> <h3 id="api-参考">API 参考</h3> <h4 id="license-激活">License 激活</h4> <p>EVSDK (pz200) 版本需要先激活，然后才能使用呼叫等功能。</p> <ol><li>获取设备专有 License ID</li></ol> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/** 
+   获取设备的 License ID: getLicenseId()
+   初始化 SDK 后，调用此方法获取设备的 License ID
+*/</span>
+
+   <span class="token class-name">String</span> licenseId <span class="token operator">=</span> engine<span class="token punctuation">.</span><span class="token function">getLicenseId</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+</code></pre></div><ol start="2"><li><p>联系支持人员获取该 License ID 的 License Key</p> <blockquote><p>将设备的 License ID 告知支持人员，由他们帮忙生成 License Key</p></blockquote></li> <li><p>激活 EVSDK</p></li></ol> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+  激活 License: checkLicense(String license_key)
+	初始化 SDK 后，调用此接口
+	licenseSuccess ： true 激活成功，false 激活失败
+*/</span>
+
+<span class="token keyword">boolean</span> licenseSuccess <span class="token operator">=</span> engine<span class="token punctuation">.</span><span class="token function">checkLicense</span><span class="token punctuation">(</span><span class="token class-name">String</span> license_key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="getserialnumber">getSerialNumber</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+  获取序列号，主要用于需要显示 SN 的地方使用
+*/</span>
+<span class="token class-name">String</span> <span class="token function">getSerialNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="setprovision">setProvision</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+  初始化 SDK 之后调用此方法，完成向平台注册
+  server:服务器地址
+  port:端口号
+*/</span>
+<span class="token keyword">int</span> <span class="token function">setProvision</span><span class="token punctuation">(</span><span class="token class-name">String</span> server<span class="token punctuation">,</span> <span class="token keyword">int</span> port<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><blockquote><p>注意，硬件终端需要使用 setProvision 接口向平台注册，而不是使用用户 login 的接口</p> <p>硬件终端使用前，需要先在平台自服务系统中添加这个终端 (在自服务系统 &gt; 通讯录 &gt; 终端列表 界面下，选择添加终端。添加终端时，需要终端的 SN 信息。)</p></blockquote> <h4 id="clearprovision">clearProvision</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+  取消注册。通常只需要在用户将终端从一个平台迁移到另一个平台，改变平台地址时使用该接口。
+*/</span>
+<span class="token keyword">int</span> <span class="token function">clearProvision</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="onregister">onRegister</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+  注册成功的回调，通过该通知获得注册状态的变化
+  registered：
+  		true :注册成功
+  		false:注册失败
+*/</span>
+<span class="token keyword">void</span> <span class="token function">onRegister</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> registered<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// do something, like displaying the status on UI</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="设置编解码器类型">设置编解码器类型</h4> <blockquote><p>注意，该方法在 pz200 设备中必须使用，否则不会使用硬件编解码</p></blockquote> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+  设置编解码器类型
+  	call_type：呼叫类型
+  	stream: 码流类型
+  	type：编码器类型
+*/</span>
+<span class="token keyword">int</span> <span class="token function">setPreviewDecoderType</span><span class="token punctuation">(</span><span class="token class-name">EV_CALL_TYPE</span> call_type<span class="token punctuation">,</span> <span class="token class-name">EV_STREAM_TYPE</span> stream<span class="token punctuation">,</span> <span class="token class-name">EV_CODEC_TYPE</span> type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">setDecoderType</span><span class="token punctuation">(</span><span class="token class-name">EV_CALL_TYPE</span> call_type<span class="token punctuation">,</span> <span class="token class-name">EV_STREAM_TYPE</span> stream<span class="token punctuation">,</span> <span class="token class-name">EV_CODEC_TYPE</span> type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">setPreviewEncoderType</span><span class="token punctuation">(</span><span class="token class-name">EV_CALL_TYPE</span> call_type<span class="token punctuation">,</span> <span class="token class-name">EV_STREAM_TYPE</span> stream<span class="token punctuation">,</span> <span class="token class-name">EV_CODEC_TYPE</span> type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">setEncoderType</span><span class="token punctuation">(</span><span class="token class-name">EV_CALL_TYPE</span> call_type<span class="token punctuation">,</span> <span class="token class-name">EV_STREAM_TYPE</span> stream<span class="token punctuation">,</span> <span class="token class-name">EV_CODEC_TYPE</span> type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//示例代码</span>
+<span class="token comment">//初始化 SDK 时需要设置，对于 pz200 要开启硬编码和硬解码</span>
+<span class="token function">setEncoderType</span><span class="token punctuation">(</span>EV_CALL_SIP<span class="token punctuation">,</span> EV_STREAM_VIDEO<span class="token punctuation">,</span> EV_CODEC_TYPE_HW<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setEncoderType</span><span class="token punctuation">(</span>EV_CALL_SIP<span class="token punctuation">,</span> EV_STREAM_CONTENT<span class="token punctuation">,</span> EV_CODEC_TYPE_HW<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setEncoderType</span><span class="token punctuation">(</span>EV_CALL_SVC<span class="token punctuation">,</span> EV_STREAM_VIDEO<span class="token punctuation">,</span> EV_CODEC_TYPE_HW<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setEncoderType</span><span class="token punctuation">(</span>EV_CALL_SVC<span class="token punctuation">,</span> EV_STREAM_CONTENT<span class="token punctuation">,</span> EV_CODEC_TYPE_HW<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">setPreviewEncoderType</span><span class="token punctuation">(</span>EV_CALL_SIP<span class="token punctuation">,</span> EV_STREAM_VIDEO<span class="token punctuation">,</span> EV_CODEC_TYPE_HW<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setPreviewEncoderType</span><span class="token punctuation">(</span>EV_CALL_SIP<span class="token punctuation">,</span> EV_STREAM_CONTENT<span class="token punctuation">,</span> EV_CODEC_TYPE_HW<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setPreviewEncoderType</span><span class="token punctuation">(</span>EV_CALL_SVC<span class="token punctuation">,</span> EV_STREAM_VIDEO<span class="token punctuation">,</span> EV_CODEC_TYPE_HW<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setPreviewEncoderType</span><span class="token punctuation">(</span>EV_CALL_SVC<span class="token punctuation">,</span> EV_STREAM_CONTENT<span class="token punctuation">,</span> EV_CODEC_TYPE_HW<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">setDecoderType</span><span class="token punctuation">(</span>EV_CALL_SIP<span class="token punctuation">,</span> EV_STREAM_VIDEO<span class="token punctuation">,</span> EV_CODEC_TYPE_HW<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setDecoderType</span><span class="token punctuation">(</span>EV_CALL_SIP<span class="token punctuation">,</span> EV_STREAM_CONTENT<span class="token punctuation">,</span> EV_CODEC_TYPE_HW<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setDecoderType</span><span class="token punctuation">(</span>EV_CALL_SVC<span class="token punctuation">,</span> EV_STREAM_VIDEO<span class="token punctuation">,</span> EV_CODEC_TYPE_HW<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setDecoderType</span><span class="token punctuation">(</span>EV_CALL_SVC<span class="token punctuation">,</span> EV_STREAM_CONTENT<span class="token punctuation">,</span> EV_CODEC_TYPE_HW<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">setPreviewDecoderType</span><span class="token punctuation">(</span>EV_CALL_SIP<span class="token punctuation">,</span> EV_STREAM_VIDEO<span class="token punctuation">,</span> EV_CODEC_TYPE_HW<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setPreviewDecoderType</span><span class="token punctuation">(</span>EV_CALL_SIP<span class="token punctuation">,</span> EV_STREAM_CONTENT<span class="token punctuation">,</span> EV_CODEC_TYPE_HW<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setPreviewDecoderType</span><span class="token punctuation">(</span>EV_CALL_SVC<span class="token punctuation">,</span> EV_STREAM_VIDEO<span class="token punctuation">,</span> EV_CODEC_TYPE_HW<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setPreviewDecoderType</span><span class="token punctuation">(</span>EV_CALL_SVC<span class="token punctuation">,</span> EV_STREAM_CONTENT<span class="token punctuation">,</span> EV_CODEC_TYPE_HW<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="setcalllogmaxsize">setCallLogMaxSize</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+  设置呼叫历史记录的最大值，上限500.
+*/</span>
+<span class="token keyword">int</span> <span class="token function">setCallLogMaxSize</span><span class="token punctuation">(</span><span class="token keyword">int</span> size<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="setlayoutcapacity">setLayoutCapacity</h4> <blockquote><p>注意，该方法在设备上必须使用，按照以下例子中的能力集合设置即可</p></blockquote> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 设置终端支持分屏的集合，对于 pz200 需要按以下设置，初始化时需要设置
+ mode:GalleryMode
+ 	  SpeakerMode
+*/</span>
+<span class="token keyword">int</span> <span class="token function">setLayoutCapacity</span><span class="token punctuation">(</span><span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutMode</span> mode<span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">&gt;</span></span> type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//示例代码</span>
+<span class="token comment">//初始化 SDK 时设置</span>
+ <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span> gallery_layout<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type1<span class="token punctuation">,</span>
+            <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type2H<span class="token punctuation">,</span>
+            <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type4<span class="token punctuation">,</span>
+            <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type9<span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+ <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span> speaker_layout<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type1<span class="token punctuation">,</span>
+            <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type2V<span class="token punctuation">,</span>
+            <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type3_1T_2B<span class="token punctuation">,</span>
+            <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type4_3T_1B<span class="token punctuation">,</span>
+            <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type5_1L_4R<span class="token punctuation">,</span>
+            <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type6<span class="token punctuation">,</span>
+            <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type8<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+engine<span class="token punctuation">.</span><span class="token function">setLayoutCapacity</span><span class="token punctuation">(</span><span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutMode<span class="token punctuation">.</span>GalleryMode</span><span class="token punctuation">,</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span>gallery_layout<span class="token punctuation">)</span><span class="token punctuation">)</span>
+engine<span class="token punctuation">.</span><span class="token function">setLayoutCapacity</span><span class="token punctuation">(</span><span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutMode<span class="token punctuation">.</span>SpeakerMode</span><span class="token punctuation">,</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span>speaker_layout<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><h4 id="getcalllog">getCallLog</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 获取呼叫历史记录，参数如下：
+   String id;
+   EVCommon.EvCallType type;//呼叫类型：CallSvc
+   EVCommon.EvCallDir dir：
+   					CallOutGoing：去电
+   					CallIncoming：来电
+   EVCommon.EvCallStatus status;//呼叫是否成功
+   String displayName;//名字
+   String peer;//会议号
+   long startTime;//开始时间
+   duration;//持续时间
+   isAudioOnly;//是否音频入会
+*/</span>
+<span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>EVCallLog</span><span class="token punctuation">&gt;</span></span> <span class="token function">getCallLog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="removecalllog">removeCallLog</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+删除呼叫历史记录
+*/</span>
+<span class="token keyword">int</span> <span class="token function">removeCallLog</span><span class="token punctuation">(</span><span class="token class-name">String</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="setlocalvideopreviewwindow">setLocalVideoPreviewWindow</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 设置本地视频预览窗口，非呼叫中、需要预览本地视频时设置
+ 注：需要在 enablePreview() 之后调用
+*/</span>
+<span class="token keyword">int</span> <span class="token function">setLocalVideoPreviewWindow</span><span class="token punctuation">(</span><span class="token class-name">Object</span> localVideoPreview<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="enablepreview">enablePreview</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+启用预览,设置近端本地视频时，请开启此方法
+*/</span>
+<span class="token keyword">int</span> <span class="token function">enablePreview</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> enable<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="setlocalcontentpreviewwindow">setLocalContentPreviewWindow</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 双流本地预览.
+ 注：需要在 enableContentPreview() 之后调用
+*/</span>
+<span class="token keyword">int</span> <span class="token function">setLocalContentPreviewWindow</span><span class="token punctuation">(</span><span class="token class-name">Object</span> localContentPreview<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="enablecontentpreview">enableContentPreview</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 启用预览，双流本地预览时，需要开启此方法
+*/</span>
+<span class="token keyword">int</span> <span class="token function">enableContentPreview</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> enable<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="setuseragent">setUserAgent</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+  设置用户代理
+  userAgent：名字
+  version：版本号
+*/</span>
+<span class="token keyword">int</span> <span class="token function">setUserAgent</span><span class="token punctuation">(</span><span class="token class-name">String</span> userAgent<span class="token punctuation">,</span><span class="token class-name">String</span> version<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="oncontent">onContent</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+双流：
+    StreamDir：//新加入两个参数
+            Plugin ：接入双流
+            Plugout：断开双流
+    boolean isExtern：投屏
+*/</span>
+<span class="token keyword">void</span> <span class="token function">onContent</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>ContentInfo</span> info<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="参考">参考</h2> <ul><li>EVSDK (Android 版) 开发文档，http://developer.hexmeet.com/svcsdk/Android-sdk.html</li></ul></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">11/7/2022, 5:26:20 PM</span></div></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-2" data-v-70334359><a href="/svcsdk/sdk-pz200.html#会捷通-evsdk-pz200-开发文档" class="sidebar-link reco-side-会捷通-evsdk-pz200-开发文档" data-v-70334359>会捷通 EVSDK(pz200) 开发文档</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/sdk-pz200.html#api-参考" class="sidebar-link reco-side-api-参考" data-v-70334359>API 参考</a></li><li class="level-2" data-v-70334359><a href="/svcsdk/sdk-pz200.html#参考" class="sidebar-link reco-side-参考" data-v-70334359>参考</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.411da203.js" defer></script><script src="/assets/js/3.1680551f.js" defer></script><script src="/assets/js/1.177e8441.js" defer></script><script src="/assets/js/43.59042230.js" defer></script>
+  </body>
+</html>

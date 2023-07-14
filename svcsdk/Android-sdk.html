@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>会捷通客户端 SDK (Android版) 开发文档 | 中创视讯</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.png">
+    <meta name="description" content="开发者中心">
+    
+    <link rel="preload" href="/assets/css/0.styles.817749b6.css" as="style"><link rel="preload" href="/assets/js/app.411da203.js" as="script"><link rel="preload" href="/assets/js/3.1680551f.js" as="script"><link rel="preload" href="/assets/js/1.177e8441.js" as="script"><link rel="preload" href="/assets/js/19.e31fc347.js" as="script"><link rel="prefetch" href="/assets/js/10.c19d7ec3.js"><link rel="prefetch" href="/assets/js/11.c0855295.js"><link rel="prefetch" href="/assets/js/12.f0ae5cae.js"><link rel="prefetch" href="/assets/js/13.5d2f9524.js"><link rel="prefetch" href="/assets/js/14.41015bd9.js"><link rel="prefetch" href="/assets/js/15.be7540d9.js"><link rel="prefetch" href="/assets/js/16.cc31d152.js"><link rel="prefetch" href="/assets/js/17.2afd4815.js"><link rel="prefetch" href="/assets/js/18.18f81fb5.js"><link rel="prefetch" href="/assets/js/20.98c031c7.js"><link rel="prefetch" href="/assets/js/21.bc321621.js"><link rel="prefetch" href="/assets/js/22.dc2b863e.js"><link rel="prefetch" href="/assets/js/23.4670b545.js"><link rel="prefetch" href="/assets/js/24.4606d590.js"><link rel="prefetch" href="/assets/js/25.ab0d5925.js"><link rel="prefetch" href="/assets/js/26.944bcd95.js"><link rel="prefetch" href="/assets/js/27.39bdcd13.js"><link rel="prefetch" href="/assets/js/28.95334c6d.js"><link rel="prefetch" href="/assets/js/29.59f3060c.js"><link rel="prefetch" href="/assets/js/30.1f67fb08.js"><link rel="prefetch" href="/assets/js/31.b2ca0506.js"><link rel="prefetch" href="/assets/js/32.b4a82496.js"><link rel="prefetch" href="/assets/js/33.da5c451e.js"><link rel="prefetch" href="/assets/js/34.117d1402.js"><link rel="prefetch" href="/assets/js/35.e39e9e7a.js"><link rel="prefetch" href="/assets/js/36.1bcba8f4.js"><link rel="prefetch" href="/assets/js/37.83bf31eb.js"><link rel="prefetch" href="/assets/js/38.c3e2e422.js"><link rel="prefetch" href="/assets/js/39.527bb476.js"><link rel="prefetch" href="/assets/js/4.99b20d32.js"><link rel="prefetch" href="/assets/js/40.23da87c4.js"><link rel="prefetch" href="/assets/js/41.a03ffbdc.js"><link rel="prefetch" href="/assets/js/42.f9b4a544.js"><link rel="prefetch" href="/assets/js/43.59042230.js"><link rel="prefetch" href="/assets/js/44.aa604134.js"><link rel="prefetch" href="/assets/js/45.60c0c458.js"><link rel="prefetch" href="/assets/js/5.f1ccbddc.js"><link rel="prefetch" href="/assets/js/6.253f75ab.js"><link rel="prefetch" href="/assets/js/7.53b2c023.js"><link rel="prefetch" href="/assets/js/8.f53a178b.js"><link rel="prefetch" href="/assets/js/9.6c9d8d70.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.817749b6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-21432440 data-v-1156296a data-v-1156296a><h3 class="title" data-v-21432440 data-v-21432440>中创视讯</h3> <p class="description" data-v-21432440 data-v-21432440>开发者中心</p> <label id="box" class="inputBox" data-v-21432440 data-v-21432440><input type="password" value="" data-v-21432440> <span data-v-21432440>Konck! Knock!</span> <button data-v-21432440>OK</button></label> <div class="footer" data-v-21432440 data-v-21432440><span data-v-21432440><i class="iconfont reco-theme" data-v-21432440></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-21432440>vuePress-theme-reco</a></span> <span data-v-21432440><i class="iconfont reco-copyright" data-v-21432440></i> <a data-v-21432440><span data-v-21432440>中创视讯</span>
+            
+          <!---->
+          2023
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">中创视讯</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><a href="/intro/" class="nav-link"><i class="undefined"></i>
+  文档
+</a></div><div class="nav-item"><a href="http://www.hexmeet.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  公司主页
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://developer.hexmeet.com/legal/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  隐私政策
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-68e5fdee data-v-1156296a><!----> <h3 class="name" data-v-68e5fdee>
+    中创视讯
+  </h3> <div class="num" data-v-68e5fdee><div data-v-68e5fdee><h3 data-v-68e5fdee>31</h3> <h6 data-v-68e5fdee>Articles</h6></div> <div data-v-68e5fdee><h3 data-v-68e5fdee>0</h3> <h6 data-v-68e5fdee>Tags</h6></div></div> <ul class="social-links" data-v-68e5fdee></ul> <hr data-v-68e5fdee></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><a href="/intro/" class="nav-link"><i class="undefined"></i>
+  文档
+</a></div><div class="nav-item"><a href="http://www.hexmeet.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  公司主页
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://developer.hexmeet.com/legal/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  隐私政策
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>会捷通 SDK (SVC)</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/svcsdk/" aria-current="page" class="sidebar-link">入门指南</a></li><li><a href="/svcsdk/windows-cpp.html" class="sidebar-link">Windows 版本 (C++)</a></li><li><a href="/svcsdk/macos-sdk.html" class="sidebar-link">macOS 版本</a></li><li><a href="/svcsdk/Android-sdk.html" aria-current="page" class="active sidebar-link">Android 版本</a></li><li><a href="/svcsdk/iOS-sdk.html" class="sidebar-link">iOS 版本</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>HexMeet SDK (AVC)</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/avcsdk/Android-AVCSDK.html" class="sidebar-link">Android 版本</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>其他</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/usecases/HJT-SDK-Use-Cases.html" class="sidebar-link">应用场景示例</a></li><li><a href="/other/faq.html" class="sidebar-link">常见问题</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-21432440 data-v-1156296a><h3 class="title" data-v-21432440 data-v-21432440></h3> <!----> <label id="box" class="inputBox" data-v-21432440 data-v-21432440><input type="password" value="" data-v-21432440> <span data-v-21432440>Konck! Knock!</span> <button data-v-21432440>OK</button></label> <div class="footer" data-v-21432440 data-v-21432440><span data-v-21432440><i class="iconfont reco-theme" data-v-21432440></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-21432440>vuePress-theme-reco</a></span> <span data-v-21432440><i class="iconfont reco-copyright" data-v-21432440></i> <a data-v-21432440><span data-v-21432440>中创视讯</span>
+            
+          <!---->
+          2023
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">会捷通客户端 SDK (Android版) 开发文档</h1> <div data-v-53977846><i class="iconfont reco-account" data-v-53977846><span data-v-53977846>中创视讯</span></i> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="会捷通客户端-sdk-android版-开发文档">会捷通客户端 SDK (Android版) 开发文档</h1> <h2 id="概述">概述</h2> <p><img src="/assets/img/android-gallery-view.14a821fe.png" alt="画廊模式"></p> <p>会捷通客户端 SDK 是⼀款视频会议软终端开发套件，开发者可以利⽤本 SDK 开发出具有清晰流畅的⾳视频体验和⾼清内容协作的⾳视频会议终端应用。会捷通客户端 SDK 具备强⼤的⽹络适应性，和独特的⾳视频抗⽹络丢包算法，配合会捷通云视讯平台使⽤，可以保证在 30% ⽹络丢包环境下视频依然清晰流畅，即使⽹络丢包⾼达 50%，依然可以保证⾳频通畅。 会捷通客户端 SDK 提供了丰富，⽽且简单易⽤的 API 接⼝。开发者不需要掌握丰富的⾳视频和信令相关知识，也可以使⽤本 SDK 开发出专业的视频会议软终端应用。 本⽂档详细介绍了 SDK 的各项功能，以及它们的使⽤⽅法。</p> <div class="custom-block tip"><p class="title"></p><p>本文档对应 SDK 版本为 1.4</p></div><h3 id="系统要求">系统要求</h3> <ul><li>Android 5.0 及以上版本的移动设备</li></ul> <h3 id="开发环境">开发环境</h3> <ul><li>推荐使⽤ AndroidStudio 3.0 或以上版本进⾏开发</li></ul> <h3 id="示例代码">示例代码</h3> <h4 id="示例代码下载地址">示例代码下载地址</h4> <p><a href="https://hexmeet.coding.net/public/evsdk-svc-android-demo/EVSDK-SVC-Android-Demo/git" target="_blank" rel="noopener noreferrer">https://hexmeet.coding.net/public/evsdk-svc-android-demo/EVSDK-SVC-Android-Demo/git <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h4 id="代码构成">代码构成</h4> <div class="custom-block tip"><p class="title">提示</p><p>以下列表结构展示为在 Android Studio 中设置浏览模式为 Android 时</p></div><ul><li>app
+<ul><li><p>manifests</p> <ul><li>AndroidManifests.xml</li></ul></li> <li><p>java</p> <ul><li>com.hexmeet.hjt - 代码目录
+<ul><li>cache - 缓存模块</li> <li>call - 入会模块</li> <li>event</li> <li>fragment  -呼叫模块</li> <li>login - 登录、匿名呼叫模块</li> <li>model</li> <li>sdk - 调用EVSDK接口模块</li> <li>service</li> <li>utils
+<ul><li>App</li> <li>AppCons</li> <li>BaseActivity - 父类</li> <li>CrashHandler</li> <li>FullscreenActivity - 父类</li> <li>MainActivity -主界面</li> <li>PermissionWrapper -权限</li> <li>PhoneStateChangedReceiver -监听来电显示</li> <li>SplashAcitvity - 闪屏页面</li></ul></li></ul></li></ul></li> <li><p>assets - 资源文件</p></li> <li><p>jniLibs - 原⽣库(.so)⽂件夹，和 EVSDK.jar 一起使用</p></li> <li><p>res - 资源文件</p> <ul><li>drawable</li> <li>layout</li> <li>mipmap</li> <li>raw - 音频文件、图片等</li> <li>valuse - 屏幕适配、颜色、字符串等</li> <li>xml</li></ul></li></ul></li></ul> <h2 id="快速定制化">快速定制化</h2> <h3 id="修改应用的-gradle-文件">修改应用的 gradle 文件</h3> <p>开发者应该根据需要对应用的 gradle 文件进行修改，特别是 applicationId 等关键内容</p> <div class="language-groovy extra-class"><pre class="language-groovy"><code>defaultConfig <span class="token punctuation">{</span>
+    <span class="token comment">// 设置应用的 applicationId，需要更改为开发者应用的真实 Id</span>
+    applicationId System<span class="token punctuation">.</span><span class="token function">getenv</span><span class="token punctuation">(</span><span class="token string gstring">&quot;APPLICATION_ID&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> String <span class="token operator">?:</span> <span class="token string gstring">&quot;com.hexmeet.hjtsdkedmo&quot;</span>
+    minSdkVersion <span class="token number">21</span>
+    targetSdkVersion <span class="token number">29</span>
+    versionCode System<span class="token punctuation">.</span><span class="token function">getenv</span><span class="token punctuation">(</span><span class="token string gstring">&quot;BUILD_CODE&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> Integer <span class="token operator">?:</span> <span class="token number">0</span>
+    versionName System<span class="token punctuation">.</span><span class="token function">getenv</span><span class="token punctuation">(</span><span class="token string gstring">&quot;BUILD_VERSION&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> String <span class="token operator">?:</span> <span class="token string gstring">&quot;0.0&quot;</span>
+
+    <span class="token keyword">def</span> appFileProviderAuth <span class="token operator">=</span> applicationId <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token string gstring">&quot;.fileprovider&quot;</span><span class="token punctuation">)</span>
+    
+    <span class="token comment">// it will be used in the AndroidManifest.xml file</span>
+    manifestPlaceholders <span class="token operator">=</span> <span class="token punctuation">[</span>APP_FILE_PROVIDER_AUTH<span class="token punctuation">:</span> appFileProviderAuth<span class="token punctuation">]</span>
+
+    ndk <span class="token punctuation">{</span>
+        <span class="token comment">// 请注意 EVSDK 不支持 x86 平台，所以abiFilters 不能包含 ‘x86'</span>
+        moduleName <span class="token string gstring">&quot;jniLibs&quot;</span>
+        abiFilters <span class="token string gstring">&quot;armeabi&quot;</span><span class="token punctuation">,</span> <span class="token string gstring">&quot;armeabi-v7a&quot;</span>
+    <span class="token punctuation">}</span>
+    testInstrumentationRunner <span class="token string gstring">&quot;android.support.test.runner.AndroidJUnitRunner&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="开发入门">开发入门</h2> <h3 id="初始化-sdk">初始化 SDK</h3> <p><strong>aar 形式：</strong></p> <table><thead><tr><th>文件</th> <th>描述</th></tr></thead> <tbody><tr><td>添加 EVSDK 库⽂件 evsdk.aar</td> <td>示例代码⽬录:swep-evsdk-android-demo\app\libs</td></tr></tbody></table> <p><strong>在程序 SdkManagerImpl 中初始化SDK:</strong></p> <div class="language-java extra-class"><pre class="language-java"><code>	<span class="token keyword">private</span> <span class="token class-name">EVEngine</span> engine<span class="token punctuation">;</span>
+	<span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span> gallery_layout<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type1<span class="token punctuation">,</span>
+            <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type2H<span class="token punctuation">,</span>
+            <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type4<span class="token punctuation">,</span>
+            <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type6W
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span> speaker_layout<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type1
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+	<span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">initSDK</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        LOG<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">&quot;App - initSDK&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Context</span> appContext <span class="token operator">=</span> <span class="token class-name">App</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">/**
+		初始化raw文件
+		注：需复制res/raw的全部文件，ResourceFile类相关代码
+ 		*/</span>
+        <span class="token class-name">ResourceFile</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createAndStart</span><span class="token punctuation">(</span>appContext<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        engine <span class="token operator">=</span> <span class="token class-name">EVFactory</span><span class="token punctuation">.</span><span class="token function">createEngine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//设置存储路径</span>
+        <span class="token class-name">String</span> path <span class="token operator">=</span> appContext<span class="token punctuation">.</span><span class="token function">getFilesDir</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getAbsolutePath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">/**
+         用于设置sdk日志相关
+         level 日志等级
+         path 日志存放位置
+         filename 日志名称
+         size 日志大小
+         */</span>
+        engine<span class="token punctuation">.</span><span class="token function">setLog</span><span class="token punctuation">(</span><span class="token string">&quot;EasyVideo&quot;</span><span class="token punctuation">,</span> path<span class="token punctuation">,</span> <span class="token string">&quot;evsdk&quot;</span><span class="token punctuation">,</span> <span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//开启日志</span>
+        engine<span class="token punctuation">.</span><span class="token function">enableLog</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//设置rootca.pem文件</span>
+        engine<span class="token punctuation">.</span><span class="token function">setRootCA</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        engine<span class="token punctuation">.</span><span class="token function">initialize</span><span class="token punctuation">(</span>appContext，path<span class="token punctuation">,</span> <span class="token string">&quot;config&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//设置最大视频窗口数量</span>
+        engine<span class="token punctuation">.</span><span class="token function">setMaxRecvVideo</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//设置呼叫带宽 </span>
+        engine<span class="token punctuation">.</span><span class="token function">setBandwidth</span><span class="token punctuation">(</span><span class="token number">2048</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//设置会中layout的两种模式</span>
+        engine<span class="token punctuation">.</span><span class="token function">setLayoutCapacity</span><span class="token punctuation">(</span><span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutMode<span class="token punctuation">.</span>GalleryMode</span><span class="token punctuation">,</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span>gallery_layout<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        engine<span class="token punctuation">.</span><span class="token function">setLayoutCapacity</span><span class="token punctuation">(</span><span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutMode<span class="token punctuation">.</span>SpeakerMode</span><span class="token punctuation">,</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span>speaker_layout<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//添加CallBack回调</span>
+        engine<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">EVListenr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><h3 id="申请权限">申请权限</h3> <div class="language-java extra-class"><pre class="language-java"><code>    <span class="token operator">&lt;</span><span class="token keyword">uses</span><span class="token operator">-</span>permission android<span class="token operator">:</span>name<span class="token operator">=</span><span class="token string">&quot;android.permission.INTERNET&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token keyword">uses</span><span class="token operator">-</span>permission android<span class="token operator">:</span>name<span class="token operator">=</span><span class="token string">&quot;android.permission.CAMERA&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token keyword">uses</span><span class="token operator">-</span>permission android<span class="token operator">:</span>name<span class="token operator">=</span><span class="token string">&quot;android.permission.READ_EXTERNAL_STORAGE&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token keyword">uses</span><span class="token operator">-</span>permission android<span class="token operator">:</span>name<span class="token operator">=</span><span class="token string">&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token keyword">uses</span><span class="token operator">-</span>permission android<span class="token operator">:</span>name<span class="token operator">=</span><span class="token string">&quot;android.permission.READ_PHONE_STATE&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token keyword">uses</span><span class="token operator">-</span>permission android<span class="token operator">:</span>name<span class="token operator">=</span><span class="token string">&quot;android.permission.RECORD_AUDIO&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token keyword">uses</span><span class="token operator">-</span>permission android<span class="token operator">:</span>name<span class="token operator">=</span><span class="token string">&quot;android.permission.MODIFY_AUDIO_SETTINGS&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token keyword">uses</span><span class="token operator">-</span>permission android<span class="token operator">:</span>name<span class="token operator">=</span><span class="token string">&quot;android.permission.ACCESS_NETWORK_STATE&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token keyword">uses</span><span class="token operator">-</span>permission android<span class="token operator">:</span>name<span class="token operator">=</span><span class="token string">&quot;android.permission.BLUETOOTH&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token keyword">uses</span><span class="token operator">-</span>permission android<span class="token operator">:</span>name<span class="token operator">=</span><span class="token string">&quot;android.permission.ACCESS_WIFI_STATE&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token keyword">uses</span><span class="token operator">-</span>permission android<span class="token operator">:</span>name<span class="token operator">=</span><span class="token string">&quot;android.permission.SYSTEM_ALERT_WINDOW&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token keyword">uses</span><span class="token operator">-</span>permission android<span class="token operator">:</span>name<span class="token operator">=</span><span class="token string">&quot;android.permission.FOREGROUND_SERVICE&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+</code></pre></div><p>如果你的 <code>targetSdkVersion</code> ≥ 29，还需要在 <strong>AndroidManifest.xml</strong> 文件的 <code>&lt;application&gt;</code> 区域添加如下行：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token operator">&lt;</span>application
+   android<span class="token operator">:</span>requestLegacyExternalStorage<span class="token operator">=</span><span class="token string">&quot;true&quot;</span><span class="token operator">&gt;</span>
+   <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>application<span class="token operator">&gt;</span>
+</code></pre></div><h3 id="防止代码混淆">防止代码混淆</h3> <p>在 <strong>app/proguard-rules.pro</strong> 文件中添加如下行，防止混淆 SDK 的代码：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token operator">-</span>keep <span class="token keyword">class</span> ev<span class="token punctuation">.</span>engine<span class="token punctuation">.</span>*<span class="token operator">*</span> <span class="token punctuation">{</span><span class="token operator">*</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token operator">-</span>keep <span class="token keyword">class</span> ev<span class="token punctuation">.</span>common<span class="token punctuation">.</span>*<span class="token operator">*</span> <span class="token punctuation">{</span><span class="token operator">*</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="呼叫流程">呼叫流程</h3> <p>下图说明客户端应用从初始化开始，呼叫进入一个会议，再结束呼叫的基本流程。</p> <img src="https://www.plantuml.com/plantuml/svg/bPJVJXD16CNl-nIJNhM9l00N14KJbPgOOkHwipl0aEqCsKwBUWL1e0goQMoHFyKMQ2qHNPlu1qifVHc_cUrRECi4N0m9sxtQRERyvdndpknebXiEpsNiM0of9mxUWIYSeBjpSt4qD8BY3ny_GnFtn-F3o6yjoT8H8fHmOjZa5KuaaVpwHcosnVSo5FQWkGRhcy5Yv7ldiklT1inY_iHuaSPc_ZcnC5CuhHEL1QWtnKP3b7xvpPN-GL7yN1JbLd_LZO2yPr1hdbXyvee7nJDmZ-7t9_2w4G0fPXhsXQD9GYqs7_Br1IejKNmDIoxKVsXhylC7S0yZODCumpY-YUltAlBusu2uCKOvflmc7gmiWzSUX6UpQK8d2Py9PkU4qU1ejplGBLyegJAEM1ux_pHtzEjJs-1JpCa4zUZj-llhMkNtLkNHcjxrKe66WZr37eOHewbWuucSQM9i9P8H16ayJR8SEvUBRwthB2DKPJM57KnDdFXpjkDx7hWdihQOHF2s1iiD_Itwf53OXSwfRfNV-wYA6i7uc67RoWV59eyuQifuoNBy4RN8rPc4xmIuHLcgWhkbBjt_tg-HHAqjtdb8uv0Mz1TsPBMX8XBbQpqMM-UoVXenMXiRUHpALdMcyrxiLNKoqVCCgmRAym4DaeoDOcgf7zXV" alt="uml diagram"> <h3 id="登录">登录</h3> <p><strong>匿名方式入会</strong></p> <div class="custom-block tip"><p class="title"></p><p>用户匿名方式入会执行：定位-&gt;匿名登录-&gt;注册视频服务-&gt;呼叫 (其中匿名登录以及注册视频服务均由SDK 处理）</p></div><ol><li><p>定位服务、匿名登录、注册视频服务统一都由SDK处理只需要调用以下 API</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 用户执行匿名登录入会
+
+  locationServer   定位服务器
+  port             端口号
+  conferenceNumber 会议号码
+  displayName      用户在会议中的名称
+  password         会议密码
+  https			   是否是https
+  return 返回 SDK 处理结果，UI一般可忽略
+ */</span>
+<span class="token keyword">int</span> <span class="token function">joinConferenceWithLocation</span><span class="token punctuation">(</span><span class="token class-name">String</span> locationServer<span class="token punctuation">,</span><span class="token keyword">int</span> port<span class="token punctuation">,</span> <span class="token class-name">String</span> conferenceNumber<span class="token punctuation">,</span> <span class="token class-name">String</span> displayName<span class="token punctuation">,</span> <span class="token class-name">String</span> password<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//示例代码</span>
+engine<span class="token punctuation">.</span><span class="token function">enableSecure</span><span class="token punctuation">(</span>https<span class="token punctuation">)</span><span class="token punctuation">;</span>
+engine<span class="token punctuation">.</span><span class="token function">joinConferenceWithLocation</span><span class="token punctuation">(</span><span class="token string">&quot;server&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;port&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;number&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;name&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;password&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li> <li><p><strong>当调用匿名登录的 API 后，UI 会收到以下 SDK 回调。需要做出处理：</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">//定位或者匿名登录错误回调</span>
+ <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>EVError</span> err<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">//入会成功回调</span>
+ <span class="token keyword">void</span> <span class="token function">onCallConnected</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>CallInfo</span> info<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment">//入会失败回调</span>
+ <span class="token keyword">void</span> <span class="token function">onCallEnd</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>CallInfo</span> info<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span> 
+</code></pre></div></li></ol> <p><strong>用户账号登录</strong></p> <div class="custom-block tip"><p class="title"></p><p>用户账号登录会执行：定位-&gt;登录-&gt;注册视频服务(其中注册视频服务由 SDK 处理)</p></div><ol><li><p>定位</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+  用户定位登录（包含定位跟登录）
+
+  locationServer 定位服务器
+  locationPort   端口号
+  userName       用户名
+  password       会议密码
+  return         返回API结果UI可忽略
+ */</span>
+<span class="token keyword">int</span> <span class="token function">loginWithLocation</span><span class="token punctuation">(</span><span class="token class-name">String</span> locationServer<span class="token punctuation">,</span> <span class="token keyword">int</span> locationPort<span class="token punctuation">,</span> <span class="token class-name">String</span> userName<span class="token punctuation">,</span> <span class="token class-name">String</span> password<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//示例代码</span>
+engine<span class="token punctuation">.</span><span class="token function">enableSecure</span><span class="token punctuation">(</span>https<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//是否是https</span>
+password <span class="token operator">=</span> engine<span class="token punctuation">.</span><span class="token function">encryptPassword</span><span class="token punctuation">(</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//登录时需要传加密过后的密码</span>
+
+engine<span class="token punctuation">.</span><span class="token function">loginWithLocation</span><span class="token punctuation">(</span>locationServer：<span class="token string">&quot;服务器地址&quot;</span><span class="token punctuation">,</span> locationPort：<span class="token string">&quot;端口号&quot;</span><span class="token punctuation">,</span> userName：<span class="token string">&quot;用户名&quot;</span><span class="token punctuation">,</span> password<span class="token operator">:</span><span class="token string">&quot;密码&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//登录后会收到SDK以下回调</span>
+<span class="token comment">//定位或者登录错误会回调</span>
+<span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>EVError</span> err<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">//登录成功会回调</span>
+<span class="token keyword">void</span> <span class="token function">onLoginSucceed</span><span class="token punctuation">(</span><span class="token class-name">EVEngine<span class="token punctuation">.</span>UserInfo</span> user<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div></li></ol> <h3 id="窗口设置">窗口设置</h3> <p><strong>EVSDK 视频窗口分为三类  1. 本地窗口 2. 远端窗口 3. 内容窗口（双流）</strong></p> <ul><li>本地窗口 - 一个，用于显示摄像头设备的图像</li> <li>远端窗口 - 多个，用于显示接收到的视频流</li> <li>内容窗口 - 一个，用于显示接收到的共享内容</li></ul> <p>App UI 可以自行控制这些窗口的摆放位置、大小、以及显示/隐藏等</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token number">1.</span>本地窗口设置
+<span class="token comment">/**
+ 设置本地窗口
+
+ logcalVideo 本地窗口对象
+ return      返回结果（UI可以忽视,不作处理）
+ */</span>
+<span class="token keyword">int</span> <span class="token function">setLocalVideoWindow</span><span class="token punctuation">(</span><span class="token class-name">Object</span> logcalVideo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//示例代码（本地窗口为surfaceView对象）</span>
+<span class="token class-name">EVFactory</span><span class="token punctuation">.</span><span class="token function">createEngine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setLocalVideoWindow</span><span class="token punctuation">(</span>surfaceView<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token number">2.</span>远端窗口
+<span class="token comment">/**
+ 远端窗口 
+
+ remoteVideo 远端窗口集合
+ return      返回结果（UI可以忽视,不作处理）
+ */</span>
+<span class="token keyword">int</span> <span class="token function">setRemoteVideoWindow</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> remoteVideo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//示例代码（远端窗口为surfaceView对象）</span>
+<span class="token class-name">EVFactory</span><span class="token punctuation">.</span><span class="token function">createEngine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setRemoteVideoWindow</span><span class="token punctuation">(</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span>remoteBox<span class="token punctuation">.</span><span class="token function">getAllSurfaces</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token number">3.</span> 内容窗口
+<span class="token comment">/**
+ 设置内容窗口
+
+ remoteContent 内容窗口对象
+ return        返回结果（UI可以忽视,不作处理）
+ */</span>
+ <span class="token keyword">int</span> <span class="token function">setRemoteContentWindow</span><span class="token punctuation">(</span><span class="token class-name">Object</span> remoteContent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//示例代码（内容窗口为surfaceView对象）</span>
+engine<span class="token punctuation">.</span><span class="token function">setRemoteContentWindow</span><span class="token punctuation">(</span>surfaceView<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="本地预览">本地预览</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 设置本地预览窗口
+   注：本地预览是指在非会议状态
+
+ view        本地预览窗口对象
+ enable      启用预览,设置本地预览时，请开启此方法
+ return      返回结果（UI可以忽视,不作处理）
+ */</span>
+ <span class="token keyword">int</span> <span class="token function">enablePreview</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> enable<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token keyword">int</span> <span class="token function">setLocalVideoPreviewWindow</span><span class="token punctuation">(</span><span class="token class-name">SurfaceView</span> view<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//示例代码</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setLocalVideoPreviewWindow</span><span class="token punctuation">(</span><span class="token class-name">SurfaceView</span> view<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      engine<span class="token punctuation">.</span><span class="token function">enablePreview</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      engine<span class="token punctuation">.</span><span class="token function">setLocalVideoPreviewWindow</span><span class="token punctuation">(</span>view<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="实现视频通话">实现视频通话</h3> <p><strong>视频通话主要分为两种，一种是匿名入会（参考登录模块的匿名登录入会），一种是用户登录后入会</strong></p> <ul><li>设置用户入会后的头像以及视频背景图片（关闭摄像头所展示的图片）</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 设置会议中用户的头像以及背景图片
+
+ backgroundPath 背景图片
+ userImagePath  用户图片
+ return 返回结果（UI可以忽视,不作处理）
+ */</span>
+<span class="token keyword">int</span> <span class="token function">setUserImage</span><span class="token punctuation">(</span><span class="token class-name">String</span> backgroundPath<span class="token punctuation">,</span><span class="token class-name">String</span> userImagePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//示例</span>
+ engine<span class="token punctuation">.</span><span class="token function">setUserImage</span><span class="token punctuation">(</span><span class="token string">&quot;backgroundPath&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;userImagePath&quot;</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>用户创建会议</li></ul> <div class="language-objectivec extra-class"><pre class="language-objectivec"><code>  <span class="token comment">/**
+  用户创建会议
+   @param conference_number 创建会议的号码，这个参数要求必须是数字字符串，字符串的长度范围由服务器设置，默认情况要求如下：
+          端口模式自定义会议号码可以是任意数字开头的 5-11 位数字，在同一个 MRU 上，一个会议的号码不能是另一个号码的前缀。
+   @param conference_title 创建会议显示的名字
+   @param password 加入会议所需要的密码，不设置则不需要入会密码
+   @return id 传出参数，用于删除会议时使用，如果不结束删除会议，会议中有参会人员，则会议不会自动结束，如果会议中没有参会人员，会议会在5分钟后自动结束并删除。如果 id 不为空，表示创建会议成功。
+   */</span>
+public String <span class="token function">createConference</span><span class="token punctuation">(</span>String conferenceNumber<span class="token punctuation">,</span> String conferenceDisplayName<span class="token punctuation">,</span> String password<span class="token punctuation">)</span>
+</code></pre></div><ul><li>用户登录后主动入会</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 用户加入会议
+
+ conferenceNumber 会议号码
+ displayName      会议名称
+ password         会议密码
+ return 返回结果（UI可以忽视,不作处理）
+ */</span>
+<span class="token keyword">int</span> <span class="token function">joinConference</span><span class="token punctuation">(</span><span class="token class-name">String</span> conferenceNumber<span class="token punctuation">,</span><span class="token class-name">String</span> displayName<span class="token punctuation">,</span> <span class="token class-name">String</span> password<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//示例 注：会议名称是用户名</span>
+engine<span class="token punctuation">.</span><span class="token function">joinConference</span><span class="token punctuation">(</span>conferenceNumber：<span class="token string">&quot;会议号码&quot;</span><span class="token punctuation">,</span>displayName<span class="token operator">:</span><span class="token string">&quot;会议名称&quot;</span><span class="token punctuation">,</span>password<span class="token operator">:</span><span class="token string">&quot;会议密码&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>当调用入会的 API 后，UI 会收到以下 SDK 回调。需要做出处理</li></ul> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">//入会成功回调</span>
+ <span class="token keyword">void</span> <span class="token function">onCallConnected</span><span class="token punctuation">(</span><span class="token class-name">EVEngine<span class="token punctuation">.</span>CallInfo</span> info<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment">//入会失败回调</span>
+ <span class="token keyword">void</span> <span class="token function">onCallEnd</span><span class="token punctuation">(</span><span class="token class-name">EVEngine<span class="token punctuation">.</span>CallInfo</span> info<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span> 
+</code></pre></div><h3 id="主讲视图或画廊视图">主讲视图或画廊视图</h3> <p>视图模式指的是应用的 UI 如何为接收到的远端视频做布局展示。典型分屏样式有：主讲视图 (即一大多小布局) 和画廊视图 (平均大小布局)。当布局样式为主讲视图时，一般希望大窗口显示的视频流分辨率比较其他远端视频流更高，而当布局样式为画廊视图时，一般希望每个视频流的分辨率尽量一致。因此，在 UI 需要改变布局样式时，需要通知 SDK，这样 SDK 可以根据需要向平台发出相应请求，告知平台 UI 希望呈现的分屏布局样式，从而平台可以尽量提供满足 app 需要的视频流。</p> <p>另外，当平台侧通过会议控制，对分屏进行改变时，SDK 也会接收到变化通知，此时 SDK 通知 UI 分屏模式发生了何种变化，UI 应该根据变化的样式进行对应的布局改变。</p> <p>相关细节可参考 API 的布局类型、分屏样式请求和布局变化事件回调部分。</p> <ul><li>主讲视图 (一大多小布局) 实现示例</li></ul> <p><img src="/assets/img/android-speaker-view.39ade3cf.png" alt="主讲模式"></p> <ul><li>画廊视图 (平均大小布局) 实现示例</li></ul> <p><img src="/assets/img/android-gallery-view.14a821fe.png" alt="画廊模式"></p> <p><strong>设置视图模式</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 设置视频模式（主讲模式、画廊模式）
+
+ layout 对象
+ return 返回结果可忽视
+ */</span>
+<span class="token keyword">int</span> <span class="token function">setLayout</span><span class="token punctuation">(</span><span class="token class-name">LayoutRequest</span> layout<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//示例</span>
+<span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span> type <span class="token operator">=</span> <span class="token punctuation">(</span>svcLayoutMode <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>typeAuto <span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>svcLayoutMode <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type1 <span class="token operator">:</span> <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type6W<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutRequest</span> request <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutRequest</span><span class="token punctuation">(</span><span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutMode</span><span class="token punctuation">.</span><span class="token function">fromInt</span><span class="token punctuation">(</span>svcLayoutMode<span class="token punctuation">)</span><span class="token punctuation">,</span>type<span class="token punctuation">,</span> <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutPage</span><span class="token punctuation">.</span>typeCurrent<span class="token punctuation">,</span> <span class="token class-name">EVEngine<span class="token punctuation">.</span>VideoSize</span><span class="token punctuation">.</span>VIDEO_SIZE_UNKNOWN<span class="token punctuation">,</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+engine<span class="token punctuation">.</span><span class="token function">setLayout</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="静音或解除静音">静音或解除静音</h3> <p>**执行本地麦克风开启或者关闭 **</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 是否启用麦克风
+
+ mute   true 为关闭 false为开启
+ return 返回结果可忽视
+ */</span>
+<span class="token keyword">void</span> <span class="token function">muteMic</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> mute<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+<span class="token comment">//示例 注：先获取⻨克⻛状态  </span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setMicMute</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> mute<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>mute <span class="token operator">^</span> <span class="token operator">!</span>engine<span class="token punctuation">.</span><span class="token function">micEnabled</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+         engine<span class="token punctuation">.</span><span class="token function">enableMic</span><span class="token punctuation">(</span><span class="token operator">!</span>mute<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+</code></pre></div><h3 id="是否打开高帧率">是否打开高帧率</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">int</span> <span class="token function">enableHighFPS</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> enable<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="是否打开1080p">是否打开1080P</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">int</span> <span class="token function">enableHD</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> enable<span class="token punctuation">)</span>
+</code></pre></div><h3 id="启用视频或停用视频">启用视频或停用视频</h3> <p><strong>执行本地视频开启或者关闭</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 是否关闭本地视频
+
+ enable true 为关闭  false为开启
+ return 返回结果可忽视
+ */</span>
+<span class="token keyword">int</span> <span class="token function">enableCamera</span><span class="token punctuation">(</span>bool enable<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//示例代码 注：先获取本地视频状态</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">enableVideo</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> enable<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>enable <span class="token operator">^</span> engine<span class="token punctuation">.</span><span class="token function">cameraEnabled</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      engine<span class="token punctuation">.</span><span class="token function">enableCamera</span><span class="token punctuation">(</span>enable<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+</code></pre></div><h3 id="接收和显示共享内容">接收和显示共享内容</h3> <p><strong>收到共享或者共享结束 SDK 都会通过回调的形式告诉 UI</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 接收到内容分享或者内容分享结束的回调
+ info ContentInfo对象
+ enabled:  true 开，false 关 
+ dir：     Upload 发 ，Download 收
+ */</span>
+<span class="token keyword">void</span> <span class="token function">onContent</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>ContentInfo</span> info<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment">//示例代码</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>info<span class="token punctuation">.</span>dir<span class="token operator">==</span> <span class="token class-name">EVCommon<span class="token punctuation">.</span>StreamDir<span class="token punctuation">.</span>Download</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token comment">//收到分享（如果设置了内容窗口那么应该在此处显示出你的内容窗口，如果没有设置内容窗口SDK将会弹出一个窗口来显示分享内容）</span>
+  <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token comment">//结束分享，关闭分享窗口        </span>
+  <span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="实现切换摄像头">实现切换摄像头</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">int</span> <span class="token function">switchCamera</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//示例代码</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">switchCamera</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  engine<span class="token punctuation">.</span><span class="token function">switchCamera</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="共享屏幕">共享屏幕</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+启动屏幕共享时，检测横竖屏时，调用此接口：
+enable : true 横屏/ false 竖屏
+*/</span>
+<span class="token keyword">void</span> <span class="token function">setLandscape</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> enable<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+开启屏幕共享：
+    cts ：上下文
+    mediaProjection ：mediaProjection对象
+    mDisplay ： Display对象
+    handler  ： 开启一个handler
+ 注：调用此接口时，回调&quot;onContent&quot;如果收到contentInfo.status类型为&quot;Declined&quot;时，代表没有权限，不	可共享。
+*/</span>
+<span class="token keyword">void</span> <span class="token function">setScreenCapture</span><span class="token punctuation">(</span><span class="token class-name">Context</span> cts<span class="token punctuation">,</span><span class="token class-name">MediaProjection</span> mediaProjection<span class="token punctuation">,</span> <span class="token class-name">Display</span> mDisplay<span class="token punctuation">,</span> <span class="token class-name">Handler</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//示例代码具体请看Demo的'ScreenCaptureService'类</span>
+
+<span class="token comment">/**
+停止屏幕共享
+*/</span>
+<span class="token keyword">int</span> <span class="token function">stopContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+</code></pre></div><h3 id="挂断会议">挂断会议</h3> <p><strong>点击挂断需调用SDK的API</strong></p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">int</span> <span class="token function">leaveConference</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//示例代码</span>
+ <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">dropCall</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    engine<span class="token punctuation">.</span><span class="token function">leaveConference</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token comment">//退出成功后，收到sdk的回调</span>
+<span class="token keyword">void</span> <span class="token function">onCallEnd</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>CallInfo</span> info<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span> 
+</code></pre></div><h3 id="p2p-点对点-呼叫相关内容">P2P (点对点) 呼叫相关内容</h3> <p>P2P 呼叫的基本流程如下图所示</p> <img src="https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuU9I008bnu821OrIGqqb1GLTEoK5rx1W5s-eW9L2W560Gd9YJev2QN5gKMQA4LXBNdv9ga9-MMeHacOhXMSpzZrViklvsiwd-rgVzIrzsJ3h-PJTB-SkGjU2P86EWjBJdPkVzcy0Qd-wUzVprTrFLqrwidVoY_tpW2P0d0TL07GRGgiHoBwNJGqlrcy7MlDY_TptUtgUx9drOjqw1KyNs-JylBJC58XkPD_eWen0SZ1GNLvgSabg2XvFFT-z_FdkjNYzXkmgP3l0ZdmsT-dpALiXJiLkZH4Yx22Adq_jmH9gI8gVJrdnh6Cxq1rF-wT3l8zaFa8XPeXbvMVcWNoTbbgKcfUSgg2HLvgRb5e43J1DN15bH6948TiB3aHGUCrVQWLBGsW1ZpUE2b9JYtJXwcFoNYnS0Goef-jtFfksy-dsJQ10cB26OC12GWbVm1hYKCpba9gN0imh0000" alt="uml diagram"> <h4 id="p2p主叫">P2P主叫</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+  conferenceNumber 被叫人userId
+  displayName      会议中显示自己名称
+  password         密码设为无
+  CallType         会议类型 ：P2P
+  return           返回结果：0 成功，否则失败 
+*/</span>
+<span class="token keyword">int</span> <span class="token function">joinConference</span><span class="token punctuation">(</span><span class="token class-name">String</span> conferenceNumber<span class="token punctuation">,</span> <span class="token class-name">String</span> displayName<span class="token punctuation">,</span> <span class="token class-name">String</span> password<span class="token punctuation">,</span> <span class="token class-name">EVEngine<span class="token punctuation">.</span>CallType</span> type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="接收到p2p呼叫请求">接收到P2P呼叫请求</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 收到P2P会议邀请的通知,具体参数如下：
+ 	boolean isAudioOnly;      可忽略
+ 	boolean contentEnabled;   可忽略
+ 	String  peer;			  主叫名字
+ 	String  conferenceNumber; P2P入会号码
+ 	String  password;		  入会密码
+ 	EVEngine.EVError err;     错误信息
+ 	EVEngine.SvcCallType type;邀请类型SvcCallP2P 点对点呼叫
+ 	EVEngine.CallAction  action
+                      {
+						SvcNoAction  		  没有呼叫动作
+ 						SvcIncomingCallRing   呼入振铃
+ 						SvcIncomingCallCancel 呼入超时，取消呼叫
+                       }
+ */</span>
+<span class="token keyword">void</span> <span class="token function">onJoinConferenceIndication</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>CallInfo</span> info<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h4 id="接听">接听</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+  Number 此会议号码为：
+  					收到P2P会议邀请通知的conferenceNumber去接听会议
+*/</span>
+<span class="token keyword">int</span> <span class="token function">declineIncommingCall</span><span class="token punctuation">(</span><span class="token class-name">String</span> <span class="token class-name">Number</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h4 id="挂断">挂断</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">int</span> <span class="token function">leaveConference</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="对方已接受p2p呼叫">对方已接受P2P呼叫</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">void</span> <span class="token function">onCallPeerConnected</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>CallInfo</span> info<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h4 id="获取主叫头像地址">获取主叫头像地址</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">void</span> <span class="token function">onPeerImageUrl</span><span class="token punctuation">(</span><span class="token class-name">String</span> imageUrl<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="api参考">API参考</h2> <div class="custom-block tip"><p class="title"></p><p>以下为用户相关接口回调</p></div><h3 id="setlog">setLog</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+  用于设置sdk     日志相关
+  logDomain     日志等级
+  path          日志存放位置
+  filename      日志名称
+  size          日志大小
+*/</span>
+<span class="token keyword">void</span> <span class="token function">setLog</span><span class="token punctuation">(</span><span class="token class-name">String</span> logDomain<span class="token punctuation">,</span> <span class="token class-name">String</span> path<span class="token punctuation">,</span> <span class="token class-name">String</span> fileName<span class="token punctuation">,</span> <span class="token keyword">int</span> size<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="enablelog">enableLog</h3> <div class="language-java extra-class"><pre class="language-java"><code>
+<span class="token comment">/**
+  打开 SDK ⽇志收集功能
+  enable true：打开  false：关闭
+*/</span>
+<span class="token keyword">void</span> <span class="token function">enableLog</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> enable<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="compresslog">compressLog</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">//获取⽇志⽂件路径，⽅便下载或⽤邮件发送⽇志</span>
+<span class="token class-name">String</span> <span class="token function">compressLog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//示例代码</span>
+<span class="token class-name">String</span> sdkPath<span class="token operator">=</span> <span class="token class-name">EVFactory</span><span class="token punctuation">.</span><span class="token function">createEngine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">compressLog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="setrootca">setRootCA</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 设置rootca.pem文件，此文件在Demo的 res\raw 文件下。
+ 
+ rootpath 文件路径
+*/</span>
+<span class="token keyword">int</span> <span class="token function">setRootCA</span><span class="token punctuation">(</span><span class="token class-name">String</span> rootPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="initialize">initialize</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 
+ 使用配置文件初始化SDK
+ appContext Application Context
+ path           配置文件路径
+ configFileName 配置文件名称
+*/</span>
+<span class="token keyword">int</span> <span class="token function">initialize</span><span class="token punctuation">(</span><span class="token class-name">Context</span> appContext，<span class="token class-name">String</span> path<span class="token punctuation">,</span><span class="token class-name">String</span> configFileName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="custom-block warning"><p class="title">注意</p><p>SDK 1.3 版本后 initialize 需要传入 appContext 参数</p></div><h3 id="setuserimage">setUserImage</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 设置会议中用户的头像以及背景图片
+
+ backgroundPath 背景图片
+ userImagePath  用户图片
+ return 返回结果（UI可以忽视,不作处理）
+ */</span>
+<span class="token keyword">int</span> <span class="token function">setUserImage</span><span class="token punctuation">(</span><span class="token class-name">String</span> backgroundPath<span class="token punctuation">,</span><span class="token class-name">String</span> userImagePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="enableharddecoding">enableHardDecoding</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+是否开启硬件解码能力
+
+注：此接口需要在进入会议前设置 
+ */</span>
+<span class="token keyword">int</span> <span class="token function">enableHardDecoding</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> hardDecoding<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="setuseragent">setUserAgent</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+  设置 SIP 信令⽤户显示的 UserAgent 域的值
+  userAgent : ⽤户代理名称
+  version   : 应⽤版本号
+ */</span>
+<span class="token keyword">int</span> <span class="token function">setUserAgent</span><span class="token punctuation">(</span><span class="token class-name">String</span> userAgent<span class="token punctuation">,</span><span class="token class-name">String</span> version<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//例如：</span>
+<span class="token function">setUserAgent</span><span class="token punctuation">(</span><span class="token string">&quot;HexMeet EasyVideo Android&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;V2.0.1.3745&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="setlayoutcapacity">setLayoutCapacity</h3> <div class="language-java extra-class"><pre class="language-java"><code> <span class="token comment">/**
+  设置会议中终端layout模式的集合：
+  mode : GalleryMode/SpeakerMode
+  types: 终端layout集合，具体请看DEMO中设置的类型集合。
+ */</span>
+<span class="token keyword">int</span> <span class="token function">setLayoutCapacity</span><span class="token punctuation">(</span><span class="token class-name">LayoutMode</span> mode<span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">LayoutType</span><span class="token punctuation">&gt;</span></span> types<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="addeventlistener">addEventListener</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+  当SDK有事件需要通知上层 APP 时，通过该监听器回调到APP处理程序，通常使⽤在登陆状态和呼叫状态等。
+ */</span>
+<span class="token keyword">int</span> <span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token class-name">EVEventListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//示例代码</span>
+engine<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">EVListenr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="removeeventlistener">removeEventListener</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+	删除监听器，当 APP 不再需要监听 SDK 事件时，需要删除对应的监听器。
+ */</span>
+<span class="token keyword">int</span> <span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token class-name">EVEventListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//示例代码</span>
+engine<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">EVListenr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="reloadvideodevices">reloadVideoDevices</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+    初始化视频采集设备，开启摄像头权限时调用此方法。如果不调用此方法，采集不到本地视频。
+*/</span>
+<span class="token keyword">int</span> <span class="token function">reloadVideoDevices</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="setdevicerotation">setDeviceRotation</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+   设置设备⽅向，取值 0， 90， 180， 270
+*/</span>
+<span class="token keyword">int</span> <span class="token function">setDeviceRotation</span><span class="token punctuation">(</span><span class="token keyword">int</span> rotation<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//示例代码</span>
+<span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">onNewDirection</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token keyword">int</span> direction<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>direction <span class="token operator">!=</span> oldCameraDirection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">final</span> <span class="token keyword">int</span> _cameraDirection <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">360</span> <span class="token operator">-</span> direction<span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">360</span><span class="token punctuation">;</span>
+              <span class="token class-name">Handler</span> handler <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Handler</span><span class="token punctuation">(</span>handlerThread<span class="token punctuation">.</span><span class="token function">getLooper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    handler<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token annotation punctuation">@Override</span>
+                       <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                          <span class="token class-name">EVFactory</span><span class="token punctuation">.</span><span class="token function">createEngine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setDeviceRotation</span><span class="token punctuation">(</span>_cameraDirection<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                             <span class="token punctuation">}</span>
+                       <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                     oldCameraDirection <span class="token operator">=</span> direction<span class="token punctuation">;</span>
+                 <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+</code></pre></div><h3 id="enablesecure">enableSecure</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+   是否启用 HTTPS 协议
+   secure true：HTTPS/false:HTTP
+*/</span>
+<span class="token keyword">int</span> <span class="token function">enableSecure</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> secure<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="enablehighfps">enableHighFPS</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 是否打开高帧率
+*/</span>
+<span class="token keyword">int</span> <span class="token function">enableHighFPS</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> enable<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//获取当前高帧率是否打开状态</span>
+<span class="token keyword">boolean</span> <span class="token function">highFPSEnabled</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="enablehd">enableHD</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 是否打开1080P
+*/</span>
+<span class="token keyword">int</span> <span class="token function">enableHD</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> enable<span class="token punctuation">)</span>
+ 
+<span class="token comment">//获取当前1080P是否打开状态</span>
+<span class="token keyword">boolean</span> <span class="token class-name">HDEnabled</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="encryptpassword">encryptPassword</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+  用户登录密码加密
+  encryptionPassword  密码明文
+  return 返回加密后的密码
+*/</span>
+ <span class="token class-name">String</span> <span class="token function">encryptPassword</span><span class="token punctuation">(</span><span class="token class-name">String</span> encryptionPassword<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="loginwithlocation">loginWithLocation</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+  用户定位登录（包含定位跟登录）
+
+  locationServer 定位服务器
+  locationPort   端口号
+  userName       用户名
+  password       会议密码
+  return         返回API结果UI可忽略
+ */</span>
+<span class="token keyword">int</span> <span class="token function">loginWithLocation</span><span class="token punctuation">(</span><span class="token class-name">String</span> locationServer<span class="token punctuation">,</span> <span class="token keyword">int</span> locationPort<span class="token punctuation">,</span> <span class="token class-name">String</span> userName<span class="token punctuation">,</span> <span class="token class-name">String</span> password<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="logout">logout</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 用户退出登录
+
+ return 返回结果
+ */</span>
+<span class="token keyword">int</span> <span class="token function">logout</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//示例代码</span>
+ <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">logout</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	engine<span class="token punctuation">.</span><span class="token function">logout</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+</code></pre></div><h3 id="downloaduserimage">downloadUserImage</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 下载用户当前头像（需登录后调用）
+
+ downLoadImage 指定储存地址
+ return        返回结果可忽略
+ */</span>
+<span class="token keyword">int</span> <span class="token function">downloadUserImage</span><span class="token punctuation">(</span><span class="token class-name">String</span> downLoadImage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="uploaduserimage">uploadUserImage</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 向服务器上传用户头像
+
+ path   上传图片地址
+ return 返回结果可忽略
+ */</span>
+<span class="token keyword">int</span> <span class="token function">uploadUserImage</span><span class="token punctuation">(</span><span class="token class-name">String</span> upLoadImage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="changepassword">changePassword</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 修改当前用户密码
+
+ oldpassword   原密码
+ newPassword   新密码
+ return        返回结果 0 表示成功
+ */</span>
+<span class="token keyword">int</span> <span class="token function">changePassword</span><span class="token punctuation">(</span><span class="token class-name">String</span> oldpassword<span class="token punctuation">,</span><span class="token class-name">String</span> newPassword<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//示例代码  注：所有密码传给SDK都是加密过后的。</span>
+ <span class="token class-name">String</span> oldPass <span class="token operator">=</span> engine<span class="token punctuation">.</span><span class="token function">encryptPassword</span><span class="token punctuation">(</span>oldPassword<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token class-name">String</span> newPass <span class="token operator">=</span> engine<span class="token punctuation">.</span><span class="token function">encryptPassword</span><span class="token punctuation">(</span>newPassword<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token keyword">int</span> code <span class="token operator">=</span> engine<span class="token punctuation">.</span><span class="token function">changePassword</span><span class="token punctuation">(</span>oldPass<span class="token punctuation">,</span> newPass<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token keyword">if</span><span class="token punctuation">(</span>code<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">//修改成功</span>
+ <span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="changedisplayname">changeDisplayName</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 修改当前用户名称
+
+ displayName   名称
+ return        返回结果 0 表示成功
+ */</span>
+<span class="token keyword">int</span> <span class="token function">changeDisplayName</span><span class="token punctuation">(</span><span class="token class-name">String</span> displayName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//示例代码</span>
+ <span class="token keyword">int</span> code <span class="token operator">=</span> engine<span class="token punctuation">.</span><span class="token function">changeDisplayName</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token keyword">if</span> <span class="token punctuation">(</span>code<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token comment">//修改成功</span>
+ <span class="token punctuation">}</span>
+</code></pre></div><h3 id="setconfdisplayname">setConfDisplayName</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+  会议中修改名字
+ */</span>
+
+<span class="token keyword">int</span> <span class="token function">setConfDisplayName</span><span class="token punctuation">(</span><span class="token class-name">String</span> displayName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="setlocalvideowindow">setLocalVideoWindow</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 设置本地窗口
+
+ logcalVideo 本地窗口对象
+ return      返回结果（UI可以忽视,不作处理）
+ */</span>
+<span class="token keyword">int</span> <span class="token function">setLocalVideoWindow</span><span class="token punctuation">(</span><span class="token class-name">Object</span> logcalVideo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//示例代码（本地窗口为surfaceView对象）</span>
+<span class="token class-name">EVFactory</span><span class="token punctuation">.</span><span class="token function">createEngine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setLocalVideoWindow</span><span class="token punctuation">(</span>surfaceView<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="setremotevideowindow">setRemoteVideoWindow</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 远端窗口 
+
+ remoteVideo 远端窗口集合
+ return      返回结果（UI可以忽视,不作处理）
+ */</span>
+<span class="token keyword">int</span> <span class="token function">setRemoteVideoWindow</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> remoteVideo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//示例代码（远端窗口为surfaceView对象）</span>
+<span class="token class-name">EVFactory</span><span class="token punctuation">.</span><span class="token function">createEngine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setRemoteVideoWindow</span><span class="token punctuation">(</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span>remoteBox<span class="token punctuation">.</span><span class="token function">getAllSurfaces</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="setremotecontentwindow">setRemoteContentWindow</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 设置内容窗口
+
+ remoteContent 内容窗口对象
+ return        返回结果（UI可以忽视,不作处理）
+ */</span>
+<span class="token keyword">int</span> <span class="token function">setRemoteContentWindow</span><span class="token punctuation">(</span><span class="token class-name">Object</span> remoteContent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//示例代码（内容窗口为surfaceView对象）</span>
+engine<span class="token punctuation">.</span><span class="token function">setRemoteContentWindow</span><span class="token punctuation">(</span>surfaceView<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="setpreviewvideowindow">setPreviewVideoWindow</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+在安卓系统中，为了在开启摄像头后能持续输出采集数据，需要通过该接⼝设置给 SDK 层⼀个空
+surfaceview，但是系统中并不使⽤这个 View 来显示任何视频，⼀般将该 SurfaceView 设置为⼀个
+像素即可。
+
+previewVideo 窗口对象
+return       返回结果（UI可以忽视,不作处理）
+*/</span>
+<span class="token keyword">int</span> <span class="token function">setPreviewVideoWindow</span><span class="token punctuation">(</span><span class="token class-name">Object</span> previewVideo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//示例代码（内容窗口为surfaceView对象）</span>
+<span class="token class-name">EVFactory</span><span class="token punctuation">.</span><span class="token function">createEngine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setPreviewVideoWindow</span><span class="token punctuation">(</span>surfaceView<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="zoomremotewindow">zoomRemoteWindow</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+当在视频通话中时，如⽤户在视频窗⼝上使⽤⼿势功能，可以使⽤该⽅法对所显示的视频做相应的
+放⼤，缩⼩，移动。
+
+StreamType   : 视频流类型：视频、双流
+float factor : 缩放⽐例
+float cx     : 参考原点横轴坐标
+float cy     : 参考原点纵轴坐标
+*/</span>
+<span class="token keyword">int</span> <span class="token function">zoomRemoteWindow</span><span class="token punctuation">(</span><span class="token class-name">StreamType</span> streamType<span class="token punctuation">,</span><span class="token keyword">float</span> factor<span class="token punctuation">,</span><span class="token keyword">float</span> cx<span class="token punctuation">,</span><span class="token keyword">float</span> cy<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="setlocalvideopreviewwindow">setLocalVideoPreviewWindow</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 设置本地视频预览窗口，非呼叫中、需要预览本地视频时设置
+ 注：需要在 enablePreview() 之后调用
+*/</span>
+<span class="token keyword">int</span> <span class="token function">setLocalVideoPreviewWindow</span><span class="token punctuation">(</span><span class="token class-name">Object</span> localVideoPreview<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="enablepreview">enablePreview</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+启用预览,设置近端本地视频时，请开启此方法
+*/</span>
+<span class="token keyword">int</span> <span class="token function">enablePreview</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> enable<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="setbandwidth">setBandwidth</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 设置呼叫带宽
+ 
+ kbps   带宽大小
+ return 返回设置结果
+ */</span>
+<span class="token keyword">int</span> <span class="token function">setBandwidth</span><span class="token punctuation">(</span><span class="token keyword">int</span> kbps<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//示例代码 设置2M带宽</span>
+engine<span class="token punctuation">.</span><span class="token function">setBandwidth</span><span class="token punctuation">(</span><span class="token number">2048</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="getdevice">getDevice</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 查看当前设置的音视频输入输出设备
+ type ：
+ 	AudioCapture
+ 	AudioPlayback
+    VideoCapture
+ */</span>
+engine<span class="token punctuation">.</span><span class="token function">getDevice</span><span class="token punctuation">(</span><span class="token class-name">DeviceType</span> type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//示例代码</span>
+<span class="token comment">//查看当前设置的视频输入输出设备</span>
+  <span class="token class-name">EVEngine<span class="token punctuation">.</span>Device</span> current_device <span class="token operator">=</span> engine<span class="token punctuation">.</span><span class="token function">getDevice</span><span class="token punctuation">(</span><span class="token class-name">EVEngine<span class="token punctuation">.</span>DeviceType<span class="token punctuation">.</span>VideoCapture</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//判断摄像头</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>current_device<span class="token operator">==</span><span class="token keyword">null</span> <span class="token operator">||</span> current_device<span class="token punctuation">.</span>name <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> <span class="token operator">!</span>current_device<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">endsWith</span><span class="token punctuation">(</span><span class="token string">&quot;f&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            LOG<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">&quot;current device is not front camera. device: &quot;</span> <span class="token operator">+</span> current_device<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">EVEngine<span class="token punctuation">.</span>Device</span><span class="token punctuation">&gt;</span></span> devices <span class="token operator">=</span> engine<span class="token punctuation">.</span><span class="token function">getDevices</span><span class="token punctuation">(</span><span class="token class-name">EVEngine<span class="token punctuation">.</span>DeviceType<span class="token punctuation">.</span>VideoCapture</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>devices <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> devices<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> devices<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token class-name">EVEngine<span class="token punctuation">.</span>Device</span> device <span class="token operator">=</span> devices<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">if</span><span class="token punctuation">(</span>device <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> device<span class="token punctuation">.</span>name <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> device<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">endsWith</span><span class="token punctuation">(</span><span class="token string">&quot;f&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        engine<span class="token punctuation">.</span><span class="token function">setDevice</span><span class="token punctuation">(</span><span class="token class-name">EVEngine<span class="token punctuation">.</span>DeviceType<span class="token punctuation">.</span>VideoCapture</span><span class="token punctuation">,</span> device<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token keyword">break</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="getdevices">getDevices</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 查看当前设置的所有音视频输入输出设备
+ type ：
+ 	AudioCapture
+ 	AudioPlayback
+    VideoCapture
+ */</span>
+ engine<span class="token punctuation">.</span><span class="token function">getDevices</span><span class="token punctuation">(</span><span class="token class-name">DeviceType</span> type<span class="token punctuation">)</span>
+ <span class="token comment">//示例代码</span>
+ <span class="token comment">//查找当前设备视频输入输出设备</span>
+  <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">EVEngine<span class="token punctuation">.</span>Device</span><span class="token punctuation">&gt;</span></span> devices <span class="token operator">=</span> engine<span class="token punctuation">.</span><span class="token function">getDevices</span><span class="token punctuation">(</span><span class="token class-name">EVEngine<span class="token punctuation">.</span>DeviceType<span class="token punctuation">.</span>VideoCapture</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>devices <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> devices<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> devices<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+           <span class="token class-name">EVEngine<span class="token punctuation">.</span>Device</span> device <span class="token operator">=</span> devices<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">//device.name 为摄像头name</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>device <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> device<span class="token punctuation">.</span>name <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> device<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">endsWith</span><span class="token punctuation">(</span><span class="token string">&quot;f&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                engine<span class="token punctuation">.</span><span class="token function">setDevice</span><span class="token punctuation">(</span><span class="token class-name">EVEngine<span class="token punctuation">.</span>DeviceType<span class="token punctuation">.</span>VideoCapture</span><span class="token punctuation">,</span> device<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+               <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+         <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="setdevice">setDevice</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 设置当前设备音视频输入输出
+ type ：
+ 	AudioCapture
+ 	AudioPlayback
+    VideoCapture
+ id: 当前设备标识
+ */</span>
+engine<span class="token punctuation">.</span><span class="token function">setDevice</span><span class="token punctuation">(</span><span class="token class-name">DeviceType</span> type<span class="token punctuation">,</span> <span class="token keyword">int</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//示例代码</span>
+ <span class="token comment">//查找当前设备视频摄像头状态</span>
+  <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">EVEngine<span class="token punctuation">.</span>Device</span><span class="token punctuation">&gt;</span></span> devices <span class="token operator">=</span> engine<span class="token punctuation">.</span><span class="token function">getDevices</span><span class="token punctuation">(</span><span class="token class-name">EVEngine<span class="token punctuation">.</span>DeviceType<span class="token punctuation">.</span>VideoCapture</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>devices <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> devices<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> devices<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+           <span class="token class-name">EVEngine<span class="token punctuation">.</span>Device</span> device <span class="token operator">=</span> devices<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">//device.name 为摄像头name</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>device <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> device<span class="token punctuation">.</span>name <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> device<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">endsWith</span><span class="token punctuation">(</span><span class="token string">&quot;f&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                engine<span class="token punctuation">.</span><span class="token function">setDevice</span><span class="token punctuation">(</span><span class="token class-name">EVEngine<span class="token punctuation">.</span>DeviceType<span class="token punctuation">.</span>VideoCapture</span><span class="token punctuation">,</span> device<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+               <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+         <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><h3 id="setmaxrecvvideo">setMaxRecvVideo</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 设置最大视频窗口路数
+ 
+ num    窗口个数
+ return 返回设置结果
+ */</span>
+<span class="token keyword">int</span> <span class="token function">setMaxRecvVideo</span><span class="token punctuation">(</span><span class="token keyword">int</span> num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="joinconference">joinConference</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 用户加入会议
+
+  conferenceNumber 会议号码
+  displayName      用户在会议中的名称
+  password         会议密码
+  return           返回结果：0 成功，否则失败 
+*/</span>
+<span class="token keyword">int</span> <span class="token function">joinConference</span><span class="token punctuation">(</span><span class="token class-name">String</span> conferenceNumber<span class="token punctuation">,</span> <span class="token class-name">String</span> displayName<span class="token punctuation">,</span> <span class="token class-name">String</span> password<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><h3 id="joinconference-2">joinConference</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+  conferenceNumber 会议号码
+  displayName      用户在会议中的名称
+  password         会议密码
+  CallType      会议类型
+  return           返回结果：0 成功，否则失败 
+*/</span>
+<span class="token keyword">int</span> <span class="token function">joinConference</span><span class="token punctuation">(</span><span class="token class-name">String</span> conferenceNumber<span class="token punctuation">,</span> <span class="token class-name">String</span> displayName<span class="token punctuation">,</span> <span class="token class-name">String</span> password<span class="token punctuation">,</span> <span class="token class-name">EVEngine<span class="token punctuation">.</span>CallType</span> type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><h3 id="joinconferencewithlocation">joinConferenceWithLocation</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 用户执行匿名登录入会
+
+  locationServer   定位服务器
+  port             端口号
+  conferenceNumber 会议号码
+  displayName      用户在会议中的名称
+  password         会议密码
+  return           返回 SDK 处理结果，UI一般可忽略
+  注：匿名方式入会执行：定位-&gt;匿名登录-&gt;注册视频服务-&gt;呼叫 (其中匿名登录以及注册视频服务均由SDK 处理）
+ */</span>
+<span class="token keyword">int</span> <span class="token function">joinConferenceWithLocation</span><span class="token punctuation">(</span><span class="token class-name">String</span> locationServer<span class="token punctuation">,</span><span class="token keyword">int</span> port<span class="token punctuation">,</span> <span class="token class-name">String</span> conferenceNumber<span class="token punctuation">,</span> <span class="token class-name">String</span> displayName<span class="token punctuation">,</span> <span class="token class-name">String</span> password<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="leaveconference">leaveConference</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">//挂断会议</span>
+<span class="token keyword">int</span> <span class="token function">leaveConference</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//示例代码</span>
+ <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">dropCall</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    engine<span class="token punctuation">.</span><span class="token function">leaveConference</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token comment">//退出成功后，收到sdk的回调</span>
+<span class="token keyword">void</span> <span class="token function">onCallEnd</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>CallInfo</span> info<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span> 
+</code></pre></div><h3 id="cameraenabled">cameraEnabled</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 获取本地视频状态
+ 
+ return 返回结果 true 为关闭  false为开启
+ 注：和是否关闭本地视频接口结合使用
+*/</span>
+<span class="token keyword">boolean</span> <span class="token function">cameraEnabled</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><h3 id="enabledcamera">enabledCamera</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 是否关闭本地视频
+
+ enable true 为关闭  false为开启
+ return 返回结果可忽视
+ */</span>
+<span class="token keyword">int</span> <span class="token function">enableCamera</span><span class="token punctuation">(</span>bool enable<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//示例代码 注：先获取本地视频状态</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">enableVideo</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> enable<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>enable <span class="token operator">^</span> engine<span class="token punctuation">.</span><span class="token function">cameraEnabled</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      engine<span class="token punctuation">.</span><span class="token function">enableCamera</span><span class="token punctuation">(</span>enable<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+</code></pre></div><h3 id="switchcamera">switchCamera</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 切换摄像头
+
+ return 返回结果可忽略
+ */</span>
+<span class="token keyword">int</span> <span class="token function">switchCamera</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//示例代码</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">switchCamera</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  engine<span class="token punctuation">.</span><span class="token function">switchCamera</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="micenabled">micEnabled</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 获取⻨克⻛状态
+ 
+ return 返回结果  true 关闭/false 打开
+ 注：和是否打开麦克风接口结合使用
+*/</span>
+<span class="token keyword">boolean</span> <span class="token function">micEnabled</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="enablemic">enableMic</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 是否启用麦克风
+
+ mute   true 为关闭 false为开启
+ return 返回结果可忽视
+ */</span>
+<span class="token keyword">void</span> <span class="token function">muteMic</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> mute<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//示例 注：先获取⻨克⻛状态  </span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setMicMute</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> mute<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>mute <span class="token operator">^</span> <span class="token operator">!</span>engine<span class="token punctuation">.</span><span class="token function">micEnabled</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        engine<span class="token punctuation">.</span><span class="token function">enableMic</span><span class="token punctuation">(</span><span class="token operator">!</span>mute<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="remotemuted">remoteMuted</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 获取远端视频是否静音
+
+ return 返回结果 true:非静音 / false :静音
+ 注：结合举手接口使用
+ */</span>
+<span class="token keyword">boolean</span> <span class="token function">remoteMuted</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="requestremoteunmute">requestRemoteUnmute</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 举手发言
+ raise   true :发言申请已发送 /false :当前不能发言
+ return  返回结果可忽略
+ 注：结合获取远端视频是否静音接口使用
+ */</span>
+<span class="token keyword">int</span> <span class="token function">requestRemoteUnmute</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> raise<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//示例代码</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">handUp</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">boolean</span> remoteMute <span class="token operator">=</span> engine<span class="token punctuation">.</span><span class="token function">remoteMuted</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  LOG<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">&quot; remoteMute ： &quot;</span> <span class="token operator">+</span> remoteMute<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>remoteMute<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    engine<span class="token punctuation">.</span><span class="token function">requestRemoteUnmute</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+    engine<span class="token punctuation">.</span><span class="token function">requestRemoteUnmute</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="setlayout">setLayout</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 设置视频模式（主讲模式、画廊模式）
+
+ layout 对象
+ return 返回结果可忽视
+ */</span>
+<span class="token keyword">int</span> <span class="token function">setLayout</span><span class="token punctuation">(</span><span class="token class-name">LayoutRequest</span> layout<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//示例代码</span>
+<span class="token comment">// 1.画廊模式 （4 路）/ 主讲模式 （1路）</span>
+ <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setLayoutMode</span><span class="token punctuation">(</span><span class="token keyword">int</span> svcLayoutMode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span> type<span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>svcLayoutMode <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+              type <span class="token operator">=</span> <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>typeAuto<span class="token punctuation">;</span>
+         <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>svcLayoutMode <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+               type <span class="token operator">=</span><span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type1<span class="token punctuation">;</span>
+         <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+               type <span class="token operator">=</span><span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type4<span class="token punctuation">;</span>
+         <span class="token punctuation">}</span>
+    <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutRequest</span> request <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutRequest</span><span class="token punctuation">(</span>
+        <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutMode</span><span class="token punctuation">.</span><span class="token function">fromInt</span><span class="token punctuation">(</span>svcLayoutMode<span class="token punctuation">)</span><span class="token punctuation">,</span>type<span class="token punctuation">,</span>  			             	           <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutPage</span><span class="token punctuation">.</span>typeCurrent<span class="token punctuation">,</span>                                                       <span class="token class-name">EVEngine<span class="token punctuation">.</span>VideoSize</span><span class="token punctuation">.</span>VIDEO_SIZE_UNKNOWN<span class="token punctuation">,</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    engine<span class="token punctuation">.</span><span class="token function">setLayout</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+
+<span class="token comment">// 2.画廊模式 （6 路）/ 主讲模式 （1路）</span>
+ <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setLayoutMode</span><span class="token punctuation">(</span><span class="token keyword">int</span> svcLayoutMode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span> type<span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>svcLayoutMode <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+              type <span class="token operator">=</span> <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>typeAuto<span class="token punctuation">;</span>
+         <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>svcLayoutMode <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+               type <span class="token operator">=</span><span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type1<span class="token punctuation">;</span>
+         <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+               type <span class="token operator">=</span><span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutType</span><span class="token punctuation">.</span>type6W<span class="token punctuation">;</span>
+         <span class="token punctuation">}</span>
+     <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutRequest</span> request <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutRequest</span><span class="token punctuation">(</span>
+        <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutMode</span><span class="token punctuation">.</span><span class="token function">fromInt</span><span class="token punctuation">(</span>svcLayoutMode<span class="token punctuation">)</span><span class="token punctuation">,</span>type<span class="token punctuation">,</span>  			             	           <span class="token class-name">SVEngine<span class="token punctuation">.</span>LayoutPage</span><span class="token punctuation">.</span>typeCurrent<span class="token punctuation">,</span>                                                       <span class="token class-name">EVEngine<span class="token punctuation">.</span>VideoSize</span><span class="token punctuation">.</span>VIDEO_SIZE_UNKNOWN<span class="token punctuation">,</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     engine<span class="token punctuation">.</span><span class="token function">setLayout</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+ 
+</code></pre></div><h3 id="getnetworkquality">getNetworkQuality</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+获取信号强弱
+*/</span>
+<span class="token keyword">float</span> <span class="token function">getNetworkQuality</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="declineincommingcall">declineIncommingCall</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+拒接P2P会议：
+conferenceNumber 会议号码
+*/</span>
+<span class="token keyword">int</span> <span class="token function">declineIncommingCall</span><span class="token punctuation">(</span><span class="token class-name">String</span> conferenceNumber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="getstats">getStats</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 获取当前通话媒体统计信息
+ return 返回结果为集合，通过循环展示本地音频、视频，远端音频、视频的传输信息
+ 具体参数如下：
+  EVEngine.StreamType type;     媒体类型
+  EVEngine.StreamDir dir;       媒体方向
+  String payloadType;           传输协议类型
+  float negoBandwidth;	        协商速率
+  float realBandwidth;	        实际速率
+  long cumPacket;               累计丢包数
+  float fps;     			    帧率
+  EVEngine.VideoSize resolution;分辨率
+  long cumPacketLoss;  			累计丢包率
+  float packetLossRate;  		丢包率
+  boolean isEncrypted; 			是否加密
+  int ssrc; 					同步源标识符
+  String name;					名称
+*/</span>
+<span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">StreamStats</span><span class="token punctuation">&gt;</span></span> <span class="token function">getStats</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="getpageinfo">getPageInfo</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+获取当前总页数和当前所在页：
+PageInfo：
+	int currentPage：当前页
+	int pagesNumber：总页数
+*/</span>
+<span class="token class-name">SVEngine<span class="token punctuation">.</span>PageInfo</span> <span class="token function">getPageInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="setpage">setPage</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+设置滑动到下一页或者上一页的页数：
+page_number：页数
+*/</span>
+<span class="token keyword">int</span> <span class="token function">setPage</span><span class="token punctuation">(</span><span class="token keyword">int</span> page_number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="setscreencapture">setScreenCapture</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+开启屏幕共享：
+    cts ：上下文
+    mediaProjection ：mediaProjection对象
+    mDisplay ： Display对象
+    handler  ：开启一个handler
+ 注：调用此接口时，回调&quot;onContent&quot;如果收到contentInfo.status类型为&quot;Declined&quot;时，代表没有权限，不	可共享。
+*/</span>
+<span class="token keyword">void</span> <span class="token function">setScreenCapture</span><span class="token punctuation">(</span><span class="token class-name">Context</span> cts<span class="token punctuation">,</span><span class="token class-name">MediaProjection</span> mediaProjection<span class="token punctuation">,</span> <span class="token class-name">Display</span> mDisplay<span class="token punctuation">,</span> <span class="token class-name">Handler</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="stopcontent">stopContent</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+停止屏幕共享
+*/</span>
+<span class="token keyword">int</span> <span class="token function">stopContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span>
+</code></pre></div><h3 id="setlandscape">setLandscape</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+启动屏幕共享时，检测横竖屏时，调用此接口：
+enable : true 横屏/ false 竖屏
+*/</span>
+<span class="token keyword">void</span> <span class="token function">setLandscape</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> enable<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="onerror">onError</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/** 
+SDK返回错误类型,分别由五种类型:
+	EVErrorTypeSdk = &quot;Sdk&quot;;        SDK错误
+    EVErrorTypeServer = &quot;Server&quot;;  服务器错误
+    EVErrorTypeLocate = &quot;Locate&quot;;  定位错误
+    EVErrorTypeCall = &quot;Call&quot;;      呼叫会议错误
+    EVErrorTypeUnknown = &quot;Unknown&quot;;未知错误
+*/</span>
+<span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>EVError</span> err<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="onloginsucceed">onLoginSucceed</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 登录成功回调
+ user 返回用户基本信息
+ */</span>
+<span class="token keyword">void</span> <span class="token function">onLoginSucceed</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>UserInfo</span> user<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="onregister">onRegister</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 视频服务注册状态（注册状态变化的时候将会走此回调）
+
+ registered true为成功 false为失败
+ */</span>
+<span class="token keyword">void</span> <span class="token function">onRegister</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> registered<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="oncallconnected">onCallConnected</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 入会成功之后走此回调，具体参数如下：
+ 	boolean isAudioOnly;         可忽略
+ 	boolean contentEnabled;      可忽略
+ 	String  peer;                邀请入会者名字
+ 	String  conferenceNumber;    邀请入会号码
+ 	String  password;            入会密码
+ 	EVEngine.EVError err;        错误信息
+ 	EVEngine.SvcCallType type：
+ 	       	SvcCallConf 普通会议 正常入会
+ 	        SvcCallP2P  点对点 主叫本地摄像头可打开，入会成功走onCallPeerConnected（）此回调
+ 	EVEngine.CallAction action：
+ 	
+ */</span>
+<span class="token keyword">void</span> <span class="token function">onCallConnected</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>CallInfo</span> info<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="oncallpeerconnected">onCallPeerConnected</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+	点对点呼叫成功走此回调:
+	info 详情请看&quot;onCallConnected()&quot;回调
+ */</span>
+<span class="token keyword">void</span> <span class="token function">onCallPeerConnected</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>CallInfo</span> info<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="oncallend">onCallEnd</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 会议结束之后走此回调
+ info 会议信息：
+ 
+ boolean isAudioOnly;         可忽略
+ boolean contentEnabled;      可忽略
+ String  peer;                可忽略
+ String  conferenceNumber;    可忽略
+ String  password;            可忽略
+ EVEngine.EVError err;        错误信息，请看错误码详情
+ EVEngine.SvcCallType type：  可忽略
+ EVEngine.CallAction action： 可忽略
+ */</span>
+<span class="token keyword">void</span> <span class="token function">onCallEnd</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>CallInfo</span> info<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="oncontent">onContent</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 接收到内容分享或者内容分享结束的回调
+ ContentInfo:
+ 	    boolean enabled;          是否有双流  true 是，false 否
+        EVEngine.StreamDir dir：  视频流方向
+        		 Upload   发双流
+        		 Download 收双流
+        EVEngine.StreamType type: 双流类型：
+        		 Content    传统视频双流
+        		 WhiteBoard 白板
+ */</span>
+<span class="token keyword">void</span> <span class="token function">onContent</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>ContentInfo</span> info<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="ondownloaduserimagecomplete">onDownloadUserImageComplete</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 用户头像下载成功回调
+
+ path 保存路径
+ */</span>
+<span class="token keyword">void</span> <span class="token function">onDownloadUserImageComplete</span><span class="token punctuation">(</span><span class="token class-name">String</span>  path<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="onuploaduserimagecomplete">onUploadUserImageComplete</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 用户上传头像成功回调
+
+ path 头像路径
+ */</span>
+<span class="token keyword">void</span> <span class="token function">onUploadUserImageComplete</span><span class="token punctuation">(</span><span class="token class-name">String</span> path<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="onlayoutindication">onLayoutIndication</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 会议中布局的变化,具体参数如下：
+ 
+   EVEngine.LayoutMode mode;         本地布局为 Speaker/Gallery 模式
+   EVEngine.LayoutMode settingMode;  终端在服务器上设置的 AutoMode/Speaker/Gallery模式
+   EVEngine.LayoutType type;         布局类型
+   boolean modeSettable;             当前会议是否允许设置布局模式
+   String speakerName;               当前会议发言者名称
+   int speakerIndex;                 当前会议发言者所对应的site集合下标
+   List&lt;EVEngine.Site&gt; sites;
+    Site {
+   		int window;          视频流windowid
+        boolean isLocal;     true 本地视频流  false 远端视频流
+        String name;         视频流显示的名字
+        long deviceId;       视频流deviceid
+        boolean micMuted;    视频流是否是本地静音
+        boolean remoteMuted; 视频流是否被服务器静音
+   	}
+ 
+ */</span>
+<span class="token keyword">void</span> <span class="token function">onLayoutIndication</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>LayoutIndication</span> layout<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="onlayoutsiteindication">onLayoutSiteIndication</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 会议中状态发生变化,具体参数如下：
+ 
+ int      window;      视频流windowid
+ boolean  isLocal;     true 本地视频流/false 远端视频流
+ String   name;        视频流显示的名字
+ long     deviceId;    视频流deviceid
+ boolean  micMuted;    视频流是否是静音
+ boolean  remoteMuted; 视频流是否被服务器静音
+ 
+ */</span>
+<span class="token keyword">void</span> <span class="token function">onLayoutSiteIndication</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>Site</span> site<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="onlayoutspeakerindication">onLayoutSpeakerIndication</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 当前会议的发言者，具体参数如下：
+ String speakerName;  当前会议发言者名称
+ int speakerIndex;    当前会议发言者下标
+ */</span>
+<span class="token keyword">void</span> <span class="token function">onLayoutSpeakerIndication</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>LayoutSpeakerIndication</span> speaker<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="onmutespeakingdetected">onMuteSpeakingDetected</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+当静音时说话，SDK提示打开麦克风
+ */</span>
+<span class="token keyword">void</span> <span class="token function">onMuteSpeakingDetected</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="onjoinconferenceindication">onJoinConferenceIndication</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 收到会议邀请的通知,具体参数如下：
+ 	boolean isAudioOnly;           可忽略
+ 	boolean contentEnabled;        可忽略
+ 	String  peer;                  邀请入会者名字
+ 	String  conferenceNumber;      邀请入会号码
+ 	String  password;              入会密码
+ 	EVEngine.EVError err;          错误信息
+ 	EVEngine.SvcCallType type;     邀请类型：SvcCallConf 普通会议邀请，SvcCallP2P 点对点呼叫
+ 	EVEngine.CallAction  action
+                      {
+						SvcNoAction           没有呼叫动作
+ 						SvcIncomingCallRing   呼入振铃
+ 						SvcIncomingCallCancel 呼入超时，取消呼叫
+                       }
+ */</span>
+<span class="token keyword">void</span> <span class="token function">onJoinConferenceIndication</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>CallInfo</span> info<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="onrecordingindication">onRecordingIndication</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 是否有录制终端参与,具体参数如下：
+ 	EVEngine.RecordingState states; //  None(停止)/On(开始)/Pause(暂停)
+ 	boolean live;  // 录制false / 直播true
+ */</span>
+<span class="token keyword">void</span> <span class="token function">onRecordingIndication</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>RecordingInfo</span> state<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="onmessageoverlay">onMessageOverlay</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 会议字幕相关通知,具体参数如下：
+  	boolean enable;          是否显示字幕
+  	String content;          字幕内容
+  	int displayRepetitions;  重复次数
+  	int displaySpeed;        滚动速度
+  	int verticalBorder;      垂直位置
+  	int transparency;        字体透明度
+  	int fontSize;            字体大小
+  	String foregroundColor;  字体颜色
+  	String backgroundColor;  字体背景颜色
+ */</span>
+<span class="token keyword">void</span> <span class="token function">onMessageOverlay</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>MessageOverlay</span> msg<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="onwarnmessage">onWarnMessage</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ 会议中网络和带宽相关通知提示，分别为一下四种：
+ NetworkPoor               网络差
+ NetworkVeryPoor		   网络极差
+ BandwidthInsufficient	   带宽不足
+ BandwidthVeryInsufficient 带宽严重不足
+ UnmuteAudioNotAllowed     当前会议禁止解除静音 
+ UnmuteAudioIndication     主持人正在解除静音，是否同意解除静音？
+ */</span>
+<span class="token keyword">void</span> <span class="token function">onWarnMessage</span><span class="token punctuation">(</span><span class="token class-name">EVCommon<span class="token punctuation">.</span>Warning</span> warnMessage<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="onnetworkquality">onNetworkQuality</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+获取信号强弱
+*/</span>
+<span class="token keyword">void</span> <span class="token function">onNetworkQuality</span><span class="token punctuation">(</span><span class="token keyword">float</span> qualityRating<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="onparticipant">onParticipant</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+获取当前会议总人数
+*/</span>
+<span class="token keyword">void</span> <span class="token function">onParticipant</span><span class="token punctuation">(</span><span class="token keyword">int</span> number<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="onmicmutedshow">onMicMutedShow</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+修改当前会议静音图标状态 ： 
+0 非静音
+1 静音
+*/</span>
+<span class="token keyword">void</span> <span class="token function">onMicMutedShow</span><span class="token punctuation">(</span><span class="token keyword">int</span> mic_muted<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="onpeerimageurl">onPeerImageUrl</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+获取P2P主叫头像
+*/</span>
+<span class="token keyword">void</span> <span class="token function">onPeerImageUrl</span><span class="token punctuation">(</span><span class="token class-name">String</span> imageUrl<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="onpageinfo">onPageInfo</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+页数发生改变的回调信息：
+PageInfo：
+	int currentPage：当前页
+	int pagesNumber：总页数
+*/</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onPageInfo</span><span class="token punctuation">(</span><span class="token class-name">SVEngine<span class="token punctuation">.</span>PageInfo</span> info<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h2 id="错误码以及枚举类型">错误码以及枚举类型</h2> <h3 id="错误码">错误码</h3> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">//SDK返回错误信息类型</span>
+<span class="token keyword">public</span> <span class="token keyword">enum</span> <span class="token class-name">ErrorType</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token class-name">EVErrorTypeSdk</span> <span class="token operator">=</span> <span class="token string">&quot;Sdk&quot;</span><span class="token punctuation">;</span><span class="token comment">//SDK错误</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token class-name">EVErrorTypeServer</span> <span class="token operator">=</span> <span class="token string">&quot;Server&quot;</span><span class="token punctuation">;</span><span class="token comment">//服务器错误</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token class-name">EVErrorTypeLocate</span> <span class="token operator">=</span> <span class="token string">&quot;Locate&quot;</span><span class="token punctuation">;</span><span class="token comment">//定位错误</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token class-name">EVErrorTypeCall</span> <span class="token operator">=</span> <span class="token string">&quot;Call&quot;</span><span class="token punctuation">;</span><span class="token comment">//呼叫错误</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> <span class="token class-name">EVErrorTypeUnknown</span> <span class="token operator">=</span> <span class="token string">&quot;Unknown&quot;</span><span class="token punctuation">;</span><span class="token comment">//未知错误</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//登陆返回错误码</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LoginResultEvent</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> LOGIN_ERROR_10009<span class="token punctuation">;</span><span class="token comment">//账号或密码错误</span>
+    <span class="token keyword">int</span> LOGIN_ERROR_1101<span class="token punctuation">;</span><span class="token comment">//密码错误。账号将在 x 次失败尝试后被锁定(5 分钟)</span>
+    <span class="token keyword">int</span> LOGIN_ERROR_1102<span class="token punctuation">;</span><span class="token comment">//密码错误次数已达上限，账号已被锁定，5分钟后自动解除</span>
+    <span class="token keyword">int</span> LOGIN_ERROR_8<span class="token punctuation">;</span><span class="token comment">//服务器不可达</span>
+    <span class="token keyword">int</span> LOGIN_ERROR_9<span class="token punctuation">;</span><span class="token comment">//无效服务器</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//呼叫会议返回的错误码</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ResourceUtils</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> CALL_ERROR_1001 <span class="token punctuation">;</span><span class="token comment">//无效的会议室号码</span>
+    <span class="token keyword">int</span> CALL_ERROR_2001 <span class="token punctuation">;</span><span class="token comment">//您呼叫的云平台尚未激活</span>
+    <span class="token keyword">int</span> CALL_ERROR_2003 <span class="token punctuation">;</span><span class="token comment">//没有可用的会议端口资源</span>
+    <span class="token keyword">int</span> CALL_ERROR_2005 <span class="token punctuation">;</span><span class="token comment">//会议还没有开始</span>
+    <span class="token keyword">int</span> CALL_ERROR_2007 <span class="token punctuation">;</span><span class="token comment">//呼叫超时，请重试</span>
+    <span class="token keyword">int</span> CALL_ERROR_2009 <span class="token punctuation">;</span><span class="token comment">//您呼叫的群组尚未绑定云会议室</span>
+    <span class="token keyword">int</span> CALL_ERROR_2011 <span class="token punctuation">;</span><span class="token comment">//您呼叫的云会议室已过期</span>
+    <span class="token keyword">int</span> CALL_ERROR_2023 <span class="token punctuation">;</span><span class="token comment">//当前入会人数已达上限</span>
+    <span class="token keyword">int</span> CALL_ERROR_2024 <span class="token punctuation">;</span><span class="token comment">//当前与会人数已达组织端口上限</span>
+    <span class="token keyword">int</span> CALL_ERROR_2025 <span class="token punctuation">;</span><span class="token comment">//当前与会人数已达平台会议端口上限</span>
+    <span class="token keyword">int</span> CALL_ERROR_2031 <span class="token punctuation">;</span><span class="token comment">//只允许会议室拥有者激活会议室</span>
+    <span class="token keyword">int</span> CALL_ERROR_2033 <span class="token punctuation">;</span><span class="token comment">//本会议不允许匿名呼叫</span>
+    <span class="token keyword">int</span> CALL_ERROR_2035 <span class="token punctuation">;</span><span class="token comment">//试用期已过期</span>
+    <span class="token keyword">int</span> CALL_ERROR_4049 <span class="token punctuation">;</span><span class="token comment">//呼叫失败，对方正在通话中</span>
+    <span class="token keyword">int</span> CALL_ERROR_4051 <span class="token punctuation">;</span><span class="token comment">//对方不在线</span>
+    <span class="token keyword">int</span> CALL_ERROR_4055 <span class="token punctuation">;</span><span class="token comment">//加入失败,会议已锁定</span>
+    <span class="token keyword">int</span> CALL_ERROR_4057 <span class="token punctuation">;</span><span class="token comment">//该会议室已被占用</span>
+    <span class="token keyword">int</span> CALL_ERROR_4067 <span class="token punctuation">;</span><span class="token comment">//仅允许本公司用户加入</span>
+    <span class="token keyword">int</span> CALL_ERROR_4069 <span class="token punctuation">;</span><span class="token comment">//仅允许被邀请人加入</span>
+    
+    <span class="token keyword">int</span> MRU_NORMAL <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span><span class="token comment">//会议结束或被主持人挂断</span>
+    <span class="token keyword">int</span> MRU_OPERATOR_DISCONNECT <span class="token operator">=</span> <span class="token number">101</span><span class="token punctuation">;</span><span class="token comment">//会议结束或被主持人挂断</span>
+    <span class="token keyword">int</span> EP_NO_PACKET_RECEIVED <span class="token operator">=</span> <span class="token number">11</span><span class="token punctuation">;</span><span class="token comment">//网络异常，请检查网络</span>
+    <span class="token keyword">int</span> MRU_NO_PACKET_RECEIVED <span class="token operator">=</span> <span class="token number">102</span><span class="token punctuation">;</span><span class="token comment">//网络异常，请检查网络</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="枚举类型">枚举类型</h3> <div class="language-java extra-class"><pre class="language-java"><code>
+<span class="token comment">/**
+  枚举类型
+*/</span>
+<span class="token keyword">public</span> <span class="token keyword">enum</span> <span class="token class-name">RegisterState</span> <span class="token punctuation">{</span>
+    IDLE<span class="token punctuation">,</span><span class="token comment">//初始化</span>
+    SUCCESS<span class="token punctuation">,</span><span class="token comment">//注册成功</span>
+    FAILED<span class="token comment">//注册失败</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">enum</span> <span class="token class-name">CallState</span> <span class="token punctuation">{</span>
+    IDLE<span class="token punctuation">,</span><span class="token comment">//初始化</span>
+    CONNECTING<span class="token punctuation">,</span><span class="token comment">//呼叫中</span>
+    AUTHORIZATION<span class="token punctuation">,</span><span class="token comment">//当会议有密码，调用此类型</span>
+    RING<span class="token punctuation">,</span><span class="token comment">//邀请入会</span>
+    CONNECTED<span class="token comment">//呼叫成功</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">enum</span> <span class="token class-name">RecordingEvent</span> <span class="token punctuation">{</span>
+    ON<span class="token punctuation">,</span><span class="token comment">//录制结束</span>
+    OFF<span class="token comment">//开始录制</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">enum</span> _EV_LAYOUT_MODE<span class="token punctuation">{</span><span class="token comment">//本地布局类型</span>
+    EV_LAYOUT_GALLERY_MODE <span class="token operator">=</span>  <span class="token number">0</span><span class="token punctuation">,</span> 
+    EV_LAYOUT_SPEAKER_MODE <span class="token operator">=</span>  <span class="token number">1</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">enum</span> _EV_LAYOUT_TYPE<span class="token punctuation">{</span><span class="token comment">//布局类型</span>
+    EV_LAYOUT_TYPE_AUTO       <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> 
+    EV_LAYOUT_TYPE_1          <span class="token operator">=</span> <span class="token number">101</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_2H         <span class="token operator">=</span> <span class="token number">201</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_2V         <span class="token operator">=</span> <span class="token number">202</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_2H_2       <span class="token operator">=</span> <span class="token number">203</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_2V_2       <span class="token operator">=</span> <span class="token number">204</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_2_1IN1     <span class="token operator">=</span> <span class="token number">205</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_2_1L_1RS   <span class="token operator">=</span> <span class="token number">207</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_3_1T_2B    <span class="token operator">=</span> <span class="token number">301</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_3_2T_1B    <span class="token operator">=</span> <span class="token number">302</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_3_1L_2R    <span class="token operator">=</span> <span class="token number">303</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_3_2IN1     <span class="token operator">=</span> <span class="token number">304</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_1P2W       <span class="token operator">=</span> <span class="token number">305</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_4          <span class="token operator">=</span> <span class="token number">401</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_4_3T_1B    <span class="token operator">=</span> <span class="token number">402</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_4_1L_3R    <span class="token operator">=</span> <span class="token number">403</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_4_1T_3B    <span class="token operator">=</span> <span class="token number">404</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_4_3IN1     <span class="token operator">=</span> <span class="token number">405</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_5_1L_4R    <span class="token operator">=</span> <span class="token number">501</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_5_4T_1B    <span class="token operator">=</span> <span class="token number">502</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_5_1T_4B    <span class="token operator">=</span> <span class="token number">503</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_6          <span class="token operator">=</span> <span class="token number">601</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_6W         <span class="token operator">=</span> <span class="token number">602</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_2P4W       <span class="token operator">=</span> <span class="token number">603</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_6CP        <span class="token operator">=</span> <span class="token number">604</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_8          <span class="token operator">=</span> <span class="token number">801</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_9          <span class="token operator">=</span> <span class="token number">901</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_9_1IN_8OUT <span class="token operator">=</span> <span class="token number">902</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_9_8T_1B    <span class="token operator">=</span> <span class="token number">903</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_9_1T_8B    <span class="token operator">=</span> <span class="token number">904</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_10         <span class="token operator">=</span> <span class="token number">1001</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_2TP8B      <span class="token operator">=</span> <span class="token number">1002</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_2CP4L4R    <span class="token operator">=</span> <span class="token number">1003</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_12W        <span class="token operator">=</span> <span class="token number">1201</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_13         <span class="token operator">=</span> <span class="token number">1301</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_1LTP12     <span class="token operator">=</span> <span class="token number">1302</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_16         <span class="token operator">=</span> <span class="token number">1601</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_1TLP16     <span class="token operator">=</span> <span class="token number">1701</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_1CP16      <span class="token operator">=</span> <span class="token number">1702</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_20         <span class="token operator">=</span> <span class="token number">2001</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_20_SQUARE  <span class="token operator">=</span> <span class="token number">2002</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_1TLP20     <span class="token operator">=</span> <span class="token number">2101</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_1CP20      <span class="token operator">=</span> <span class="token number">2102</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_25         <span class="token operator">=</span> <span class="token number">2501</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_30         <span class="token operator">=</span> <span class="token number">3001</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_30_SQUARE  <span class="token operator">=</span> <span class="token number">3002</span><span class="token punctuation">,</span>
+    EV_LAYOUT_TYPE_36         <span class="token operator">=</span> <span class="token number">3601</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">enum</span> _EV_SVC_CALL_TYPE <span class="token punctuation">{</span>
+    EV_SVC_CALL_CONF <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token comment">// 普通会议 正常入会  </span>
+    EV_SVC_CALL_P2P <span class="token operator">=</span> <span class="token number">1</span> <span class="token comment">//SvcCallP2P  点对点 </span>
+<span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">enum</span> EV_SVC_CALL_ACTION_CLI<span class="token punctuation">{</span>
+    EV_SVC_NO_ACTION <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>   <span class="token comment">// 没有呼叫动作</span>
+    EV_SVC_INCOMING_CALL_RING <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">// 呼入振铃</span>
+    EV_SVC_INCOMING_CALL_CANCEL <span class="token operator">=</span> <span class="token number">2</span> <span class="token comment">// 呼入超时，取消呼叫</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">enum</span> _EV_RECORDING_STATE <span class="token punctuation">{</span>
+    EV_RECORDING_STATE_NONE <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token comment">//通知</span>
+    EV_RECORDING_STATE_ON <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span><span class="token comment">//开始</span>
+    EV_RECORDING_STATE_PAUSE <span class="token operator">=</span> <span class="token number">2</span><span class="token comment">//暂停</span>
+<span class="token punctuation">}</span> 
+
+<span class="token keyword">public</span> <span class="token keyword">enum</span> _EV_STREAM_DIR <span class="token punctuation">{</span>
+	EV_STREAM_UPLOAD <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token comment">//发双流</span>
+	EV_STREAM_DOWNLOAD <span class="token operator">=</span> <span class="token number">1</span><span class="token comment">//收双流</span>
+<span class="token punctuation">}</span>
+
+typedef <span class="token keyword">enum</span> _EV_STREAM_TYPE <span class="token punctuation">{</span>
+	EV_STREAM_CONTENT <span class="token operator">=</span> <span class="token number">0</span>，<span class="token comment">//传统视频双流</span>
+	EV_STREAM_WHITE_BOARD <span class="token operator">=</span> <span class="token number">1</span> <span class="token comment">//白板</span>
+<span class="token punctuation">}</span>
+
+
+</code></pre></div></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">9/16/2022, 5:10:26 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/svcsdk/macos-sdk.html" class="prev">
+            macOS 版本
+          </a></span> <span class="next"><a href="/svcsdk/iOS-sdk.html">
+            iOS 版本
+          </a></span></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-2" data-v-70334359><a href="/svcsdk/Android-sdk.html#概述" class="sidebar-link reco-side-概述" data-v-70334359>概述</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#系统要求" class="sidebar-link reco-side-系统要求" data-v-70334359>系统要求</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#开发环境" class="sidebar-link reco-side-开发环境" data-v-70334359>开发环境</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#示例代码" class="sidebar-link reco-side-示例代码" data-v-70334359>示例代码</a></li><li class="level-2" data-v-70334359><a href="/svcsdk/Android-sdk.html#快速定制化" class="sidebar-link reco-side-快速定制化" data-v-70334359>快速定制化</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#修改应用的-gradle-文件" class="sidebar-link reco-side-修改应用的-gradle-文件" data-v-70334359>修改应用的 gradle 文件</a></li><li class="level-2" data-v-70334359><a href="/svcsdk/Android-sdk.html#开发入门" class="sidebar-link reco-side-开发入门" data-v-70334359>开发入门</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#初始化-sdk" class="sidebar-link reco-side-初始化-sdk" data-v-70334359>初始化 SDK</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#申请权限" class="sidebar-link reco-side-申请权限" data-v-70334359>申请权限</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#防止代码混淆" class="sidebar-link reco-side-防止代码混淆" data-v-70334359>防止代码混淆</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#呼叫流程" class="sidebar-link reco-side-呼叫流程" data-v-70334359>呼叫流程</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#登录" class="sidebar-link reco-side-登录" data-v-70334359>登录</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#窗口设置" class="sidebar-link reco-side-窗口设置" data-v-70334359>窗口设置</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#本地预览" class="sidebar-link reco-side-本地预览" data-v-70334359>本地预览</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#实现视频通话" class="sidebar-link reco-side-实现视频通话" data-v-70334359>实现视频通话</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#主讲视图或画廊视图" class="sidebar-link reco-side-主讲视图或画廊视图" data-v-70334359>主讲视图或画廊视图</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#静音或解除静音" class="sidebar-link reco-side-静音或解除静音" data-v-70334359>静音或解除静音</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#是否打开高帧率" class="sidebar-link reco-side-是否打开高帧率" data-v-70334359>是否打开高帧率</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#是否打开1080p" class="sidebar-link reco-side-是否打开1080p" data-v-70334359>是否打开1080P</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#启用视频或停用视频" class="sidebar-link reco-side-启用视频或停用视频" data-v-70334359>启用视频或停用视频</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#接收和显示共享内容" class="sidebar-link reco-side-接收和显示共享内容" data-v-70334359>接收和显示共享内容</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#实现切换摄像头" class="sidebar-link reco-side-实现切换摄像头" data-v-70334359>实现切换摄像头</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#共享屏幕" class="sidebar-link reco-side-共享屏幕" data-v-70334359>共享屏幕</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#挂断会议" class="sidebar-link reco-side-挂断会议" data-v-70334359>挂断会议</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#p2p-点对点-呼叫相关内容" class="sidebar-link reco-side-p2p-点对点-呼叫相关内容" data-v-70334359>P2P (点对点) 呼叫相关内容</a></li><li class="level-2" data-v-70334359><a href="/svcsdk/Android-sdk.html#api参考" class="sidebar-link reco-side-api参考" data-v-70334359>API参考</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#setlog" class="sidebar-link reco-side-setlog" data-v-70334359>setLog</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#enablelog" class="sidebar-link reco-side-enablelog" data-v-70334359>enableLog</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#compresslog" class="sidebar-link reco-side-compresslog" data-v-70334359>compressLog</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#setrootca" class="sidebar-link reco-side-setrootca" data-v-70334359>setRootCA</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#initialize" class="sidebar-link reco-side-initialize" data-v-70334359>initialize</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#setuserimage" class="sidebar-link reco-side-setuserimage" data-v-70334359>setUserImage</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#enableharddecoding" class="sidebar-link reco-side-enableharddecoding" data-v-70334359>enableHardDecoding</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#setuseragent" class="sidebar-link reco-side-setuseragent" data-v-70334359>setUserAgent</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#setlayoutcapacity" class="sidebar-link reco-side-setlayoutcapacity" data-v-70334359>setLayoutCapacity</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#addeventlistener" class="sidebar-link reco-side-addeventlistener" data-v-70334359>addEventListener</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#removeeventlistener" class="sidebar-link reco-side-removeeventlistener" data-v-70334359>removeEventListener</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#reloadvideodevices" class="sidebar-link reco-side-reloadvideodevices" data-v-70334359>reloadVideoDevices</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#setdevicerotation" class="sidebar-link reco-side-setdevicerotation" data-v-70334359>setDeviceRotation</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#enablesecure" class="sidebar-link reco-side-enablesecure" data-v-70334359>enableSecure</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#enablehighfps" class="sidebar-link reco-side-enablehighfps" data-v-70334359>enableHighFPS</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#enablehd" class="sidebar-link reco-side-enablehd" data-v-70334359>enableHD</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#encryptpassword" class="sidebar-link reco-side-encryptpassword" data-v-70334359>encryptPassword</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#loginwithlocation" class="sidebar-link reco-side-loginwithlocation" data-v-70334359>loginWithLocation</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#logout" class="sidebar-link reco-side-logout" data-v-70334359>logout</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#downloaduserimage" class="sidebar-link reco-side-downloaduserimage" data-v-70334359>downloadUserImage</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#uploaduserimage" class="sidebar-link reco-side-uploaduserimage" data-v-70334359>uploadUserImage</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#changepassword" class="sidebar-link reco-side-changepassword" data-v-70334359>changePassword</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#changedisplayname" class="sidebar-link reco-side-changedisplayname" data-v-70334359>changeDisplayName</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#setconfdisplayname" class="sidebar-link reco-side-setconfdisplayname" data-v-70334359>setConfDisplayName</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#setlocalvideowindow" class="sidebar-link reco-side-setlocalvideowindow" data-v-70334359>setLocalVideoWindow</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#setremotevideowindow" class="sidebar-link reco-side-setremotevideowindow" data-v-70334359>setRemoteVideoWindow</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#setremotecontentwindow" class="sidebar-link reco-side-setremotecontentwindow" data-v-70334359>setRemoteContentWindow</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#setpreviewvideowindow" class="sidebar-link reco-side-setpreviewvideowindow" data-v-70334359>setPreviewVideoWindow</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#zoomremotewindow" class="sidebar-link reco-side-zoomremotewindow" data-v-70334359>zoomRemoteWindow</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#setlocalvideopreviewwindow" class="sidebar-link reco-side-setlocalvideopreviewwindow" data-v-70334359>setLocalVideoPreviewWindow</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#enablepreview" class="sidebar-link reco-side-enablepreview" data-v-70334359>enablePreview</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#setbandwidth" class="sidebar-link reco-side-setbandwidth" data-v-70334359>setBandwidth</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#getdevice" class="sidebar-link reco-side-getdevice" data-v-70334359>getDevice</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#getdevices" class="sidebar-link reco-side-getdevices" data-v-70334359>getDevices</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#setdevice" class="sidebar-link reco-side-setdevice" data-v-70334359>setDevice</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#setmaxrecvvideo" class="sidebar-link reco-side-setmaxrecvvideo" data-v-70334359>setMaxRecvVideo</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#joinconference" class="sidebar-link reco-side-joinconference" data-v-70334359>joinConference</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#joinconference-2" class="sidebar-link reco-side-joinconference-2" data-v-70334359>joinConference</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#joinconferencewithlocation" class="sidebar-link reco-side-joinconferencewithlocation" data-v-70334359>joinConferenceWithLocation</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#leaveconference" class="sidebar-link reco-side-leaveconference" data-v-70334359>leaveConference</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#cameraenabled" class="sidebar-link reco-side-cameraenabled" data-v-70334359>cameraEnabled</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#enabledcamera" class="sidebar-link reco-side-enabledcamera" data-v-70334359>enabledCamera</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#switchcamera" class="sidebar-link reco-side-switchcamera" data-v-70334359>switchCamera</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#micenabled" class="sidebar-link reco-side-micenabled" data-v-70334359>micEnabled</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#enablemic" class="sidebar-link reco-side-enablemic" data-v-70334359>enableMic</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#remotemuted" class="sidebar-link reco-side-remotemuted" data-v-70334359>remoteMuted</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#requestremoteunmute" class="sidebar-link reco-side-requestremoteunmute" data-v-70334359>requestRemoteUnmute</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#setlayout" class="sidebar-link reco-side-setlayout" data-v-70334359>setLayout</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#getnetworkquality" class="sidebar-link reco-side-getnetworkquality" data-v-70334359>getNetworkQuality</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#declineincommingcall" class="sidebar-link reco-side-declineincommingcall" data-v-70334359>declineIncommingCall</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#getstats" class="sidebar-link reco-side-getstats" data-v-70334359>getStats</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#getpageinfo" class="sidebar-link reco-side-getpageinfo" data-v-70334359>getPageInfo</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#setpage" class="sidebar-link reco-side-setpage" data-v-70334359>setPage</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#setscreencapture" class="sidebar-link reco-side-setscreencapture" data-v-70334359>setScreenCapture</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#stopcontent" class="sidebar-link reco-side-stopcontent" data-v-70334359>stopContent</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#setlandscape" class="sidebar-link reco-side-setlandscape" data-v-70334359>setLandscape</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#onerror" class="sidebar-link reco-side-onerror" data-v-70334359>onError</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#onloginsucceed" class="sidebar-link reco-side-onloginsucceed" data-v-70334359>onLoginSucceed</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#onregister" class="sidebar-link reco-side-onregister" data-v-70334359>onRegister</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#oncallconnected" class="sidebar-link reco-side-oncallconnected" data-v-70334359>onCallConnected</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#oncallpeerconnected" class="sidebar-link reco-side-oncallpeerconnected" data-v-70334359>onCallPeerConnected</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#oncallend" class="sidebar-link reco-side-oncallend" data-v-70334359>onCallEnd</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#oncontent" class="sidebar-link reco-side-oncontent" data-v-70334359>onContent</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#ondownloaduserimagecomplete" class="sidebar-link reco-side-ondownloaduserimagecomplete" data-v-70334359>onDownloadUserImageComplete</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#onuploaduserimagecomplete" class="sidebar-link reco-side-onuploaduserimagecomplete" data-v-70334359>onUploadUserImageComplete</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#onlayoutindication" class="sidebar-link reco-side-onlayoutindication" data-v-70334359>onLayoutIndication</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#onlayoutsiteindication" class="sidebar-link reco-side-onlayoutsiteindication" data-v-70334359>onLayoutSiteIndication</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#onlayoutspeakerindication" class="sidebar-link reco-side-onlayoutspeakerindication" data-v-70334359>onLayoutSpeakerIndication</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#onmutespeakingdetected" class="sidebar-link reco-side-onmutespeakingdetected" data-v-70334359>onMuteSpeakingDetected</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#onjoinconferenceindication" class="sidebar-link reco-side-onjoinconferenceindication" data-v-70334359>onJoinConferenceIndication</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#onrecordingindication" class="sidebar-link reco-side-onrecordingindication" data-v-70334359>onRecordingIndication</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#onmessageoverlay" class="sidebar-link reco-side-onmessageoverlay" data-v-70334359>onMessageOverlay</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#onwarnmessage" class="sidebar-link reco-side-onwarnmessage" data-v-70334359>onWarnMessage</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#onnetworkquality" class="sidebar-link reco-side-onnetworkquality" data-v-70334359>onNetworkQuality</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#onparticipant" class="sidebar-link reco-side-onparticipant" data-v-70334359>onParticipant</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#onmicmutedshow" class="sidebar-link reco-side-onmicmutedshow" data-v-70334359>onMicMutedShow</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#onpeerimageurl" class="sidebar-link reco-side-onpeerimageurl" data-v-70334359>onPeerImageUrl</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#onpageinfo" class="sidebar-link reco-side-onpageinfo" data-v-70334359>onPageInfo</a></li><li class="level-2" data-v-70334359><a href="/svcsdk/Android-sdk.html#错误码以及枚举类型" class="sidebar-link reco-side-错误码以及枚举类型" data-v-70334359>错误码以及枚举类型</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#错误码" class="sidebar-link reco-side-错误码" data-v-70334359>错误码</a></li><li class="level-3" data-v-70334359><a href="/svcsdk/Android-sdk.html#枚举类型" class="sidebar-link reco-side-枚举类型" data-v-70334359>枚举类型</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.411da203.js" defer></script><script src="/assets/js/3.1680551f.js" defer></script><script src="/assets/js/1.177e8441.js" defer></script><script src="/assets/js/19.e31fc347.js" defer></script>
+  </body>
+</html>
